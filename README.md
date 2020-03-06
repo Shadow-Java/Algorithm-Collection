@@ -5,6 +5,6 @@
 
  ---- | ----- | ------  
 
- 1  | [two sum](https://leetcode.com/problems/two-sum/) | [Java](http://github.com/liyuanbo1997) | [📒](https://leetcode.com/articles/two-sum/#) | Easy
+ 1  |     [two sum](https://leetcode.com/problems/two-sum/) |     [Java](http://github.com/liyuanbo1997) |    [📒](https://leetcode.com/articles/two-sum/#)  |    Easy
 
  单元格内容  | 单元格内容 | 单元格内容
