@@ -8,3 +8,7 @@
    |3|[longest-increasing-subsequence](https://leetcode-cn.com/problems/longest-increasing-subsequence/)| Dynamic programming |[Java](https://github.com/bonfy/leetcode/blob/master/solutions/0002-add-two-numbers/add-two-numbers.py)|Medium|
    |4|[Longest Turbulent Subarray](https://leetcode-cn.com/problems/longest-turbulent-subarray/)| Dynamic programming |[Java](https://github.com/bonfy/leetcode/blob/master/solutions/0002-add-two-numbers/add-two-numbers.py)|Medium|
    |5|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode-cn.com/problems/longest-increasing-subsequence/)| Tree |[Java](https://github.com/bonfy/leetcode/blob/master/solutions/0002-add-two-numbers/add-two-numbers.py)|Medium|
+   |5|[Swap Nodes in Pairs](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)| LinkList |[Java](src/SwapNodesPairs)|Medium|
+   |763|[Partition Labels](https://leetcode-cn.com/problems/partition-labels/)| String |[Java](src/PartitionLabels)|Medium|
+   |925|[Long Pressed Name](https://leetcode-cn.com/problems/long-pressed-name/)| String |[Java](src/LongPressedName)|Simple|
+   
