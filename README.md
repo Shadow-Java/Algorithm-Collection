@@ -12,4 +12,5 @@
    |7|[Partition Labels](https://leetcode-cn.com/problems/partition-labels/)| String |[Java](SourceCode/src/PartitionLabels.java)|Medium|763|
    |8|[Long Pressed Name](https://leetcode-cn.com/problems/long-pressed-name/)| String |[Java](SourceCode/src/LongPressedName.java)|Easy|925|
    |9|[Binary Tree Preorder Traversal](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)| Tree |[Java](SourceCode/src/BinaryTreePreorderTraversal.java)|Medium|144|
+   |10|[Unique Number of Occurrences](https://leetcode-cn.com/problems/unique-number-of-occurrences/)| Array |[Java](SourceCode/src/UniqueNumberOccurrences.java)|Easy|1207|
    
