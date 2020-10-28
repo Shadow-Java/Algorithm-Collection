@@ -23,6 +23,7 @@ public class BinaryTreePreorderTraversal {
     /*
     *递归的前序遍历,先遍历根节点，再遍历左节点，其次右节点（以节点为空遍历结束）
     */
+
     public void recursive(TreeNode root,List<Integer> res){
         if(root == null)
             return;
