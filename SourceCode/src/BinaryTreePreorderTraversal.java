@@ -60,7 +60,7 @@ public class BinaryTreePreorderTraversal {
 
 
     /**
-     * 迭代的前序遍历，利用栈
+     * 迭代的前序遍历，利用栈Stack数据结构
      * @param head
      */
     public static void preOrderIteration(TreeNode head) {

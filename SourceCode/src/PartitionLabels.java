@@ -11,9 +11,7 @@ import java.util.List;
  * 每个字母最多出现在一个片段中。
  * 像 "ababcbacadefegde", "hijhklij" 的划分是错误的，因为划分的片段数较少。
  *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/partition-labels
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ *
  */
 public class PartitionLabels {
     public List<Integer> partitionLabels(String S) {

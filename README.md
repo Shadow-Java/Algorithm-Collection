@@ -14,4 +14,5 @@
    |9|[Binary Tree Preorder Traversal](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)| Tree |[Java](SourceCode/src/BinaryTreePreorderTraversal.java)|Medium|144|
    |10|[Unique Number of Occurrences](https://leetcode-cn.com/problems/unique-number-of-occurrences/)| Array |[Java](SourceCode/src/UniqueNumberOccurrences.java)|Easy|1207|
    |11|[Sum Root to Leaf Numbers](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/)| Tree |[Java](SourceCode/src/SumRootLeafNumbers.java)|Medium|129|
+   |12|[Binary Tree Level Order Traversal](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)| Tree |[Java](SourceCode/src/BinaryTreeLevelOrderTraversal.java)|Medium|102|
    
