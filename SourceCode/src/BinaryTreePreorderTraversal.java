@@ -72,6 +72,7 @@ public class BinaryTreePreorderTraversal {
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
             System.out.print(node.val + " ");
+            //注意这里迭代是先加入右节点，因为用的是栈数据结构
             if (node.right != null) {
                 stack.push(node.right);
             }
