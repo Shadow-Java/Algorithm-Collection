@@ -32,49 +32,65 @@ import java.util.*;
  * collection.getRandom();
  *
  */
-public class RandomizedCollection {
-        Map<Integer, Set<Integer>> idx;
-        List<Integer> nums;
+class RandomizedCollection {
+    private List<Integer> value;
+    private Map<Integer, Set<Integer>> set;//key为插入的值，set为id的集合
 
-        /** Initialize your data structure here. */
-        public RandomizedCollection() {
-            idx = new HashMap<Integer, Set<Integer>>();
-            nums = new ArrayList<Integer>();
+    /** Initialize your data structure here. */
+    public RandomizedCollection() {
+        value = new ArrayList<>();
+        set = new HashMap<Integer,Set<Integer>>();
+    }
+
+    /** Inserts a value to the collection. Returns true if the collection did not already contain the specified element.
+     *list插入时是O(1)，但是需要遍历整个list判断是否存在，以此用hashmap存储字段的id，只需要将数字插入到最后
+     *迷惑的点：该情况假想的是一开始都没有数据存储在集合里，即一开始就用自己定义的规则
+     */
+    public boolean insert(int val) {
+        //将数字的id提取出来，插入到最后一位
+        value.add(val);
+        Set<Integer> ids = set.getOrDefault(val,new HashSet<Integer>()); //提取插入值的所有id
+        ids.add(value.size()-1);//插入最后一位，记录id
+        set.put(val,ids);//将提取的ids插入到原来的hashmap
+        return ids.size()==1;//如果只插入一个说明之前不包含，大于2说明包含 true是包含
+    }
+    /**
+     * getOrDefault(val,new HashSet<Integer>())  map中存在key就获取对应的value，不存在则ids为new HashSet<Integer>()
+     */
+
+    /** Removes a value from the collection. Returns true if the collection contained the specified element. */
+    public boolean remove(int val) {
+        if(!set.containsKey(val)){
+            return false;
         }
-
-        /** Inserts a value to the collection. Returns true if the collection did not already contain the specified element. */
-        public boolean insert(int val) {
-            nums.add(val);
-            Set<Integer> set = idx.getOrDefault(val, new HashSet<Integer>());
-            set.add(nums.size() - 1);
-            idx.put(val, set);
-            return set.size() == 1;
+        Iterator<Integer> it = set.get(val).iterator();
+        int i = it.next();
+        int lastNum = value.get(value.size() - 1);
+        value.set(i, lastNum);
+        set.get(val).remove(i);
+        set.get(lastNum).remove(value.size() - 1);
+        if (i < value.size() - 1) {
+            set.get(lastNum).add(i);
         }
-
-        /** Removes a value from the collection. Returns true if the collection contained the specified element. */
-        public boolean remove(int val) {
-            if (!idx.containsKey(val)) {
-                return false;
-            }
-            Iterator<Integer> it = idx.get(val).iterator();
-            int i = it.next();
-            int lastNum = nums.get(nums.size() - 1);
-            nums.set(i, lastNum);
-            idx.get(val).remove(i);
-            idx.get(lastNum).remove(nums.size() - 1);
-            if (i < nums.size() - 1) {
-                idx.get(lastNum).add(i);
-            }
-            if (idx.get(val).size() == 0) {
-                idx.remove(val);
-            }
-            nums.remove(nums.size() - 1);
-            return true;
+        if (set.get(val).size() == 0) {
+            set.remove(val);
         }
+        value.remove(value.size() - 1);
+        return true;
 
-        /** Get a random element from the collection. */
-        public int getRandom() {
-            return nums.get((int) (Math.random() * nums.size()));
-        }
+    }
 
+    /** Get a random element from the collection. */
+    public int getRandom() {
+        return value.get((int) (Math.random() * value.size()));//获取id的随机值
+    }
 }
+
+/**
+ * Your RandomizedCollection object will be instantiated and called as such:
+ * RandomizedCollection obj = new RandomizedCollection();
+ * boolean param_1 = obj.insert(val);
+ * boolean param_2 = obj.remove(val);
+ * int param_3 = obj.getRandom();
+ */
+
