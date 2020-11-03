@@ -35,15 +35,23 @@ public class ValidMountainArray {
         return true;
     }
 
-    //优化方法
+    /**
+     * 优化方法 双指针
+     * 可以使用两种指针，一个从左边找最高山峰，一个从右边找最高山峰，最后判断找到的是不是同一个山峰
+     */
     public boolean validMountainArray_2(int[] A) {
-        if(A.length<3 || A[1]<A[0])  return false;
-        int i=1;
-        while(i<A.length && A[i]>A[i-1]) i++;
-        if(i==A.length) return false;
-        while(i<A.length && A[i]<A[i-1]) i++;
-        if(i<A.length) return false;
-        return true;
+        int len = A.length;
+        int left = 0;
+        int right = len - 1;
+        //从左边往右边找，一直找到山峰为止
+        while (left + 1 < len && A[left] < A[left + 1])
+            left++;
+        //从右边往左边找，一直找到山峰为止
+        while (right > 0 && A[right - 1] > A[right])
+            right--;
+        //判断从左边和从右边找的山峰是不是同一个
+        return left > 0 && right < len - 1 && left == right;
     }
+
 
 }
