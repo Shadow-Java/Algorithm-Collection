@@ -19,6 +19,6 @@
    |14|[Intersection of Two Arrays](https://leetcode-cn.com/problems/intersection-of-two-arrays/)| <font color=#F0FFF0>Array</font> |[Java](SourceCode/src/IntersectionTwoArrays.java)|<font color=#00FFFF>Easy</font>|349|
    |15|[Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)| <font color=#F0FFF0>Array\|HashTable</font> |[Java](SourceCode/src/RandomizedCollection.java)|<font color=#0000FF>Hard</font>|381|
    |16|[Valid Mountain Array](https://leetcode-cn.com/problems/valid-mountain-array/)| <font color=#F0FFF0>Array</font> |[Java](SourceCode/src/ValidMountainArray.java)|<font color=#00FFFF>Easy</font>|941|
-   |17|[Insert Interval](https://leetcode-cn.com/problems/insert-interval/)| <font color=#F0FFF0>Array\|Sort</font> |[Java](SourceCode/src/InsertInterval.java)|<font color=#0000FF>Hard</font>|941|
+   |17|[Insert Interval](https://leetcode-cn.com/problems/insert-interval/)| <font color=#F0FFF0>Array\|Sort</font> |[Java](SourceCode/src/InsertInterval.java)|<font color=#0000FF>Hard</font>|57|
    
    
