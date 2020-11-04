@@ -17,7 +17,8 @@
    |12|[Binary Tree Level Order Traversal](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)| <font color=#ADFF2F>Tree</font> |[Java](SourceCode/src/BinaryTreeLevelOrderTraversal.java)|<font color=#FFD700>Medium</font>|102|
    |13|[Island Perimeter](https://leetcode-cn.com/problems/island-perimeter/)| <font color=#F0FFF0>Array</font> |[Java](SourceCode/src/IslandPerimeter.java)|<font color=#FFD700>Medium</font>|463|
    |14|[Intersection of Two Arrays](https://leetcode-cn.com/problems/intersection-of-two-arrays/)| <font color=#F0FFF0>Array</font> |[Java](SourceCode/src/IntersectionTwoArrays.java)|<font color=#00FFFF>Easy</font>|349|
-   |15|[Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)| <font color=#F0FFF0>Array\|HashTable</font> |[Java](SourceCode/src/RandomizedCollection.java)|<font color=#00FFFF>Hard</font>|381|
-   |16|[Valid Mountain Array](https://leetcode-cn.com/problems/valid-mountain-array/)| <font color=#F0FFF0>Array</font> |[Java](SourceCode/src/ValidMountainArray.java)\|[Python](SourceCode/src/ValidMountainArray.py)|<font color=#00FFFF>Easy</font>|941|
+   |15|[Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)| <font color=#F0FFF0>Array\|HashTable</font> |[Java](SourceCode/src/RandomizedCollection.java)|<font color=#0000FF>Hard</font>|381|
+   |16|[Valid Mountain Array](https://leetcode-cn.com/problems/valid-mountain-array/)| <font color=#F0FFF0>Array</font> |[Java](SourceCode/src/ValidMountainArray.java)|<font color=#00FFFF>Easy</font>|941|
+   |17|[Insert Interval](https://leetcode-cn.com/problems/insert-interval/)| <font color=#F0FFF0>Array\|Sort</font> |[Java](SourceCode/src/InsertInterval.java)|<font color=#0000FF>Hard</font>|941|
    
    
