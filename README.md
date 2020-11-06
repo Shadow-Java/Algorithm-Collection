@@ -19,6 +19,7 @@
    |14|[Intersection of Two Arrays](https://leetcode-cn.com/problems/intersection-of-two-arrays/)| <font color=#F0FFF0>Array</font> |[Java](SourceCode/src/IntersectionTwoArrays.java)|<font color=#00FFFF>Easy</font>|349|
    |15|[Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)| <font color=#F0FFF0>Array\|HashTable</font> |[Java](SourceCode/src/RandomizedCollection.java)|<font color=#0000FF>Hard</font>|381|
    |16|[Valid Mountain Array](https://leetcode-cn.com/problems/valid-mountain-array/)| <font color=#F0FFF0>Array</font> |[Java](SourceCode/src/ValidMountainArray.java)|<font color=#00FFFF>Easy</font>|941|
-   |17|[Insert Interval](https://leetcode-cn.com/problems/insert-interval/)| <font color=#F0FFF0>Array\|Sort</font> |[Java](SourceCode/src/InsertInterval.java)|<font color=#0000FF>Hard</font>|57|
-   
+   |17|[Insert Interval](https://leetcode-cn.com/problems/insert-interval/)| <font color=#8FBC8F>Array\|Sort</font> |[Java](SourceCode/src/InsertInterval.java)|<font color=#0000FF>Hard</font>|57|
+   |18|[Word Ladder](https://leetcode-cn.com/problems/word-ladder/)| <font color=#5F9EA0>Breadth-first Search</font> |[Java](SourceCode/src/WordLadder.java)|<font color=#FFD700>Medium</font>|127|
+   |19|[Sort Integers by The Number of 1 Bits](https://leetcode-cn.com/problems/sort-integers-by-the-number-of-1-bits/)| <font color=#FFE4C4>Bit Manipulation</font> |[Java](SourceCode/src/SortIntegersTheNumberBits.java)|<font color=#00FFFF>Easy</font>|1356|
    
