@@ -1,9 +1,6 @@
 package SourceCode.src;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * 给你一个整数数组 arr 。请你将数组中的元素按照其二进制表示中数字 1 的数目升序排序。
@@ -22,10 +19,10 @@ import java.util.List;
  *
  */
 public class SortIntegersTheNumberBits {
-    //根据2的个数进行排序
+    //暴力解法一
     public int[] sortByBits(int[] arr) {//加入list，排序利用集合的compare
         int[] bit = new int[10001];
-        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<Integer>();//可以排序的间接数组
         for (int x : arr) {
             list.add(x);
             bit[x] = get(x);
@@ -53,5 +50,24 @@ public class SortIntegersTheNumberBits {
         }
         return res;
     }
+
+    /**
+     * 暴力解法二
+     * Integer.bitCount统计1的个数，求余的10000000必须比arr[i]大
+     * @param arr
+     * @return
+     */
+    public int[] sortByBits_2(int[] arr) {
+        int[] res = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            res[i] = Integer.bitCount(arr[i]) * 10000000 + arr[i];
+        }
+        Arrays.sort(res);//自带的排序函数
+        for (int i = 0; i < res.length; i++) {
+            res[i] = res[i] % 10000000;//求余得arr[i]
+        }
+        return res;
+    }
+
 
 }
