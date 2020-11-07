@@ -22,4 +22,5 @@
    |17|[Insert Interval](https://leetcode-cn.com/problems/insert-interval/)| <font color=#8FBC8F>Array\|Sort</font> |[Java](SourceCode/src/InsertInterval.java)|<font color=#0000FF>Hard</font>|57|
    |18|[Word Ladder](https://leetcode-cn.com/problems/word-ladder/)| <font color=#5F9EA0>Breadth-first Search</font> |[Java](SourceCode/src/WordLadder.java)|<font color=#FFD700>Medium</font>|127|
    |19|[Sort Integers by The Number of 1 Bits](https://leetcode-cn.com/problems/sort-integers-by-the-number-of-1-bits/)| <font color=#FFE4C4>Bit Manipulation</font> |[Java](SourceCode/src/SortIntegersTheNumberBits.java)|<font color=#00FFFF>Easy</font>|1356|
+   |19|[Count of Range Sum](https://leetcode-cn.com/problems/count-of-range-sum/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/SortIntegersTheNumberBits.java)|<font color=#0000FF>Hard</font>|1356|
    
