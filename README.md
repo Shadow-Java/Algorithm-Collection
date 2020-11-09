@@ -24,4 +24,5 @@
    |19|[Sort Integers by The Number of 1 Bits](https://leetcode-cn.com/problems/sort-integers-by-the-number-of-1-bits/)| <font color=#FFE4C4>Bit Manipulation</font> |[Java](SourceCode/src/SortIntegersTheNumberBits.java)|<font color=#00FFFF>Easy</font>|1356|
    |20|[Count of Range Sum](https://leetcode-cn.com/problems/count-of-range-sum/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/SortIntegersTheNumberBits.java)|<font color=#0000FF>Hard</font>|327|
    |21|[Best Time to Buy and Sell Stock II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)| <font color=#FFE4C4>Greedy</font> |[Java](SourceCode/src/BestTimeBuySellStock.java)|<font color=#00FFFF>Easy</font>|122|
+   |22|[K Closest Points to Origin](https://leetcode-cn.com/problems/k-closest-points-to-origin/)| <font color=#FFE4C4>Divide and Conquer</font> |[Java](SourceCode/src/KClosestPointsOrigin.java)|<font color=#FFD700>Medium</font>|122|
    
