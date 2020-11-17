@@ -27,7 +27,8 @@
    |22|[K Closest Points to Origin](https://leetcode-cn.com/problems/k-closest-points-to-origin/)| <font color=#FFE4C4>Divide and Conquer</font> |[Java](SourceCode/src/KClosestPointsOrigin.java)|<font color=#FFD700>Medium</font>|973|
    |23|[Next Permutation](https://leetcode-cn.com/problems/next-permutation/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/NextPermutation.java)|<font color=#FFD700>Medium</font>|31|
    |24|[Freedom Trail](https://leetcode-cn.com/problems/freedom-trail/)| <font color=#FFE4C4>Depth-first Search</font> |[Java](SourceCode/src/FreedomTrail.java)|<font color=#0000FF>Hard</font>|514|
-   
+   |25|[Queue Reconstruction by Height](https://leetcode-cn.com/problems/queue-reconstruction-by-height/)| <font color=#FFE4C4>Greedy</font> |[Java](SourceCode/src/QueueReconstructionHeight.java)|<font color=#FFD700>Medium</font>|406|
+   |26|[Matrix Cells in Distance Order](https://leetcode-cn.com/problems/matrix-cells-in-distance-order/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/MatrixCellsDistanceOrder.java)|<font color=#00FFFF>Easy</font>|1030|
    
 ##  :thinking:多线程
 
