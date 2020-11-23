@@ -29,9 +29,22 @@
    |24|[Freedom Trail](https://leetcode-cn.com/problems/freedom-trail/)| <font color=#FFE4C4>Depth-first Search</font> |[Java](SourceCode/src/FreedomTrail.java)|<font color=#0000FF>Hard</font>|514|
    |25|[Queue Reconstruction by Height](https://leetcode-cn.com/problems/queue-reconstruction-by-height/)| <font color=#FFE4C4>Greedy</font> |[Java](SourceCode/src/QueueReconstructionHeight.java)|<font color=#FFD700>Medium</font>|406|
    |26|[Matrix Cells in Distance Order](https://leetcode-cn.com/problems/matrix-cells-in-distance-order/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/MatrixCellsDistanceOrder.java)|<font color=#00FFFF>Easy</font>|1030|
+   |27|[Gas Station](https://leetcode-cn.com/problems/gas-station/)| <font color=#FFE4C4>Greedy</font> |[Java](SourceCode/src/MatrixCellsDistanceOrder.java)|<font color=#00FFFF>Easy</font>|1030|
+   |28|[Move Zeroes](https://leetcode-cn.com/problems/move-zeroes/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/MoveZeroes.java)|<font color=#00FFFF>Easy</font>|283|
+   |29|[Insertion Sort List](https://leetcode-cn.com/problems/insertion-sort-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/InsertionSortList.java)|<font color=#FFD700>Medium</font>|147|
+   |30|[Insertion Sort List](https://leetcode-cn.com/problems/insertion-sort-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/InsertionSortList.java)|<font color=#FFD700>Medium</font>|147|
+   |31|[Insertion Sort List](https://leetcode-cn.com/problems/insertion-sort-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/InsertionSortList.java)|<font color=#FFD700>Medium</font>|147|
    
 ##  :thinking:多线程
 
    | # | Title | Type | Source Code | Difficulty | Qid |
    |:---:|:---:|:---:|:---:|:---:|:---:|
    |1|[Print in Order](https://leetcode-cn.com/problems/print-in-order/)| <font color=#FFE4C4>MultiThreading</font> |[Java](SourceCode/src/PrintOrder.java)|<font color=#00FFFF>Easy</font>|1114|
+   
+## :parasol_on_ground:算法框架总结
+
+   二分查找
+   BFS
+   DFS
+   
+   
