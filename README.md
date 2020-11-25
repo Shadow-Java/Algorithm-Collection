@@ -34,6 +34,7 @@
    |29|[Insertion Sort List](https://leetcode-cn.com/problems/insertion-sort-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/InsertionSortList.java)|<font color=#FFD700>Medium</font>|147|
    |30|[Minimum Number of Arrows to Burst Balloons](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/MinimumBalloons.java)|<font color=#FFD700>Medium</font>|452|
    |31|[Count Complete Tree Nodes](https://leetcode-cn.com/problems/count-complete-tree-nodes/)| <font color=#FFE4C4>Tree</font> |[Java](SourceCode/src/CountCompleteTreeNodes.java)|<font color=#FFD700>Medium</font>|222|
+   |32|[Increasing Decreasing String](https://leetcode-cn.com/problems/increasing-decreasing-string/)| <font color=#FFE4C4>Tree</font> |[Java](SourceCode/src/IncreasingDecreasingString.java)|<font color=#00FFFF>Easy</font>|1370|
    
 ##  :thinking:多线程
 
