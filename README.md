@@ -32,8 +32,8 @@
    |27|[Gas Station](https://leetcode-cn.com/problems/gas-station/)| <font color=#FFE4C4>Greedy</font> |[Java](SourceCode/src/MatrixCellsDistanceOrder.java)|<font color=#00FFFF>Easy</font>|1030|
    |28|[Move Zeroes](https://leetcode-cn.com/problems/move-zeroes/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/MoveZeroes.java)|<font color=#00FFFF>Easy</font>|283|
    |29|[Insertion Sort List](https://leetcode-cn.com/problems/insertion-sort-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/InsertionSortList.java)|<font color=#FFD700>Medium</font>|147|
-   |30|[Insertion Sort List](https://leetcode-cn.com/problems/insertion-sort-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/InsertionSortList.java)|<font color=#FFD700>Medium</font>|147|
-   |31|[Insertion Sort List](https://leetcode-cn.com/problems/insertion-sort-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/InsertionSortList.java)|<font color=#FFD700>Medium</font>|147|
+   |30|[Minimum Number of Arrows to Burst Balloons](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/MinimumBalloons.java)|<font color=#FFD700>Medium</font>|452|
+   |31|[Count Complete Tree Nodes](https://leetcode-cn.com/problems/count-complete-tree-nodes/)| <font color=#FFE4C4>Tree</font> |[Java](SourceCode/src/CountCompleteTreeNodes.java)|<font color=#FFD700>Medium</font>|222|
    
 ##  :thinking:多线程
 
