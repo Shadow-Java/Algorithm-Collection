@@ -34,7 +34,9 @@
    |29|[Insertion Sort List](https://leetcode-cn.com/problems/insertion-sort-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/InsertionSortList.java)|<font color=#FFD700>Medium</font>|147|
    |30|[Minimum Number of Arrows to Burst Balloons](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/MinimumBalloons.java)|<font color=#FFD700>Medium</font>|452|
    |31|[Count Complete Tree Nodes](https://leetcode-cn.com/problems/count-complete-tree-nodes/)| <font color=#FFE4C4>Tree</font> |[Java](SourceCode/src/CountCompleteTreeNodes.java)|<font color=#FFD700>Medium</font>|222|
-   |32|[Increasing Decreasing String](https://leetcode-cn.com/problems/increasing-decreasing-string/)| <font color=#FFE4C4>Tree</font> |[Java](SourceCode/src/IncreasingDecreasingString.java)|<font color=#00FFFF>Easy</font>|1370|
+   |32|[Increasing Decreasing String](https://leetcode-cn.com/problems/increasing-decreasing-string/)| <font color=#FFE4C4>String</font> |[Java](SourceCode/src/IncreasingDecreasingString.java)|<font color=#00FFFF>Easy</font>|1370|
+   |33|[Maximum Gap](https://leetcode-cn.com/problems/maximum-gap/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/MaximumGap.java)|<font color=#0000FF>Hard</font>|164|
+   |34|[4Sum II](https://leetcode-cn.com/problems/4sum-ii/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/SumI.java)|<font color=#FFD700>Medium</font>|454|
    
 ##  :thinking:多线程
 
