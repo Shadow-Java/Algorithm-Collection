@@ -37,6 +37,8 @@
    |32|[Increasing Decreasing String](https://leetcode-cn.com/problems/increasing-decreasing-string/)| <font color=#FFE4C4>String</font> |[Java](SourceCode/src/IncreasingDecreasingString.java)|<font color=#00FFFF>Easy</font>|1370|
    |33|[Maximum Gap](https://leetcode-cn.com/problems/maximum-gap/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/MaximumGap.java)|<font color=#0000FF>Hard</font>|164|
    |34|[4Sum II](https://leetcode-cn.com/problems/4sum-ii/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/SumI.java)|<font color=#FFD700>Medium</font>|454|
+   |35|[Largest Perimeter Triangle](https://leetcode-cn.com/problems/largest-perimeter-triangle/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/LargestPerimeterTriangle.java)|<font color=#00FFFF>Easy</font>|976|
+   |36|[Reverse Pairs](https://leetcode-cn.com/problems/reverse-pairs/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/ReversePairs.java)|<font color=#0000FF>Hard</font>|493|
    
 ##  :thinking:多线程
 
