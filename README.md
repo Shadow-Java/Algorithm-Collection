@@ -41,6 +41,8 @@
    |36|[Reverse Pairs](https://leetcode-cn.com/problems/reverse-pairs/)| <font color=#FFE4C4>Sort</font> |[Java](SourceCode/src/ReversePairs.java)|<font color=#0000FF>Hard</font>|493|
    |37|[Reorganize String](https://leetcode-cn.com/problems/reorganize-string/)| <font color=#FFE4C4>Heap</font> |[Java](SourceCode/src/ReorganizeString.java)|<font color=#FFD700>Medium</font>|767|
    |38|[Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/FindArray.java)|<font color=#FFD700>Medium</font>|34|
+   |39|[Count Primes](https://leetcode-cn.com/problems/count-primes/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/FindArray.java)|<font color=#FFD700>Medium</font>|34|
+   |40|[Unique Paths](https://leetcode-cn.com/problems/unique-paths/)| <font color=#FFE4C4>Dynamic programming</font> |[Java](SourceCode/src/UniquePaths.java)|<font color=#FFD700>Medium</font>|62|
    
 ##  :thinking:多线程
 
