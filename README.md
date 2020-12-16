@@ -43,6 +43,8 @@
    |38|[Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/FindArray.java)|<font color=#FFD700>Medium</font>|34|
    |39|[Count Primes](https://leetcode-cn.com/problems/count-primes/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/FindArray.java)|<font color=#FFD700>Medium</font>|34|
    |40|[Unique Paths](https://leetcode-cn.com/problems/unique-paths/)| <font color=#FFE4C4>Dynamic programming</font> |[Java](SourceCode/src/UniquePaths.java)|<font color=#FFD700>Medium</font>|62|
+   |41|[Lemonade Change](https://leetcode-cn.com/problems/lemonade-change/)| <font color=#FFE4C4>Greedy</font> |[Java](SourceCode/src/LemonadeChange.java)|<font color=#00FFFF>Easy</font>|860|
+   |42|[Word Pattern](https://leetcode-cn.com/problems/word-pattern/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/WordPattern.java)|<font color=#00FFFF>Easy</font>|290|
    
 ##  :thinking:多线程
 
