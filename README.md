@@ -45,6 +45,9 @@
    |40|[Unique Paths](https://leetcode-cn.com/problems/unique-paths/)| <font color=#FFE4C4>Dynamic programming</font> |[Java](SourceCode/src/UniquePaths.java)|<font color=#FFD700>Medium</font>|62|
    |41|[Lemonade Change](https://leetcode-cn.com/problems/lemonade-change/)| <font color=#FFE4C4>Greedy</font> |[Java](SourceCode/src/LemonadeChange.java)|<font color=#00FFFF>Easy</font>|860|
    |42|[Word Pattern](https://leetcode-cn.com/problems/word-pattern/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/WordPattern.java)|<font color=#00FFFF>Easy</font>|290|
+   |43|[Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)| <font color=#FFE4C4>Dynamic Programming</font> |[Java](SourceCode/src/SellStock.java)|<font color=#FFD700>Medium</font>|714|
+   |44|[First Unique Character in a String](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/FirstUniqueCharacter.java)|<font color=#00FFFF>Easy</font>|387|
+   |45|[Find the Difference](https://leetcode-cn.com/problems/find-the-difference/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/FindDifference.java)|<font color=#00FFFF>Easy</font>|389|
    
 ##  :thinking:多线程
 
