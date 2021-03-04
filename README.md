@@ -48,6 +48,9 @@
    |43|[Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)| <font color=#FFE4C4>Dynamic Programming</font> |[Java](SourceCode/src/SellStock.java)|<font color=#FFD700>Medium</font>|714|
    |44|[First Unique Character in a String](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/FirstUniqueCharacter.java)|<font color=#00FFFF>Easy</font>|387|
    |45|[Find the Difference](https://leetcode-cn.com/problems/find-the-difference/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/FindDifference.java)|<font color=#00FFFF>Easy</font>|389|
+   |46|[Binary Prefix Divisible By 5](https://leetcode-cn.com/problems/binary-prefix-divisible-by-5/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/BinaryPrefixDivisible.java)|<font color=#00FFFF>Easy</font>|1018|
+   |47|[Range Sum Query 2D - Immutable](https://leetcode-cn.com/problems/range-sum-query-2d-immutable/)| <font color=#FFE4C4>Dynamic Programming</font> |[Java](SourceCode/src/RangeSumQuery.java)|<font color=#FFD700>Medium</font>|304|
+   |48|[Russian Doll Envelopes](https://leetcode-cn.com/problems/russian-doll-envelopes/)| <font color=#FFE4C4>Dynamic Programming</font> |[Java](SourceCode/src/RussianDollEnvelopes.java)|<font color=#0000FF>Hard</font>|354|
    
 ##  :thinking:多线程
 
