@@ -67,10 +67,5 @@
    |:---:|:---:|:---:|:---:|:---:|:---:|
    |1|[Print in Order](https://leetcode-cn.com/problems/print-in-order/)| <font color=#FFE4C4>MultiThreading</font> |[Java](SourceCode/src/PrintOrder.java)|<font color=#00FFFF>Easy</font>|1114|
    
-## :parasol_on_ground:算法框架总结
-
-   二分查找
-   BFS
-   DFS
    
    
