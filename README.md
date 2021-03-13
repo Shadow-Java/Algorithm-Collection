@@ -53,14 +53,20 @@
    |48|[Russian Doll Envelopes](https://leetcode-cn.com/problems/russian-doll-envelopes/)| <font color=#FFE4C4>Dynamic Programming</font> |[Java](SourceCode/src/RussianDollEnvelopes.java)|<font color=#0000FF>Hard</font>|354|
    |49|[Palindrome Partitioning II](https://leetcode-cn.com/problems/palindrome-partitioning-ii/)| <font color=#FFE4C4>Dynamic Programming</font> |[Java](SourceCode/src/PalindromePartitioningII.java)|<font color=#0000FF>Hard</font>|132|
    |50|[Remove All Adjacent Duplicates In String](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/RemoveAllAdjacentDuplicates.java)|<font color=#00FFFF>Easy</font>|1047|
+   |51|[Design HashSet](https://leetcode-cn.com/problems/design-hashset/)| <font color=#FFE4C4>Design</font> |[Java](SourceCode/src/DesignHashSet.java)|<font color=#00FFFF>Easy</font>|705|
    
    
-## TODO LIST (3.10)
-
+## TODO LIST (3第二周)
 
 - [ ]  232. 用栈实现队列
+- [ ]  224. 基本计算器
+- [ ]  227. 基本计算器 II
+- [ ]  331. 验证二叉树的前序序列化
+- [ ]  131. 分割回文串
 
-- [X]  1047. 删除字符串中的所有相邻重复项  
+- [X]  1047. 删除字符串中的所有相邻重复项
+- [X]  705. 设计hashset  
+
    
 ##  :thinking:多线程
 
