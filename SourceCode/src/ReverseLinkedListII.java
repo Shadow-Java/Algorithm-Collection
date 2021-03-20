@@ -21,14 +21,14 @@ public class ReverseLinkedListII {
         for(int i = 1; i < m; i++){
             pre = pre.next;
         }
-        head = pre.next;
+        head = pre.next;//head为pre.next对象的引用
         for(int i = m; i < n; i++){
             ListNode nex = head.next;
             head.next = nex.next;
             nex.next = pre.next;
             pre.next = nex;
         }
-        return dummy.next;
+        return dummy.next;//pre改变，同一内存下的结点值dummy头结点不变
     }
 
 
