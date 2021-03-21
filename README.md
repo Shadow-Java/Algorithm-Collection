@@ -62,6 +62,7 @@
    |57|[Basic Calculator II](https://leetcode-cn.com/problems/basic-calculator-ii/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/BasicCalculatorII.java)|<font color=#FFD700>Medium</font>|227|
    |58|[Implement Queue using Stacks](https://leetcode-cn.com/problems/implement-queue-using-stacks/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/ImplementQueueusingStacks.java)|<font color=#00FFFF>Easy</font>|232|
    |59|[Design HashMap](https://leetcode-cn.com/problems/design-hashmap/)| <font color=#FFE4C4>Design</font> |[Java](SourceCode/src/DesignHashMap.java)|<font color=#00FFFF>Easy</font>|706|
+   |60|[Set Matrix Zeroes](https://leetcode-cn.com/problems/set-matrix-zeroes/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/SetMatrixZeroes.java)|<font color=#FFD700>Medium</font>|73|
    
 ## TODO LIST (3第二周)
 
