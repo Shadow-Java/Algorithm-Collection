@@ -58,14 +58,18 @@
    |53|[Kth Largest Element in an Array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)| <font color=#FFE4C4>Heap</font> |[Java](SourceCode/src/KthLargestElementArray.java)|<font color=#FFD700>Medium</font>|215|
    |54|[Design Parking System](https://leetcode-cn.com/problems/design-parking-system/)| <font color=#FFE4C4>Design</font> |[Java](SourceCode/src/DesignParkingSystem.java)|<font color=#00FFFF>Easy</font>|215|
    |55|[Evaluate Reverse Polish Notation](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/EvaluateReversePolishNotation.java)|<font color=#FFD700>Medium</font>|150|
+   |56|[Basic Calculator](https://leetcode-cn.com/problems/basic-calculator/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/BasicCalculator.java)|<font color=#0000FF>Hard</font>|224|
+   |57|[Basic Calculator II](https://leetcode-cn.com/problems/basic-calculator-ii/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/BasicCalculatorII.java)|<font color=#FFD700>Medium</font>|227|
+   |58|[Implement Queue using Stacks](https://leetcode-cn.com/problems/implement-queue-using-stacks/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/ImplementQueueusingStacks.java)|<font color=#00FFFF>Easy</font>|232|
+   |59|[Design HashMap](https://leetcode-cn.com/problems/design-hashmap/)| <font color=#FFE4C4>Design</font> |[Java](SourceCode/src/DesignHashMap.java)|<font color=#00FFFF>Easy</font>|706|
    
 ## TODO LIST (3第二周)
 
-- [ ]  232. 用栈实现队列
-- [ ]  224. 基本计算器
-- [ ]  227. 基本计算器 II
+- [X]  232. 用栈实现队列
+- [X]  224. 基本计算器
+- [X]  227. 基本计算器 II
 - [ ]  331. 验证二叉树的前序序列化
-- [ ]  131. 分割回文串
+- [X]  131. 分割回文串
 
 - [X]  1047. 删除字符串中的所有相邻重复项
 - [X]  705. 设计hashset  
