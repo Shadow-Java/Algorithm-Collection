@@ -64,18 +64,36 @@
    |59|[Design HashMap](https://leetcode-cn.com/problems/design-hashmap/)| <font color=#FFE4C4>Design</font> |[Java](SourceCode/src/DesignHashMap.java)|<font color=#00FFFF>Easy</font>|706|
    |60|[Set Matrix Zeroes](https://leetcode-cn.com/problems/set-matrix-zeroes/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/SetMatrixZeroes.java)|<font color=#FFD700>Medium</font>|73|
    
-## TODO LIST (3第二周)
+## TODO LIST (3月)
 
-- [X]  232. 用栈实现队列
-- [X]  224. 基本计算器
-- [X]  227. 基本计算器 II
-- [ ]  331. 验证二叉树的前序序列化
-- [X]  131. 分割回文串
-
-- [X]  1047. 删除字符串中的所有相邻重复项
-- [X]  705. 设计hashset  
-
-   
+- [X] 第二周
+    - [X]  232. 用栈实现队列
+    - [X]  224. 基本计算器
+    - [X]  227. 基本计算器 II
+    - [X]  131. 分割回文串
+    - [X]  1047. 删除字符串中的所有相邻重复项
+    - [X]  705. 设计hashset
+    
+- [ ] 第三周
+     - [ ]  331. 验证二叉树的前序序列化
+     - [X]  150. 逆波兰表达式求值
+     - [X]  1603.设计停车系统
+     - [X]  92.反转链表
+     - [ ]  115.不同子序列
+     - [X]  706.设计哈希映射
+     - [ ]  54.螺旋矩阵
+     - [ ]  59.螺旋矩阵II
+     
+- [ ] Extra Branch
+     - [ ]  剑指offer
+           - [ ] 03.数组中重复的数字
+           - [ ] 04.二维数组中的查找
+     - [ ]  腾讯精选50题   
+           - [ ] 2.两数相加
+           - [ ] 4.寻找两个正序数组的中位数
+     - [ ]  字节跳动
+           - [ ] 23.合并K个升序链表
+     
 ##  :thinking:多线程
 
    | # | Title | Type | Source Code | Difficulty | Qid |
