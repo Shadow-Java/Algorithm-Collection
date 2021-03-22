@@ -63,6 +63,7 @@
    |58|[Implement Queue using Stacks](https://leetcode-cn.com/problems/implement-queue-using-stacks/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/ImplementQueueusingStacks.java)|<font color=#00FFFF>Easy</font>|232|
    |59|[Design HashMap](https://leetcode-cn.com/problems/design-hashmap/)| <font color=#FFE4C4>Design</font> |[Java](SourceCode/src/DesignHashMap.java)|<font color=#00FFFF>Easy</font>|706|
    |60|[Set Matrix Zeroes](https://leetcode-cn.com/problems/set-matrix-zeroes/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/SetMatrixZeroes.java)|<font color=#FFD700>Medium</font>|73|
+   |61|[Number of 1 Bits](https://leetcode-cn.com/problems/number-of-1-bits/)| <font color=#FFE4C4>Bit Manipulation</font> |[Java](SourceCode/src/NumberofBits.java)|<font color=#00FFFF>Easy</font>|191|
    
 ## TODO LIST (3月)
 
