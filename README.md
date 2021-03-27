@@ -68,6 +68,7 @@
    |62|[Remove Duplicates from Sorted List II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/RemoveDuplicates.java)|<font color=#FFD700>Medium</font>|82|
    |63|[Flatten Nested List Iterator](https://leetcode-cn.com/problems/flatten-nested-list-iterator/)| <font color=#FFE4C4>Design</font> |[Java](SourceCode/src/FlattenNestedListIterator.java)|<font color=#FFD700>Medium</font>|341|
    |64|[Remove Duplicates from Sorted List](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/RemoveDuplicatesfromSortedList.java)|<font color=#00FFFF>Easy</font>|83|
+   |65|[Rotate List](https://leetcode-cn.com/problems/rotate-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/RotateList.java)|<font color=#FFD700>Medium</font>|61|
    
 ## TODO LIST (3月)
 
