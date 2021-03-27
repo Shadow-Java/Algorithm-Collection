@@ -9,15 +9,26 @@ package SourceCode.src;
  */
 public class RemoveDuplicatesfromSortedList {
     public ListNode deleteDuplicates(ListNode head) {
-        return new ListNode();
+        if(head == null){
+            return null;
+        }
+        ListNode curNode = head;
+        while(curNode != null && curNode.next != null){
+            if(curNode.val == curNode.next.val){//如果相等，则删除节点，但是不更新指针
+                curNode.next = curNode.next.next;
+            }else{
+                curNode = curNode.next;//不等则更新当前指针
+            }
+        }
+        return head;
     }
 
     public class ListNode {
         int val;
-        RemoveDuplicates.ListNode next;
+        ListNode next;
         ListNode() {}
         ListNode(int val) { this.val = val; }
-        ListNode(int val, RemoveDuplicates.ListNode next) { this.val = val; this.next = next; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 }
 
