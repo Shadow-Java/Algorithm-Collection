@@ -70,6 +70,7 @@
    |64|[Remove Duplicates from Sorted List](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/RemoveDuplicatesfromSortedList.java)|<font color=#00FFFF>Easy</font>|83|
    |65|[Rotate List](https://leetcode-cn.com/problems/rotate-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/RotateList.java)|<font color=#FFD700>Medium</font>|61|
    |67|[Binary Search Tree Iterator](https://leetcode-cn.com/problems/binary-search-tree-iterator/)| <font color=#FFE4C4>Tree|Stack</font> |[Java](SourceCode/src/BinarySearchTreeIterator.java)|<font color=#FFD700>Medium</font>|173|
+   |68|[Reverse Bits](https://leetcode-cn.com/problems/reverse-bits/)| <font color=#FFE4C4>Bit Manipulation</font> |[Java](SourceCode/src/ReverseBits.java)|<font color=#00FFFF>Easy</font>190|
    
 ## TODO LIST (3月)
 
