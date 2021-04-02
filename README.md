@@ -72,6 +72,7 @@
    |67|[Binary Search Tree Iterator](https://leetcode-cn.com/problems/binary-search-tree-iterator/)| <font color=#FFE4C4>Tree|Stack</font> |[Java](SourceCode/src/BinarySearchTreeIterator.java)|<font color=#FFD700>Medium</font>|173|
    |68|[Reverse Bits](https://leetcode-cn.com/problems/reverse-bits/)| <font color=#FFE4C4>Bit Manipulation</font> |[Java](SourceCode/src/ReverseBits.java)|<font color=#00FFFF>Easy</font>|190|
    |69|[Subsets II](https://leetcode-cn.com/problems/subsets-ii/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/SubsetsII.java)|<font color=#FFD700>Medium</font>|90|
+   |70|[Clumsy Factorial](https://leetcode-cn.com/problems/clumsy-factorial/    )| <font color=#FFE4C4>Math</font> |[Java](SourceCode/src/ClumsyFactorial.java)|<font color=#FFD700>Medium</font>|1006|
    
 ## TODO LIST (3月)
 
