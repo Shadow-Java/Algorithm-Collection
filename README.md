@@ -73,6 +73,8 @@
    |68|[Reverse Bits](https://leetcode-cn.com/problems/reverse-bits/)| <font color=#FFE4C4>Bit Manipulation</font> |[Java](SourceCode/src/ReverseBits.java)|<font color=#00FFFF>Easy</font>|190|
    |69|[Subsets II](https://leetcode-cn.com/problems/subsets-ii/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/SubsetsII.java)|<font color=#FFD700>Medium</font>|90|
    |70|[Clumsy Factorial](https://leetcode-cn.com/problems/clumsy-factorial/    )| <font color=#FFE4C4>Math</font> |[Java](SourceCode/src/ClumsyFactorial.java)|<font color=#FFD700>Medium</font>|1006|
+   |71|[Volume of Histogram LCCI](https://leetcode-cn.com/problems/volume-of-histogram-lcci/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/VolumeHistogramLCCI.java)|<font color=#0000FF>Hard</font>|面试题 17.21|
+   |72|[Longest Common Subsequence](https://leetcode-cn.com/problems/longest-common-subsequence/)| <font color=#FFE4C4>Dynamic Programming</font> |[Java](SourceCode/src/longestCommonSubsequence.java)|<font color=#FFD700>Medium</font>|1143|
    
 ## TODO LIST (3月)
 
