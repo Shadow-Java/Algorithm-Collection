@@ -76,6 +76,7 @@
    |71|[Volume of Histogram LCCI](https://leetcode-cn.com/problems/volume-of-histogram-lcci/)| <font color=#FFE4C4>Stack</font> |[Java](SourceCode/src/VolumeHistogramLCCI.java)|<font color=#0000FF>Hard</font>|面试题 17.21|
    |72|[Longest Common Subsequence](https://leetcode-cn.com/problems/longest-common-subsequence/)| <font color=#FFE4C4>Dynamic Programming</font> |[Java](SourceCode/src/longestCommonSubsequence.java)|<font color=#FFD700>Medium</font>|1143|
    |73|[Rabbits in Forest](https://leetcode-cn.com/problems/rabbits-in-forest/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/RabbitsinForest.java)|<font color=#FFD700>Medium</font>|781|
+   |74|[Merge Sorted Array](https://leetcode-cn.com/problems/merge-sorted-array/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/MergeSortedArray.java)|<font color=#00FFFF>Easy</font>|88|
    
 ## TODO LIST (3月)
 
