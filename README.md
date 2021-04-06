@@ -77,6 +77,7 @@
    |72|[Longest Common Subsequence](https://leetcode-cn.com/problems/longest-common-subsequence/)| <font color=#FFE4C4>Dynamic Programming</font> |[Java](SourceCode/src/longestCommonSubsequence.java)|<font color=#FFD700>Medium</font>|1143|
    |73|[Rabbits in Forest](https://leetcode-cn.com/problems/rabbits-in-forest/)| <font color=#FFE4C4>Hash Table</font> |[Java](SourceCode/src/RabbitsinForest.java)|<font color=#FFD700>Medium</font>|781|
    |74|[Merge Sorted Array](https://leetcode-cn.com/problems/merge-sorted-array/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/MergeSortedArray.java)|<font color=#00FFFF>Easy</font>|88|
+   |75|[Remove Duplicates from Sorted Array II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/)| <font color=#FFE4C4>Two Pointers</font> |[Java](SourceCode/src/RemoveDuplicatesfromSortedArrayII.java)|<font color=#FFD700>Medium</font>|80|
    
 ## TODO LIST (3月)
 
