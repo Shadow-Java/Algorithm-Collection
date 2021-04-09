@@ -80,6 +80,7 @@
    |75|[Remove Duplicates from Sorted Array II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/)| <font color=#FFE4C4>Two Pointers</font> |[Java](SourceCode/src/RemoveDuplicatesfromSortedArrayII.java)|<font color=#FFD700>Medium</font>|80|
    |76|[Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/Powxn.java)|<font color=#FFD700>Medium</font>|50|
    |77|[Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/FindMinimuminRotatedSortedArray.java)|<font color=#FFD700>Medium</font>|153|
+   |78|[Find Minimum in Rotated Sorted Array II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/FindMinimuminRotatedSortedArray.java)|<font color=#0000FF>Hard</font>|154|
    
 ## TODO LIST (3月)
 

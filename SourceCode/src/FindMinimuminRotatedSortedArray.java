@@ -31,19 +31,17 @@ public class FindMinimuminRotatedSortedArray {
      * @return
      */
     public int findMin_2(int[] nums){
-        if(nums.length == 1){
-            return nums[0];
-        }
-        int left = 0,right = nums.length-1,mid = 0;
-        while(nums[left] >= nums[right]){//如果nums[left] <= nums[right] 则是未经过旋转，排序好的，则取numg[0]
-            if(left + 1 == right){//结束条件
-                return mid;
-            }
-            if(nums[left] <= nums[mid]){//说明左边是旋转后的升序
-                left = mid;
-            }
-            if(nums[mid] <= nums[right]){//说明左边正常升序的多，移动右节点
-                right = mid;
+        int l = 0, r = nums.length - 1, mid = 0;
+        while (l < r) {
+            mid = l + ((r - l) >> 1);
+            //这里有个编程技巧
+            //因为l<r 所以最后一轮肯定是(r,r+1)
+            //那么mid 肯定是取值l 当判断条件是mid与l比时 会出现与自身比 造成出现等于情况 不好判断
+            //所以判断条件时mid 与 r比 这样肯定是不同的两个数比
+            if (nums[mid] < nums[r]) {  // mid可能为最小值
+                r = mid;
+            } else { // 没有重复值
+                l = mid+1;      // mid肯定不是最小值
             }
         }
         return nums[mid];
