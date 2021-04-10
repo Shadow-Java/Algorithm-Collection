@@ -2,27 +2,12 @@ package SourceCode.src;
 
 public class FindMinimumRotatedSortedArrayII {
 
-
-    public static int findMin(int[] nums) {
-        int left = 0,right = nums.length-1,mid = 0;
-        if(nums.length == 1){
-            return nums[0];
-        }
-        while(nums[left] >= nums[right]){//说明是旋转后的数组
-            mid = (left + right) / 2;//我们是要找最小值
-            if(mid + 1 == right){
-                break;
-            }
-            if(nums[mid] <= nums[right]){//如果旋转较多，左边都是大数,右边是小数，那么尽量靠左走
-                right = mid;
-            }
-            if(nums[mid] >= nums[left] ){//旋转较少,右边是小数多，那么尽量往右走
-                left = mid;
-            }
-        }
-        return nums[mid];
-    }
-
+    /**
+     * 二分法是二段性，不是单调性，一旦存在重复数字则二分会存在问题
+     * 只要一段满足某个性质，另外一段不满足某个性质，就可以用「二分」。
+     * @param nums
+     * @return
+     */
     public static int findMin_2(int[] nums){
         int l = 0, r = nums.length - 1, mid = 0;
         while (l < r) {
@@ -40,9 +25,45 @@ public class FindMinimumRotatedSortedArrayII {
         return nums[mid];
     }
 
-    public static void main(String[] args) {
-        int[] nums = {4,1,2,2};
-        System.out.println(findMin_2(nums));
+    /**
+     * 二分查找,返回目标值在数组中的索引
+     * 存在情况：
+     *          1.如果数组是偶数个，mid会先进中左（中间偏左）
+     *          2.如果数组是奇数个，mid直接中间的数
+     * 最终会走到一个left+1 = right的情况（即相邻），如果此时left和right都没有，则会一直循环mid = right|left
+     * @param nums
+     * @param target
+     */
+    public static int binarySearch(int[] nums,int target){
+        int left = 0,right = nums.length-1,mid = 0;
+        while(left <= right){
+            mid = (left+right)/2;
+            if(nums[mid] == target){
+                return mid;
+            }
+            if(target >= nums[mid]){//右移
+                left = mid;
+            }
+            if(target < nums[mid]){//左移
+                right = mid;
+            }
+        }
+        return mid;
+    }
+
+    public int findMin(int[] nums) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int mid = (left + right) / 2;
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;
+            }else if (nums[mid] < nums[right]) {
+                right = mid;
+            }else {
+                right = right - 1;
+            }
+        }
+        return nums[left];
     }
 
 }

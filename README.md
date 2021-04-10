@@ -81,6 +81,7 @@
    |76|[Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/Powxn.java)|<font color=#FFD700>Medium</font>|50|
    |77|[Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/FindMinimuminRotatedSortedArray.java)|<font color=#FFD700>Medium</font>|153|
    |78|[Find Minimum in Rotated Sorted Array II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/FindMinimuminRotatedSortedArray.java)|<font color=#0000FF>Hard</font>|154|
+   |79|[Search in Rotated Sorted Array](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/SearchinRotatedSortedArray.java)|<font color=#FFD700>Medium</font>|33|
    
 ## TODO LIST (3月)
 
