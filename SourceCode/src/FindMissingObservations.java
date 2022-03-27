@@ -18,6 +18,8 @@ package SourceCode.src;
  *
  * 时间复杂度：O(n) 执行时间2ms，超过100%用户
  *
+ * 同类型的题：2195. 向数组中追加 K 个整数{@link AppendKIntegersWithMinimalSum}
+ *
  */
 public class FindMissingObservations {
 

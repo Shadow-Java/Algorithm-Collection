@@ -69,7 +69,7 @@
    |63|[Flatten Nested List Iterator](https://leetcode-cn.com/problems/flatten-nested-list-iterator/)| <font color=#FFE4C4>Design</font> |[Java](SourceCode/src/FlattenNestedListIterator.java)|<font color=#FFD700>Medium</font>|341|
    |64|[Remove Duplicates from Sorted List](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/RemoveDuplicatesfromSortedList.java)|<font color=#00FFFF>Easy</font>|83|
    |65|[Rotate List](https://leetcode-cn.com/problems/rotate-list/)| <font color=#FFE4C4>Linked List</font> |[Java](SourceCode/src/RotateList.java)|<font color=#FFD700>Medium</font>|61|
-   |67|[Binary Search Tree Iterator](https://leetcode-cn.com/problems/binary-search-tree-iterator/)| <font color=#FFE4C4>Tree|Stack</font> |[Java](SourceCode/src/BinarySearchTreeIterator.java)|<font color=#FFD700>Medium</font>|173|
+   |67|[Binary Search Tree Iterator](https://leetcode-cn.com/problems/binary-search-tree-iterator/)| <font color=#FFE4C4>Tree Stack</font> |[Java](SourceCode/src/BinarySearchTreeIterator.java)|<font color=#FFD700>Medium</font>|173|
    |68|[Reverse Bits](https://leetcode-cn.com/problems/reverse-bits/)| <font color=#FFE4C4>Bit Manipulation</font> |[Java](SourceCode/src/ReverseBits.java)|<font color=#00FFFF>Easy</font>|190|
    |69|[Subsets II](https://leetcode-cn.com/problems/subsets-ii/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/SubsetsII.java)|<font color=#FFD700>Medium</font>|90|
    |70|[Clumsy Factorial](https://leetcode-cn.com/problems/clumsy-factorial/    )| <font color=#FFE4C4>Math</font> |[Java](SourceCode/src/ClumsyFactorial.java)|<font color=#FFD700>Medium</font>|1006|
@@ -84,36 +84,22 @@
    |79|[Search in Rotated Sorted Array](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)| <font color=#FFE4C4>Binary Search</font> |[Java](SourceCode/src/SearchinRotatedSortedArray.java)|<font color=#FFD700>Medium</font>|33|
    |80|[Ugly Number](https://leetcode-cn.com/problems/ugly-number/)| <font color=#FFE4C4>Math</font> |[Java](SourceCode/src/UglyNumber.java)|<font color=#00FFFF>Easy</font>|263|
    |81|[Find Missing Observations](https://leetcode-cn.com/problems/find-missing-observations/submissions/)| <font color=#FFE4C4>Math</font> |[Java](SourceCode/src/FindMissingObservations.java)|<font color=#FFD700>Medium</font>|2028|
+   |82|[Append K Integers With Minimal Sum](https://leetcode-cn.com/problems/append-k-integers-with-minimal-sum/)| <font color=#FFE4C4>Array</font> |[Java](SourceCode/src/AppendKIntegersWithMinimalSum.java)|<font color=#FFD700>Medium</font>|2195|
    
 ## TODO LIST (3月)
 
-- [X] 第二周
-    - [X]  232. 用栈实现队列
-    - [X]  224. 基本计算器
-    - [X]  227. 基本计算器 II
-    - [X]  131. 分割回文串
-    - [X]  1047. 删除字符串中的所有相邻重复项
-    - [X]  705. 设计hashset
+- [X] 第四周
+    - [X]  2028. 寻找缺失的观测数
+    - [ ]  2195.向数组追加K个整数
+    - [ ]  markdown重新排版（分简单、困难等，将英文title和pid融合，添加中文title）
     
-- [ ] 第三周
-     - [ ]  331. 验证二叉树的前序序列化
-     - [X]  150. 逆波兰表达式求值
-     - [X]  1603.设计停车系统
-     - [X]  92.反转链表
-     - [ ]  115.不同子序列
-     - [X]  706.设计哈希映射
-     - [ ]  54.螺旋矩阵
-     - [ ]  59.螺旋矩阵II
-     
-- [ ] Extra Branch
-     - [ ]  剑指offer  
-          - [ ] 03.数组中重复的数字
-          - [ ] 04.二维数组中的查找
-     - [ ]  腾讯精选50题
-          - [ ] 2.两数相加   
-          - [ ] 4.寻找两个正序数组的中位数       
-     - [ ]  字节跳动  
-          - [ ] 23.合并K个升序链表
+## TODO LIST (4月)
+
+- [X] 第一周
+    - [ ]  按类型刷题
+    - [ ]  注重Java源码的实践与分析
+
+
      
 ##  :thinking:多线程
 
