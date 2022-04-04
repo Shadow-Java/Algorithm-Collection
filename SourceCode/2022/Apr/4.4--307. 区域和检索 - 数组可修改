@@ -1,0 +1,188 @@
+## 题目
+
+给你一个数组 nums ，请你完成两类查询。
+
+其中一类查询要求 更新 数组 nums 下标对应的值
+另一类查询要求返回数组 nums 中索引 left 和索引 right 之间（ 包含 ）的nums元素的 和 ，其中 left <= right
+实现 NumArray 类：
+
+NumArray(int[] nums) 用整数数组 nums 初始化对象
+void update(int index, int val) 将 nums[index] 的值 更新 为 val
+int sumRange(int left, int right) 返回数组 nums 中索引 left 和索引 right 之间（ 包含 ）的nums元素的 和 （即，nums[left] + nums[left + 1], ..., nums[right]）
+
+
+>示例 1：
+>输入：
+["NumArray", "sumRange", "update", "sumRange"]
+[[[1, 3, 5]], [0, 2], [1, 2], [0, 2]]
+输出：
+[null, 9, null, 8]
+
+解释：
+NumArray numArray = new NumArray([1, 3, 5]);
+numArray.sumRange(0, 2); // 返回 1 + 3 + 5 = 9
+numArray.update(1, 2);   // nums = [1,2,5]
+numArray.sumRange(0, 2); // 返回 1 + 2 + 5 = 8
+
+## 不考虑大数据的情况下（暴力检索）
+
+```java
+class NumArray {
+    /**
+    现在有个场景 100万条数据 实现区域的检索，如果是遍历则时间复杂度太大
+    
+     */
+    int[] nums = {};
+    public NumArray(int[] nums) {
+        this.nums = nums;
+    }
+    
+    public void update(int index, int val) {
+        nums[index] = val;
+    }
+    
+    public int sumRange(int left, int right) {//暴力遍历查找
+        int sum = 0;
+        for(int i=left;i<=right;i++){
+            sum += nums[i];
+        }
+        return sum;
+    }
+}
+
+```
+
+
+
+## 假设数据量有一百万
+
+>首先按照平常的数组结构，区域求和肯定只能用暴力遍历才行。所以必须使用新的数据结构，在构建的时候注入，才能在区域求和时更快；
+
+>那么可以怎么去做
+
+暴力遍历的话，sumRange会达到O(N),但update才O（1），如果频繁则会因为sumRange卡住
+
+### 1.前缀和
+
+使用前缀和，sumRange会达到O（1），但update会达到O（N）
+
+![avatar](../images/Apr/线段树.png)
+
+### 2.数组分块
+
+将数组nums分块，每一块大小为size，总共nums.length/size块；用num存储每一块的元素和
+
++ 构造函数
+计算块大小，初始化sum
+
++ update 函数  O（1）
+更新nums[idx],且更新num[idx/size]的值
+
++ sumRange 函数 O（n/size + size）
+
+求[left,right]的值，若[left,right]在某一块内，则直接求某一块的[i1,i2]的元素和；
+若[left,right]在不同的快内，则块b1中[left,size-1]的元素和sum1,块b2中[0,right]的元素和sum3 ，块b1与b2之前的元素和sum2
+
+sum = sum1+sum2+sum3；
+
+```java
+```
+
+### 3.线段树
+
+可以将sumRange和update都降为`log（N）`
+
+```java
+public static void main(String[] args) {
+        int[] arr = {1,3,5,7,9,11};
+        int[] tree = new int[14];
+        build_tree(arr,tree,0,0,5);
+        update_tree(arr,tree,0,0,5,4,6);
+        System.out.println(query_tree(arr,tree,0,0,5,2,5));
+        for (int i = 0; i < tree.length; i++) {
+            System.out.println("tree["+i+"]=="+tree[i]);
+        }
+    }
+
+    /**
+     * [start,end]表示数组的区间 也是线段树结点的区间
+     * 建node结点，则就是递归建立左结点和右结点
+     * @param arr 原数组
+     * @param tree 线段树 数组存储
+     * @param node 线段树当前顶点结点
+     * @param start 原数组左端点
+     * @param end 原数组右端点
+     */
+    public static void build_tree(int[] arr,int[] tree,int node,int start,int end){
+        if(start == end){
+            tree[node] = arr[start];
+        }else{
+            int mid = (start+end)/2;
+            int left_node = node*2+1;
+            int right_node = node*2+2;
+            build_tree(arr,tree,left_node,start,mid);
+            build_tree(arr,tree,right_node,mid+1,end);
+            tree[node] = tree[left_node] + tree[right_node];//非叶子节点
+        }
+    }
+
+    /**
+     * 作用：单点修改，将数组中的arr[idx]=val,
+     * 由于已经创建线段树，那么现在只能通过遍历树修改
+     * 过程：将idx号改成val，那么难点在修改树上，遍历区间去修改
+     * @param arr 原数组
+     * @param tree 线段树数组存储
+     * @param node 当前结点
+     * @param start 线段树的分段区间 即数组的下标
+     * @param end  线段树的分段区间 即数组的下标
+     * @param idx 需要修改的数组下标
+     * @param val 修改的值
+     */
+    public static void update_tree(int[] arr,int[] tree,int node,int start,int end,int idx,int val){
+        if(start == end){//根据区间走的，所以不需要判断start==idx，只需start==end走到结点即可
+            arr[idx] = val;
+            tree[node] = val;
+        }else{//不是叶子节点
+            int mid = (start+end)/2;
+            int left_node = node*2+1;
+            int right_node = node*2+2;
+            if(idx >= start && idx <=mid){
+                update_tree(arr,tree,left_node,start,mid,idx,val);
+            }else{
+                update_tree(arr,tree,right_node,mid+1,end,idx,val);
+            }
+            tree[node] = tree[left_node]+tree[right_node];
+        }
+    }
+
+    /**
+     * 区间[L,R]求和
+     * @param arr
+     * @param tree
+     * @param node
+     * @param start
+     * @param end
+     * @param L 
+     * @param R
+     * @return
+     */
+    public static int query_tree(int[] arr,int[] tree,int node,int start,int end,int L,int R){
+        if(R < start || L > end){//没落在[start，end]上
+            return 0;
+        }else if(start == end) {//叶子结点直接返回值
+            return tree[node];
+        }else if(L <= start && end <= R){//如果[start,end]在[L,R]的子区间直接返回，用于剪枝
+            return tree[node];
+        }else{
+                int mid = (start+end)/2;
+                int left_node = node*2+1;
+                int right_node = node*2+2;
+                int sum_left = query_tree(arr,tree,left_node,start,mid,L,R);
+                int sum_right = query_tree(arr,tree,right_node,mid+1,end,L,R);
+                return sum_left + sum_right;
+        }
+    }
+```
+
+#### 4.树状数组
+
