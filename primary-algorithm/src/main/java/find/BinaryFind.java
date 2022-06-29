@@ -79,9 +79,10 @@ public class BinaryFind {
         int L = 0;
         int R = arr.length - 1;
         int index = -1;//记录最左的对号
-        while (L < R) {//L<=R说明有范围
+        while (L <= R) {//L<=R说明有范围
             int mid = L + ((R - L) >> 1);//为什么使用L+（R-L）/2
-            if (arr[mid] >= value) {
+            if (arr[mid]
+                    >= value) {
                 index = mid;
                 R = mid - 1;
             } else {
@@ -116,11 +117,15 @@ public class BinaryFind {
         if(arr.length == 1 || arr[0] < arr[1]){
             return 0;
         }
+        //局部最小值就是最低谷，如果i-1 < i的，那么i-1不可能是最小值，因为可能会一直在上升
+        //如果最后两个数 N-1 > N,那么N一定是最小值
         if(arr[arr.length-1] < arr[arr.length - 2]){
             return arr.length - 1;
         }
+        //为什么要从1到N-2，因为首尾已经排除
         int left = 1;int right = arr.length - 2;
         int mid = 0;
+        //为什么没有加上等于，是因为有三个if条件，如果两个则是<=
         while (left < right){
             mid = (left + right)/2;
             if(arr[mid] > arr[mid - 1]){//左侧二分
@@ -131,6 +136,7 @@ public class BinaryFind {
                 return mid;
             }
         }
+        //为什么L或R都可以，因为结束条件就是L==R
         return left;
     }
 
