@@ -1,7 +1,8 @@
 package find;
 
 /**
- * 二分是对于一个<strong>有序数组</strong>的查找算法
+ * 二分是对于一个<strong>有序数组</strong>的查找算法<br>
+ * 二分查找其实也是利用<strong>双指针</strong>的查找算法
  * <p>
  *     算法问题：
  *     <ul>
@@ -10,6 +11,11 @@ package find;
  *         <li>局部最小值问题</li>
  *     </ul>
  * </p>
+ *
+ * 时间复杂度的计算：
+ * <pre>
+ *     假设数组总长是N，那么每次都从中间砍半，砍半次数为时间长度x，则x=logN
+ * </pre>
  *
  *
  * @author Shadow at 2022/6/20 23:27
@@ -20,8 +26,8 @@ public class BinaryFind {
     /**
      * 查找有序数组中的某个数是否存在<br>
      *
-     * {@code 时间复杂度}:<br>
-     * {@code 空间复杂度}
+     * {@code 时间复杂度}:logN<br>
+     * {@code 空间复杂度}:O(1)
      *
      * @param sortedArr
      * @param num
@@ -34,7 +40,7 @@ public class BinaryFind {
         int L = 0;
         int R = sortedArr.length - 1;
         int mid = 0;
-        while (L < R) {
+        while (L < R) {//因为是三种情况，最后是L==R
             //L下标10亿  R下标18亿  mid就会溢出  不安全
             //mid = L+（R-L）/2  R比较大的数 - L的数肯定不会溢出
             //N/2  N >> 1 位运算比除运算快
@@ -75,11 +81,11 @@ public class BinaryFind {
      * @param value
      * @return
      */
-    public static int nearestIndex(int[] arr, int value) {
+    public static int nearestLeftIndex(int[] arr, int value) {
         int L = 0;
         int R = arr.length - 1;
         int index = -1;//记录最左的对号
-        while (L <= R) {//L<=R说明有范围
+        while (L <= R) {//L<=R是因为只有两种情况，要么向左找要么向右找，而mid就是index
             int mid = L + ((R - L) >> 1);//为什么使用L+（R-L）/2
             if (arr[mid]
                     >= value) {
@@ -87,6 +93,29 @@ public class BinaryFind {
                 R = mid - 1;
             } else {
                 L = mid + 1;
+            }
+        }
+        return index;//最后L!=R
+    }
+
+
+    /**
+     * 搜索数组的最右侧边界
+     *
+     * @param arr
+     * @param value
+     * @return
+     */
+    public static int nearestRightIndex(int[] arr, int value) {
+        int L=0,R = arr.length-1,mid = 0;
+        int index = -1;
+        while(L <= R){
+            mid = L+((R-L)>>1);
+            if(arr[mid] <= value){
+                L = mid +1;
+                index = mid;
+            }else{
+                R = mid - 1;
             }
         }
         return index;

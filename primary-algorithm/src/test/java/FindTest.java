@@ -1,6 +1,6 @@
 import find.BinaryFind;
+import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -24,6 +24,12 @@ public class FindTest {
                 }
             }
         }
+    }
+
+    @Test
+    public void testRightIndex(){
+        int[] arr = {1,2,3,3,3,3,4,4,6,7,7,8,8,8,9,10};
+        System.out.println(BinaryFind.nearestRightIndex(arr,4));
     }
 
     public static void printArray(int[] arr) {
