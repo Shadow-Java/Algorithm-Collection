@@ -170,4 +170,13 @@ public class BinaryFind {
     }
 
 
+    /**
+     * 一个无序数组，左边是小于value的值，右边是大于value的值
+     * 找到最左边界
+     */
+    public void findDifLeftIndex(){
+
+    }
+
+
 }

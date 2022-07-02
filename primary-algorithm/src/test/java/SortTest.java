@@ -1,5 +1,4 @@
-import sort.BubbleSort;
-import sort.SelectionSort;
+import sort.Sort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -19,7 +18,7 @@ public class SortTest {
         System.out.println("--------------------原长度为"+nums.length+" 数组：-------------");
         printArray(nums);
         System.out.println("--------------------数组长度为"+nums.length+" 排序后：-------------");
-        BubbleSort.bubbleSort(nums);
+        Sort.bubbleSort(nums);
         printArray(nums);
     }
 
@@ -37,7 +36,7 @@ public class SortTest {
         for (int i = 0; i < testTime; i++) {
             int[] arr1 = generateRandomArray(minSize,maxSize, maxValue);
             int[] arr2 = copyArray(arr1);
-            SelectionSort.selectionSort(arr1);//目标测试函数
+            Sort.selectionSort(arr1);//目标测试函数
             successSort(arr2);
             if (!isEqual(arr1, arr2)) {
                 return false;

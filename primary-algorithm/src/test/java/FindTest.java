@@ -26,6 +26,9 @@ public class FindTest {
         }
     }
 
+    /**
+     * @see BinaryFind#nearestRightIndex(int[], int)
+     */
     @Test
     public void testRightIndex(){
         int[] arr = {1,2,3,3,3,3,4,4,6,7,7,8,8,8,9,10};
