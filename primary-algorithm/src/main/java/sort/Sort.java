@@ -8,11 +8,10 @@ import java.util.Arrays;
  *
  * <p>算法问题：
  *     <ul>
- *         <li>插入排序</li>
- *         <li>选择排序</li>
- *         <li>冒泡排序</li>
+ *         <li>插入排序{@link Sort#insertionSort(int[])}</li>
+ *         <li>选择排序{@link Sort#selectionSort(int[])}</li>
+ *         <li>冒泡排序{@link Sort#bubbleSort(int[])}</li>
  *         <li>归并排序</li>
- *         <li>桶排序</li>
  *         <li>基数排序</li>
  *         <li>快速排序</li>
  *         <li>拓扑排序</li>
@@ -126,7 +125,7 @@ public class Sort {
      *
      * <p>1.二进制层面：
      * <pre>
-     *     1^1=0, 1^0=1
+     *     1^1=0, 1^0=1,0^0=0
      * </pre>
      * <p>2.十进制层面:
      * <pre>一个数和0异或得到本身  和本身异或得到0
