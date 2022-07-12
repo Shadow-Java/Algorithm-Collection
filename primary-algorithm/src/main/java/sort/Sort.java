@@ -3,7 +3,7 @@ package sort;
 import java.util.Arrays;
 
 /**
- * 排序算法是需要考虑两个问题：稳定性和时间复杂度
+ * 基于比较的排序算法是需要考虑两个问题：稳定性和时间复杂度
  *
  *
  * <p>算法问题：
@@ -12,7 +12,6 @@ import java.util.Arrays;
  *         <li>选择排序{@link Sort#selectionSort(int[])}</li>
  *         <li>冒泡排序{@link Sort#bubbleSort(int[])}</li>
  *         <li>归并排序</li>
- *         <li>基数排序</li>
  *         <li>快速排序</li>
  *         <li>拓扑排序</li>
  *         <li>堆排序</li>
