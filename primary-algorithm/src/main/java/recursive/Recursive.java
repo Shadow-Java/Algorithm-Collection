@@ -58,4 +58,11 @@ public class Recursive {
         return Math.max(leftMax,rightMax);
     }
 
+    /**
+     * 任何的递归都能转成迭代
+     */
+    public static void iteration(int[] arr,int L,int R){
+
+    }
+
 }
