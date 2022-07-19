@@ -1,4 +1,4 @@
-import find.BinaryFind;
+import intermittent.lying.continuous.progress.bitoperation.find.BinaryFind;
 import org.junit.Test;
 
 import java.util.Random;
