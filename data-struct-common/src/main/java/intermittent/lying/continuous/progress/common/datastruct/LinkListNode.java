@@ -1,7 +1,5 @@
-package Intermittent.lying.continuous.progress.common.datastruct;
+package intermittent.lying.continuous.progress.common.datastruct;
 
-
-import lombok.Data;
 
 /**
  *

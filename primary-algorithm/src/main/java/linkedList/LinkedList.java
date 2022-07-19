@@ -1,6 +1,6 @@
 package linkedList;
 
-import Intermittent.lying.continuous.progress.common.datastruct.LinkListNode;
+import intermittent.lying.continuous.progress.common.datastruct.LinkListNode;
 
 /**
  *
