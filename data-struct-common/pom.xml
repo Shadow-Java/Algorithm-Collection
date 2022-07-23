@@ -12,6 +12,7 @@
     <!--    maven标准版本-->
     <modelVersion>4.0.0</modelVersion>
     <artifactId>data-struct-common</artifactId>
+    <version>${parent.version}</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
