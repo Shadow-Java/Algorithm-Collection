@@ -1,4 +1,4 @@
-package intermittent.lying.continuous.progress.common.datastruct;
+package Intermittent.lying.continuous.progress.common.datastruct;
 
 
 /**

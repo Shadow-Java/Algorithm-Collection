@@ -1,4 +1,4 @@
-package intermittent.lying.continuous.progress.common.interfaces;
+package Intermittent.lying.continuous.progress.common.interfaces;
 
 import java.util.List;
 
