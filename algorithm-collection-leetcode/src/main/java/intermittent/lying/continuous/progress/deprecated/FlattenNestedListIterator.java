@@ -1,6 +1,7 @@
 package intermittent.lying.continuous.progress.deprecated;
 
-import intermittent.lying.continuous.progress.common.interfaces.NestedInteger;
+
+import Intermittent.lying.continuous.progress.common.interfaces.NestedInteger;
 
 import java.util.Iterator;
 import java.util.LinkedList;

@@ -5,13 +5,13 @@
 
 
     <parent>
-        <groupId>leetcode-algorithm</groupId>
-        <artifactId>leetcode</artifactId>
+        <groupId>algorithm.collection</groupId>
+        <artifactId>algorithm-collection</artifactId>
         <version>1.0.1-SNAPSHOT</version>
     </parent>
     <!--    maven标准版本-->
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>data-struct-common</artifactId>
+    <artifactId>algorithm-collection-common</artifactId>
     <version>${parent.version}</version>
 
     <properties>

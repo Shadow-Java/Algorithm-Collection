@@ -1,6 +1,7 @@
 package intermittent.lying.continuous.progress.bitoperation.linkedList;
 
-import intermittent.lying.continuous.progress.common.datastruct.LinkListNode;
+
+import Intermittent.lying.continuous.progress.common.datastruct.LinkListNode;
 
 /**
  *
