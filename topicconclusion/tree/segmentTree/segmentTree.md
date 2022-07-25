@@ -19,7 +19,7 @@
 
 ## 建树
 
-```java
+```python
 /**
      * [start,end]表示数组的区间 也是线段树结点的区间
      * 建node结点，则就是递归建立左结点和右结点
@@ -46,7 +46,7 @@
 
 ## 区间求和
 
-```java
+```python
 /**
      * 区间[L,R]求和
      * @param arr
@@ -78,7 +78,7 @@
 
 ## 单点修改
 
-```java
+```python
 /**
      * 作用：单点修改，将数组中的arr[idx]=val,
      * 由于已经创建线段树，那么现在只能通过遍历树修改
@@ -115,7 +115,7 @@
 
 ## 完整代码
 
-```java
+```python
 public class SolutionTest {
 
     public static void main(String[] args) {
