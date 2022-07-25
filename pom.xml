@@ -31,9 +31,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-<!-- pom标签  https://blog.csdn.net/weixin_44226789/article/details/107890467-->
+   <!-- pom标签  https://blog.csdn.net/weixin_44226789/article/details/107890467-->
+   <!--  maven生命周期 https://cloud.tencent.com/developer/article/1543717-->
     <dependencyManagement>
-<!--    子项目必须显示声明依赖才能使用,depencies默认继承父项目-->
+   <!--    子项目必须显示声明依赖才能使用,depencies默认继承父项目-->
         <dependencies>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -125,7 +126,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>
                     <version>2.4</version>
-                    <type>maven-plugin</type>
                 </plugin>
             </plugins>
         </pluginManagement>
