@@ -67,7 +67,10 @@ public class T1260_Shift2dGrid{
         Solution solution = new T1260_Shift2dGrid().new Solution();
         // TO TEST
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
+
+    /**
+     * leetcode submit region begin(Prohibit modification and deletion)
+     */
 class Solution {
         //todo double-check
         public List<List<Integer>> shiftGrid(int[][] grid, int k) {

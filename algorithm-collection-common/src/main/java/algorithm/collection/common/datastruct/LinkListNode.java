@@ -1,4 +1,4 @@
-package algorithm.collection.common.common.datastruct;
+package algorithm.collection.common.datastruct;
 
 
 /**

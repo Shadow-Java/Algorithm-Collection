@@ -1,4 +1,4 @@
-package algorithm.collection.common.common.interfaces;
+package algorithm.collection.leetcode.baseclass;
 
 import java.util.List;
 

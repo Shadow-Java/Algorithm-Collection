@@ -1,7 +1,7 @@
 package algorithm.collection.primary.linkedList;
 
 
-import algorithm.collection.common.common.datastruct.LinkListNode;
+import algorithm.collection.common.datastruct.LinkListNode;
 
 /**
  *

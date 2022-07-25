@@ -1,4 +1,4 @@
-package algorithm.collection.common.common.util;
+package algorithm.collection.common.util;
 
 /**
  * 加密工具

@@ -1,7 +1,7 @@
 package algorithm.collection.leetcode.deprecated;
 
 
-import algorithm.collection.common.common.interfaces.NestedInteger;
+import algorithm.collection.leetcode.baseclass.NestedInteger;
 
 import java.util.Iterator;
 import java.util.LinkedList;
