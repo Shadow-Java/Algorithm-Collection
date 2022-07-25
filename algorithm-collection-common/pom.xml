@@ -12,12 +12,6 @@
     <!--    maven标准版本-->
     <modelVersion>4.0.0</modelVersion>
     <artifactId>algorithm-collection-common</artifactId>
-    <version>${parent.version}</version>
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
 
     <dependencies>
         <dependency>

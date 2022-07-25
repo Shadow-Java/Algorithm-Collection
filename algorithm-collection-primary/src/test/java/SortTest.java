@@ -1,4 +1,4 @@
-import intermittent.lying.continuous.progress.bitoperation.sort.Sort;
+import algorithm.collection.primary.sort.Sort;
 
 import java.util.Arrays;
 import java.util.Random;

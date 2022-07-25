@@ -1,5 +1,5 @@
 import org.junit.Test;
-import intermittent.lying.continuous.progress.bitoperation.recursive.Recursive;
+import algorithm.collection.primary.recursive.Recursive;
 
 /**
  * @author Shadow at 2022/7/5 22:46
