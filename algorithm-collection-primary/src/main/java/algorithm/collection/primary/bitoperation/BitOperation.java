@@ -3,11 +3,6 @@ package algorithm.collection.primary.bitoperation;
 /**
  * 位运算
  *
- * <pre>
- *     <ul>
- *
- *     </ul>
- * </pre>
  * <p>异或是相同的为0，不同为1；那么可以通过异或解决什么问题？
  *
  * <p>1.二进制层面：
@@ -18,7 +13,8 @@ package algorithm.collection.primary.bitoperation;
  * <pre>一个数和0异或得到本身  和本身异或得到0
  *     n^0=n n^n=0
  * </pre>
- * <ul>3.解决问题层面：
+ * <ul>
+ *    3.解决问题层面：
  *     <li>
  *         3.1 比如一群数中找出唯一得数，因为数一般是成群结对的，可以通过异或找到
  *         <pre>
@@ -69,8 +65,8 @@ public class BitOperation {
      *</p>
      *<pre>有以下解决方式：
      *     <ul>
-     *         <li>全部异或结果为a^b=2^5,再次异或a^b^b=a;a^b^a=b;</li>
-     *         <li>全部异或结果为a^b=2^5,</li>
+     *         <li>全部异或结果为a^b=2^5,再次异或a^b^b=a;a^b^a=b;(该方法需要在数组中找出a或b)</li>
+     *         <li>全部异或结果为a^b=2^5,通过末尾的1来找出a,就能实现a^b^a=b</li>
      *     </ul>
      *</pre>
      *
@@ -115,7 +111,7 @@ public class BitOperation {
             int rightOne = N&(~N+1);
             count++;
             /**
-             * 不能用N -= rightOne,可能为负数
+             * 不能用N -= rightOne,N可能为负数
              */
             N ^= rightOne;
         }
