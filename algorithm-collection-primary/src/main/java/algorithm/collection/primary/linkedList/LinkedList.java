@@ -62,4 +62,38 @@ public class LinkedList {
     }
 
 
+    /**
+     * 由数组生成单链表结构
+     *
+     * <pre>
+     *     数组:    [1,2,3,4,5]
+     *     生成链表: 1->2->3->4->5->null
+     *             ^
+     *             1为head节点
+     * </pre>
+     *
+     * @param num
+     * @return
+     */
+    public static SingleLinkListNode<Integer> createLinkList(int[] num){
+        SingleLinkListNode<Integer> head = new SingleLinkListNode<>(null);
+        SingleLinkListNode<Integer> cur = head;
+        for(int i=0;i<num.length-1;i++){
+            cur.value = num[i];
+            SingleLinkListNode<Integer> next = new SingleLinkListNode<>(null);
+            next.value = num[i+1];
+            next.next = null;
+            cur.next = next;
+            //cur = next;  错误,next当前为value
+            /**
+             * 当前节点为上一轮的全部
+             */
+            cur = cur.next;
+        }
+        return head;
+    }
+
+
+
+
 }

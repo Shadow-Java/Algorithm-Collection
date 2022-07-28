@@ -8,8 +8,8 @@ package algorithm.collection.common.datastruct.linklist;
  */
 public class DoubleLinkListNode<T>{
     private T value;
-    private DoubleLinkListNode pre;
-    private DoubleLinkListNode next;
+    private DoubleLinkListNode<T> pre;
+    private DoubleLinkListNode<T> next;
 
     DoubleLinkListNode(T value){
         this.value = value;

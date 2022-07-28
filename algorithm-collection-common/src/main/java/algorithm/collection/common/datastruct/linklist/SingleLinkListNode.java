@@ -9,9 +9,9 @@ package algorithm.collection.common.datastruct.linklist;
  */
 public class SingleLinkListNode<T> {
     public T value;
-    public SingleLinkListNode next;
+    public SingleLinkListNode<T> next;
 
-    SingleLinkListNode(T value){
+    public SingleLinkListNode(T value){
         this.value = value;
     }
 }
