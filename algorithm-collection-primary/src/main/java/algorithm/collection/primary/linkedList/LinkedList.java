@@ -1,7 +1,7 @@
 package algorithm.collection.primary.linkedList;
 
 
-import algorithm.collection.common.datastruct.LinkListNode;
+import algorithm.collection.common.datastruct.linklist.SingleLinkListNode;
 
 /**
  *
@@ -19,24 +19,43 @@ public class LinkedList {
 
 
     /**
-     * 反转链表,输入头结点，返回头结点
-     * 类型：头结点有值
-     * 比如：5->4->3->2->1
-     * 反转后：1->2->3->4->5
+     * <p>反转链表,输入头结点，返回头结点
+     *
+     * <pre>  head.value = 5
+     *     比如: 5->4->3->2->1->null
+     *          ^
+     *   反转后: 1->2->3->4->5->null
+     *          ^
+     * </pre>
+     *
+     * 类型:头结点有值,结果返回新的头部
+     * 结构:pre->head->next
      */
-    public static LinkListNode reverseList(LinkListNode head){
+    public static SingleLinkListNode reverseList(SingleLinkListNode head){
         /**
-         * 代表cur节点的上一个节点
+         * 代表cur节点的上一个节点,开始时上一节点为null
          */
-        LinkListNode pre = null;
+        SingleLinkListNode pre = null;
         /**
          * 代表cur的下一个节点
          */
-        LinkListNode next;
+        SingleLinkListNode next;
         while(head.next != null){
+            /**
+             * 当前节点是head,故记录下一个节点head;下一轮的cur为next
+             */
             next = head.next;
+            /**
+             * 下一节点已记录,故断连head与head.next;将head指向上一节点pre
+             */
             head.next = pre;
+            /**
+             * pre已使用,记录下一节点的值；对于下一节点来说当前节点为next
+             */
             pre = head;
+            /**
+             * 用记录的next来更新head,next的主要作用是来更新head，即next就是下一轮的cur
+             */
             head = next;
         }
         return pre;

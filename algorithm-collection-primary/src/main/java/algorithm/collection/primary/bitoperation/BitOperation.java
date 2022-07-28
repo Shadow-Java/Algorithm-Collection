@@ -69,7 +69,8 @@ public class BitOperation {
      *         <li>全部异或结果为a^b=2^5,通过末尾的1来找出a,就能实现a^b^a=b</li>
      *     </ul>
      *</pre>
-     *
+     *<Strong>Note:</Strong>找末尾中的1时，因为是eor=a^b,异或特点是不同的为1，即1可以区分a和b;<br>
+     * 用eor‘=0去异或该位上为1的数，就能得到a
      * @param arr
      */
     public void findOddTimesTwo(int[] arr){
@@ -80,13 +81,13 @@ public class BitOperation {
         /**
          * eor = a ^ b
          * eor != 0
-         * eor 必然有一个位置为1
+         * eor 必然有一个位置为1 (不同的位置异或为1,该位置能区分a和b)
          * eor = 0110010000
          * 提取eor最右侧的1,即eor&(~eor+1) = 0000010000
          */
         int rightOne = eO & (~eO + 1);//提取最右侧的1
         for (int cur : arr) {
-            if ((cur & rightOne) != 0) {//这位上有1的数字
+            if ((cur & rightOne) != 0) {//cur这位上有1的数字
                 eOhasOne ^= cur;//eor'
             }
         }
