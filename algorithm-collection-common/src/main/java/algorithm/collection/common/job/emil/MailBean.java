@@ -3,6 +3,7 @@ package algorithm.collection.common.job.emil;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 邮件
@@ -25,7 +26,7 @@ public class MailBean implements Serializable {
     private String port;
 
     /**
-     * 邮件地址
+     * 邮件地址,例如232@qq.com
      */
     private String address;
 
@@ -39,7 +40,25 @@ public class MailBean implements Serializable {
      */
     private String protocol;
 
-    private String receiver;
+    /**
+     * 接收者
+     */
+    private List<User> receivers;
+
+    /**
+     * 抄送
+     */
+    private List<User> carbonCopy;
+
+    /**
+     * 抄送
+     */
+    private List<User> blindCarbonCopy;
+
+    /**
+     * 发送者
+     */
+    private User sender;
 
     /**
      * 邮件信息
