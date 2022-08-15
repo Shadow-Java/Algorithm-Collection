@@ -72,17 +72,40 @@ public class LinkedList {
      *             1为head节点
      * </pre>
      *
+     * <pre>
+     * 流程：
+     * 1.初始化 (cur = head)
+     *     1       2
+     *    / \      |
+     * head cur  next
+     * 2.连接next (cur.next = next)
+     *     1         2
+     *    / \        |
+     * head cur ->  next
+     *
+     * 3.更新cur (cur = cur.next)
+     *     1        2
+     *     |        |
+     *   head  ->  cur
+     *
+     * 4.for结束,进入下一轮 （next = new SingleLinkListNode<>(num[i+1])）
+     *     1        2     3
+     *     |        |     |
+     *   head  ->  cur  next
+     * </pre>
+     *
      * @param num
      * @return
      */
     public static SingleLinkListNode<Integer> createLinkList(int[] num){
         SingleLinkListNode<Integer> head = new SingleLinkListNode<>(null);
+        /**
+         * head和cur同时指向头结点，用cur来更新，而head不变
+         */
         SingleLinkListNode<Integer> cur = head;
         for(int i=0;i<num.length-1;i++){
             cur.value = num[i];
-            SingleLinkListNode<Integer> next = new SingleLinkListNode<>(null);
-            next.value = num[i+1];
-            next.next = null;
+            SingleLinkListNode<Integer> next = new SingleLinkListNode<>(num[i+1]);//这里可以不用赋值
             cur.next = next;
             //cur = next;  错误,next当前为value
             /**

@@ -13,5 +13,6 @@ public class SingleLinkListNode<T> {
 
     public SingleLinkListNode(T value){
         this.value = value;
+        next = null;
     }
 }

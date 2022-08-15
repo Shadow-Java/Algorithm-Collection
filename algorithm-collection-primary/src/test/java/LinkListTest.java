@@ -11,8 +11,11 @@ import org.junit.Test;
  */
 public class LinkListTest {
 
+    /**
+     * 通过数组创建单链表
+     */
     @Test
-    public void createLinkList(){
+    public void createSingleLinkList(){
         int[] num = {1,2,3,4,5,6,7};
         SingleLinkListNode<Integer> head = LinkedList.createLinkList(num);
         while(head != null){
