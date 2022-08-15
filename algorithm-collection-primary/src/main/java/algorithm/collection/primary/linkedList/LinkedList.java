@@ -28,6 +28,10 @@ public class LinkedList {
      *          ^
      * </pre>
      *
+     * <pre>
+     *     流程：
+     * </pre>
+     *
      * 类型:头结点有值,结果返回新的头部
      * 结构:pre->head->next
      */
@@ -78,6 +82,7 @@ public class LinkedList {
      *     1       2
      *    / \      |
      * head cur  next
+     *
      * 2.连接next (cur.next = next)
      *     1         2
      *    / \        |
