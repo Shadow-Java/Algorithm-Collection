@@ -26,7 +26,7 @@ public @interface ToDoEvent {
      *
      * @return
      */
-    long deadLine();
+    long deadLine() default 0;
 
     /**
      * 重要程度

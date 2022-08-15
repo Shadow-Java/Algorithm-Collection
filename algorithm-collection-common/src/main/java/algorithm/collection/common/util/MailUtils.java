@@ -23,7 +23,7 @@ import java.util.Properties;
 public class MailUtils {
 
     @SneakyThrows
-    public static void  sendMail(MailBean mailBean){
+    public static void sendMail(MailBean mailBean){
         // 1. 创建一封邮件
         Properties props = new Properties();
         // 用于连接邮件服务器的参数配置（发送邮件时才需要用到）
