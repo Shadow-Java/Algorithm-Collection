@@ -9,6 +9,9 @@ import java.util.Random;
 
 public class BinaryTreeGenerator {
 
+    /**
+     * todo 需要优化，参数给定最小高度  最小左子树等自定义生成
+     */
     public static TreeNode generateBinaryTree(int depth, int maxValue) {
         if (depth < 1) {
             return null;
@@ -40,14 +43,15 @@ public class BinaryTreeGenerator {
         levelOrder(root);
     }
 
-    public static List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> levelLists = new ArrayList<>();
-        return dfs(root,levelLists);
+    public static void levelOrder(TreeNode root) {
+        System.out.println("--------------------------二叉树生成如下--------------------------");
+        bfs(root);
+        System.out.println("--------------------------二叉树打印完成--------------------------");
     }
 
-    public static List<List<Integer>> dfs(TreeNode root,List<List<Integer>> levelList){
+    public static void bfs(TreeNode root){
         if(root == null){
-            return new ArrayList<>();
+            System.out.println("--------------------------二叉树为空，请重新输入--------------------------");
         }
         Deque<TreeNode> nodeDeque = new ArrayDeque<>();
         nodeDeque.add(root);
@@ -66,9 +70,7 @@ public class BinaryTreeGenerator {
                 }
             }
             System.out.println("");
-            levelList.add(levelNodeVals);
         }
-        return levelList;
     }
 
 }
