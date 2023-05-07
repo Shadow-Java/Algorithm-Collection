@@ -52,10 +52,6 @@ public class BinaryTreeGenerator {
         printTree(root);
     }
 
-    public static void dfs(TreeNode root){
-
-    }
-
 
     public static void bfs(TreeNode root){
         if(root == null){

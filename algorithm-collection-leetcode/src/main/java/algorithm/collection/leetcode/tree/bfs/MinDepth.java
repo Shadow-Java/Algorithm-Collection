@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.tree.dfs;
+package algorithm.collection.leetcode.tree.bfs;
 
 import algorithm.collection.common.datastruct.tree.BinaryTreeGenerator;
 import algorithm.collection.common.datastruct.tree.TreeNode;
