@@ -54,7 +54,7 @@ public class MinDepth {
 
     public static void main(String[] args) {
         TreeNode root = BinaryTreeGenerator.generateBinaryTree(4,15);
-        BinaryTreeGenerator.levelOrder(root);
+        BinaryTreeGenerator.printTree(root);
         System.out.println(minDepth(root));
     }
 

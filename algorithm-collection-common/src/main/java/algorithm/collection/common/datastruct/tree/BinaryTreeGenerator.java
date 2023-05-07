@@ -23,31 +23,39 @@ public class BinaryTreeGenerator {
         return root;
     }
 
-    public static void main(String[] args) {
-        TreeNode root = generateBinaryTree(3, 10);
-        // 输出生成的二叉树
-        //printTree(root);
-        printTreeByOrderLevel(root);
-    }
-
-    public static void printTree(TreeNode root) {
-        if (root == null) {
-            return;
+    /**
+     * 二叉树生成器
+     * @param minHeight 最小高度
+     * @param width     宽度
+     * @param maxValue  结点最大值
+     * @return
+     */
+    public static TreeNode generateBinaryTree(int minHeight, int width, int maxValue) {
+        if (minHeight < 1 || width < 1) {
+            return null;
         }
-        System.out.print(root.val + " ");
-        printTree(root.left);
-        printTree(root.right);
+        Random random = new Random();
+        int rootVal = random.nextInt(maxValue + 1);
+        TreeNode root = new TreeNode(rootVal);
+        if (minHeight == 1) {
+            return root;
+        }
+        int leftWidth = random.nextInt(width);
+        int rightWidth = width - leftWidth - 1;
+        root.left = generateBinaryTree(minHeight - 1, leftWidth, maxValue);
+        root.right = generateBinaryTree(minHeight - 1, rightWidth, maxValue);
+        return root;
     }
 
-    public static void printTreeByOrderLevel(TreeNode root) {
-        levelOrder(root);
+    public static void main(String[] args) {
+        TreeNode root = generateBinaryTree(6, 10);
+        printTree(root);
     }
 
-    public static void levelOrder(TreeNode root) {
-        System.out.println("--------------------------二叉树生成如下--------------------------");
-        bfs(root);
-        System.out.println("--------------------------二叉树打印完成--------------------------");
+    public static void dfs(TreeNode root){
+
     }
+
 
     public static void bfs(TreeNode root){
         if(root == null){
@@ -71,6 +79,57 @@ public class BinaryTreeGenerator {
             }
             System.out.println("");
         }
+    }
+
+
+
+
+    /**
+     * 求二叉树的高度
+     * @param root
+     * @return
+     */
+    public static int getBinaryTreeDepthByBfs(TreeNode root){
+        if(root == null){
+            return 0;
+        }
+        Deque<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        int level = 0;
+        while(!queue.isEmpty()){
+            int n = queue.size();
+            for(int i=0;i<n;i++){
+                TreeNode treeNode = queue.pop();
+                if(treeNode.left != null){
+                    queue.add(treeNode.left);
+                }
+                if(treeNode.right != null){
+                    queue.add(treeNode.right);
+                }
+            }
+            level++;
+        }
+        return level;
+    }
+
+    public static void levelOrder(TreeNode root) {
+        System.out.println("--------------------------二叉树生成如下--------------------------");
+        bfs(root);
+        System.out.println("--------------------------二叉树打印完成--------------------------");
+    }
+
+
+    public static void printTree(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.val + " ");
+        printTree(root.left);
+        printTree(root.right);
+    }
+
+    public static void printTreeByOrderLevel(TreeNode root) {
+        levelOrder(root);
     }
 
 }
