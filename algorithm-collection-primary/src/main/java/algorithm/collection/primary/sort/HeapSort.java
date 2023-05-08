@@ -138,6 +138,26 @@ public class HeapSort {
         }
     }
 
+    /**
+     * 堆排序：每次删除堆顶元素(即最小值)
+     *
+     * @return
+     */
+    public int deleteMin(){
+        int t = node[1];
+        int n = 10;
+        /**
+         * 直接覆盖堆顶元素
+         */
+        node[1] = node[n];
+        /**
+         * 堆的元素减一
+         */
+        n--;
+        adjustDown(1);
+        return t;
+    }
+
 
     public void swap(int i,int j){
         /**
