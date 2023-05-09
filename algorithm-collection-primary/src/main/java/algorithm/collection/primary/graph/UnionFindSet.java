@@ -34,14 +34,14 @@ public class UnionFindSet {
      * @param v
      * @return
      */
-    public int getFather(int v){
+    public int getLeader(int v){
         if(robbers[v] == v){
             return v;
         }else{
             /**
              * 路径压缩，每次在函数返回时，顺带把路上遇到人的boss改为最后找到的祖宗编号，也就是犯罪团伙的最高领导人，这样可以提高今后找到犯罪领导人的速度
              */
-            robbers[v] = getFather(robbers[v]);
+            robbers[v] = getLeader(robbers[v]);
             return robbers[v];
         }
     }
@@ -53,8 +53,8 @@ public class UnionFindSet {
      * @param u
      */
     public void merge(int v,int u){
-        int i = getFather(v);
-        int j = getFather(u);
+        int i = getLeader(v);
+        int j = getLeader(u);
         if(i != j){
             robbers[j] = i;
             /**
