@@ -60,6 +60,7 @@ public class Recursive {
 
     /**
      * 任何的递归都能转成迭代
+     * 迭代是一种宽泛的概念，是指重复一种过程，一般通过循环结构来实现；比如for循环、while循环和递归等
      */
     public static void iteration(int[] arr,int L,int R){
 
