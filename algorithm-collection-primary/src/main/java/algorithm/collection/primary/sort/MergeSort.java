@@ -10,6 +10,7 @@ public class MergeSort {
 
     /**
      * 归并排序：采用分治法的思想，将数组分成若干个有序的子数组，然后有序的子数组合并的过程
+     * 分：递归的将其分成若干个子数组，是个二叉树结构
      * https://blog.csdn.net/justidle/article/details/104203958
      *
      * @param nums

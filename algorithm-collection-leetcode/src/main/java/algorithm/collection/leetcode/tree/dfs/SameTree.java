@@ -4,6 +4,7 @@ import algorithm.collection.common.datastruct.tree.TreeNode;
 
 /**
  * 100. 相同的树
+ * {@link algorithm.collection.leetcode.tree.bfs.Symmetric}
  * 给你两棵二叉树的根节点 p 和 q ，编写一个函数来检验这两棵树是否相同。
  *
  * 如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。

@@ -4,7 +4,10 @@ import algorithm.collection.common.datastruct.tree.BinaryTreeGenerator;
 import algorithm.collection.common.datastruct.tree.TreeNode;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.Stack;
 
 /**
@@ -30,6 +33,8 @@ public class DeepWidthSearch {
     private int n = 4;
 
     private int count = 0;
+
+    private Map<Integer, List<Integer>> graph;
 
 
     /**
@@ -130,6 +135,31 @@ public class DeepWidthSearch {
             }
             if(treeNode.left != null){
                 stack.push(treeNode.left);
+            }
+        }
+    }
+
+
+    public List<Integer> dfsGraph(int start) {
+        /**
+         * 记录已经访问过的点
+         */
+        Set<Integer> visited = new HashSet<>();
+        /**
+         * 遍历的顺序
+         */
+        List<Integer> result = new ArrayList<>();
+        dfsHelper(start, visited, result);
+        return result;
+    }
+
+
+    private void dfsHelper(int node, Set<Integer> visited, List<Integer> result) {
+        visited.add(node);
+        result.add(node);
+        for (int neighbor : graph.get(node)) {
+            if (!visited.contains(neighbor)) {
+                dfsHelper(neighbor, visited, result);
             }
         }
     }
