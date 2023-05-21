@@ -1,18 +1,17 @@
-package algorithm.collection.leetcode.baseclass.list;
+package algorithm.collection.common.datastruct.linklist;
 
 /**
  * Definition for singly-linked list.
  *
  * @author shadow
- * @date 2023/4/10 9:29
- * @since 1.0
- */
+ * @create 2023-05-21 14:22
+ **/
 public class ListNode {
 
     public int val;
     public ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
+    public ListNode() {}
+    public ListNode(int val) { this.val = val; }
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 
 }

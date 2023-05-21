@@ -1,12 +1,14 @@
 package algorithm.collection.leetcode.list;
 
-import algorithm.collection.leetcode.baseclass.list.ListNode;
+
+import algorithm.collection.common.datastruct.linklist.ListNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Stack;
 
 /**
- * TODO
+ * 1019. 链表中的下一个更大节点
  *
  * @author shadow
  * @date 2023/4/10 9:28
