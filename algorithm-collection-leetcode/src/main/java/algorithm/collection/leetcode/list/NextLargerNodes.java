@@ -5,7 +5,6 @@ import algorithm.collection.common.datastruct.linklist.ListNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Stack;
 
 /**
  * 1019. 链表中的下一个更大节点
@@ -17,6 +16,9 @@ import java.util.Stack;
 public class NextLargerNodes {
 
 
+    /**
+     * 使用递归，动态分配内存的数组
+     */
     private int[] ans;
     private final Deque<Integer> st = new ArrayDeque<>(); // 单调栈（节点值）
 
