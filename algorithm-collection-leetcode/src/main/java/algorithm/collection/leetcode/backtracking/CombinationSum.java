@@ -53,6 +53,12 @@ public class CombinationSum {
             ans.add(new ArrayList<>(list));
             return;
         }
+        /**
+         * TODO 这种每次都指定了(0,n-1)的写法有什么不同
+         * 1.比如数组[2,3,6,7]，[2,2,3]、[2,3,2]是相同的，需要解决重复的组合
+         * 2.利用后两个约束条件做剪枝，较为简单，设置递归出口如下if (sum >= target)
+         * 3.利用栈结构
+         */
         for(int j=0;j<candidates.length;j++){
             if(res+candidates[j] > target){
                 break;
