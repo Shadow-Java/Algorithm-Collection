@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * 1.two sum
- * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
+ * 给定一个整数数组 nums和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那两个整数，并返回它们的数组下标。
  *
  * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
  *
@@ -18,7 +18,6 @@ import java.util.Map;
  * 输入：nums = [3,2,4], target = 6
  * 输出：[1,2]
  *
-
  * @author shadow
  * @create 2023-05-18 00:13
  **/
@@ -29,6 +28,7 @@ public class TwoSum {
     /**
      * 记忆化搜索，即我要搜索的target-i，在i后面，那么边查边搜索(在当前的i上，搜索i之前的数据)，且hash搜索只有O（1）<br/>
      * 如果不用记忆化搜索，那么需要O(N^2)
+     * 另一种解法：滑动窗口（双指针）
      * @param nums
      * @param target
      * @return
