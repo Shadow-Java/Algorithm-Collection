@@ -1,7 +1,11 @@
 package algorithm.collection.leetcode.slidingwindow;
 
+import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
+import algorithm.collection.common.datastruct.tag.DataStructType;
+import algorithm.collection.common.datastruct.tag.TagCategory;
+
 /**
- * todo 76
+ * 76. 最小覆盖子串
  *
  * 如果一个数组问题可以用动态规划解，但又可以使用滑动窗口解决，那么往往滑动窗口的效率更高。<br/>
  * 滑动窗口使用双指针解决问题，所以一般也叫双指针算法，因为两个指针间形成一个窗口
@@ -14,5 +18,7 @@ package algorithm.collection.leetcode.slidingwindow;
  * @author shadow
  * @create 2023-05-18 00:42
  **/
+@TagCategory(questionNumber = "76",questionTitle = "最小覆盖子串",dataStructType = DataStructType.ARRAY,
+        algorithmCategory = AlgorithmCategory.DEPTH_FIRST_SEARCH)
 public class MinimumWindowSubstring {
 }
