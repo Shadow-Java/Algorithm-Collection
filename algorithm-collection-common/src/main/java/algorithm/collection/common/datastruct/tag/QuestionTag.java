@@ -20,6 +20,8 @@ public @interface QuestionTag {
      */
     String questionTitle();
 
+    String questionLink();
+
     /**
      * 难度
      */
