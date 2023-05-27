@@ -12,7 +12,8 @@ public enum AlgorithmCategory {
     OTHER("OTHER"),
     DEPTH_FIRST_SEARCH("DEPTH_FIRST_SEARCH"),
     WIDTH_FIRST_SEARCH("WIDTH_FIRST_SEARCH"),
-    DOUBLE_POINTER("DOUBLE_POINTER");
+    DOUBLE_POINTER("DOUBLE_POINTER"),
+    SLIDE_WINDOW("SLIDE_WINDOW");
     private String value;
 
     AlgorithmCategory(String level) {

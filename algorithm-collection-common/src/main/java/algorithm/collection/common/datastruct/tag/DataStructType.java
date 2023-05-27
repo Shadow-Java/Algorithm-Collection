@@ -9,16 +9,43 @@ package algorithm.collection.common.datastruct.tag;
  */
 public enum DataStructType {
 
+    /**
+     * 树
+     */
     UNIVERSAL_TREE("UNIVERSAL_TREE"),
-    ARRAY("ARRAY"),
+    /**
+     * 数组
+     */
+    ARRAY_LIST("ARRAY_LIST"),
+    /**
+     * 一般的栈
+     */
     UNIVERSAL_STACK("UNIVERSAL_STACK"),
+    /**
+     * 单调栈
+     */
     MONOTONIC_STACK("MONOTONIC_STACK"),
+    /**
+     * 二叉树
+     */
     BINARY_TREE("BINARY_TREE"),
+    /**
+     * 队列
+     */
     UNIVERSAL_QUEUE("UNIVERSAL_QUEUE"),
+    /**
+     * 双端队列
+     */
     //双端队列
     DEDED_DOUBLE_QUEUE("DEDED_DOUBLE_QUEUE"),
-    UNIVERSAL_LIST("UNIVERSAL_LIST"),
-    SINGLE_LIST("SINGLE_LIST");
+    /**
+     * 链表
+     */
+    UNIVERSAL_LINKLIST("UNIVERSAL_LINKLIST"),
+    /**
+     * 单链表
+     */
+    SINGLE_LINKLIST("SINGLE_LINKLIST");
 
     private String value;
 

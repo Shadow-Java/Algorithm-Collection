@@ -24,7 +24,7 @@ import algorithm.collection.common.datastruct.tag.TimeComplexity;
         difficultyLeve = DifficultyLevel.EASY,
         questionNumber = "76",
         questionTitle = "最小覆盖子串",
-        dataStructType = DataStructType.ARRAY,
+        questionLink = "https://leetcode.cn/problems/minimum-window-substring/",
         algorithmCategory = AlgorithmCategory.DEPTH_FIRST_SEARCH,
         timeComplexity = TimeComplexity.O_N
         )

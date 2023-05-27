@@ -20,7 +20,9 @@ public @interface QuestionTag {
      */
     String questionTitle();
 
-    String questionLink();
+    String questionLink() default "https://leetcode.cn/problemset/all/";
+
+    String questionDesc() default "";
 
     /**
      * 难度
@@ -36,12 +38,12 @@ public @interface QuestionTag {
      * 使用的数据结构
      * @return
      */
-    DataStructType dataStructType();
+    DataStructType[] dataStructTypes() default {};
 
     /**
      * 使用的什么类型的算法
      * @return
      */
-    AlgorithmCategory algorithmCategory();
+    AlgorithmCategory[] algorithmCategory() default {};
 
 }
