@@ -1,18 +1,13 @@
 package algorithm.collection.common.datastruct.tag;
 
 /**
- * 题型分类：用于后期算法题拓展，比如算法的类别处理
+ * 所属题号的不同方法实现
  *
  * @author shadow
- * @date 2023/5/27 11:03
+ * @date 2023/5/27 12:30
  * @since 1.0
  */
-public @interface TagCategory {
-
-    /**
-     * 难度
-     */
-    DifficultyLevel difficultyLevel = DifficultyLevel.EASY;
+public @interface MethodTag {
 
     /**
      * 题号
@@ -21,14 +16,9 @@ public @interface TagCategory {
     String questionNumber();
 
     /**
-     * 题目title
-     */
-    String questionTitle();
-
-    /**
      * 时间复杂度
      */
-    TimeComplexity timeComplexity = TimeComplexity.O_N;
+    TimeComplexity timeComplexity() default TimeComplexity.O_N;
 
     /**
      * 使用的数据结构

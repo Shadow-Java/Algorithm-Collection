@@ -2,7 +2,9 @@ package algorithm.collection.leetcode.slidingwindow;
 
 import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
 import algorithm.collection.common.datastruct.tag.DataStructType;
-import algorithm.collection.common.datastruct.tag.TagCategory;
+import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.QuestionTag;
+import algorithm.collection.common.datastruct.tag.TimeComplexity;
 
 /**
  * 76. 最小覆盖子串
@@ -18,7 +20,14 @@ import algorithm.collection.common.datastruct.tag.TagCategory;
  * @author shadow
  * @create 2023-05-18 00:42
  **/
-@TagCategory(questionNumber = "76",questionTitle = "最小覆盖子串",dataStructType = DataStructType.ARRAY,
-        algorithmCategory = AlgorithmCategory.DEPTH_FIRST_SEARCH)
+@QuestionTag(
+        difficultyLeve = DifficultyLevel.EASY,
+        questionNumber = "76",
+        questionTitle = "最小覆盖子串",
+        dataStructType = DataStructType.ARRAY,
+        algorithmCategory = AlgorithmCategory.DEPTH_FIRST_SEARCH,
+        timeComplexity = TimeComplexity.O_N
+        )
 public class MinimumWindowSubstring {
+
 }
