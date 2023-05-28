@@ -1,13 +1,15 @@
 package algorithm.collection.leetcode.slidingwindow;
 
+import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
+import algorithm.collection.common.datastruct.tag.DataStructType;
+import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.MethodTag;
+import algorithm.collection.common.datastruct.tag.QuestionTag;
+import algorithm.collection.common.datastruct.tag.TimeComplexity;
+
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
- * 3. 无重复字符的最长子串
- * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
- *
  * 输入: s = "abcabcbb"
  * 输出: 3
  * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
@@ -19,16 +21,33 @@ import java.util.Set;
  * @author shadow
  * @create 2023-05-18 00:41
  **/
+@QuestionTag(
+        difficultyLeve = DifficultyLevel.MEDIUM,
+        questionNumber = "3",
+        questionTitle = "无重复字符的最长子串",
+        desc = "给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。",
+        questionLink = "https://leetcode.cn/problems/longest-substring-without-repeating-characters/",
+        algorithmCategory = AlgorithmCategory.DOUBLE_POINTER,
+        timeComplexity = TimeComplexity.O_N,
+        dataStructTypes = {DataStructType.HASH_MAP}
+)
 public class LongestSubstring {
 
     /**
      * 滑动窗口（双指针解决）：即怎样去移动左右指针的问题
      *
-     * https://leetcode.cn/problems/longest-substring-without-repeating-characters/solution/hua-dong-chuang-kou-by-powcai/
      * @param s
      * @return
      */
+    @MethodTag(
+            questionNumber = "3",
+            methodLink = "https://leetcode.cn/problems/longest-substring-without-repeating-characters/solution/hua-dong-chuang-kou-by-powcai/",
+            timeComplexity = TimeComplexity.O_N,
+            dataStructType = DataStructType.HASH_MAP,
+            algorithmCategory = AlgorithmCategory.SLIDE_WINDOW
+    )
     public int lengthOfLongestSubstring(String s) {
+        //记录的历史的遍历的ch的索引
         HashMap<Character, Integer> map = new HashMap<>();
         int maxLen = 0;//用于记录最大不重复子串的长度
         int left = 0;//滑动窗口左指针
@@ -64,11 +83,16 @@ public class LongestSubstring {
 
 
     /**
-     * 其他题目
-     * https://leetcode.cn/problems/longest-substring-without-repeating-characters/solution/yi-ge-mo-ban-miao-sha-10dao-zhong-deng-n-sb0x/
      * @param s
      * @return
      */
+    @MethodTag(
+            methodLink = "https://leetcode.cn/problems/longest-substring-without-repeating-characters/solution/yi-ge-mo-ban-miao-sha-10dao-zhong-deng-n-sb0x/",
+            questionNumber = "3",
+            timeComplexity = TimeComplexity.O_N,
+            dataStructType = DataStructType.ARRAY_LIST,
+            algorithmCategory = AlgorithmCategory.SLIDE_WINDOW
+    )
     public int anotherWayToSolveIt(String s) {
         int maxSize = 0;
         int [] dict = new int[256]; //记录ASCII 码字符出现的位置，以字符作为下标

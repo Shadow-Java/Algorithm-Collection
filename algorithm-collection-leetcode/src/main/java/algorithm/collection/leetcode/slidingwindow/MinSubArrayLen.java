@@ -1,5 +1,12 @@
 package algorithm.collection.leetcode.slidingwindow;
 
+import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
+import algorithm.collection.common.datastruct.tag.DataStructType;
+import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.MethodTag;
+import algorithm.collection.common.datastruct.tag.QuestionTag;
+import algorithm.collection.common.datastruct.tag.TimeComplexity;
+
 /**
  * 209. 长度最小的子数组
  *
@@ -19,6 +26,14 @@ package algorithm.collection.leetcode.slidingwindow;
  * @author shadow
  * @create 2023-05-27 01:03
  **/
+@QuestionTag(
+        difficultyLeve = DifficultyLevel.MEDIUM,
+        questionNumber = "209",
+        questionTitle = "长度最小的子数组",
+        questionLink = "https://leetcode.cn/problems/minimum-size-subarray-sum/",
+        algorithmCategory = AlgorithmCategory.DOUBLE_POINTER,
+        timeComplexity = TimeComplexity.O_N
+)
 public class MinSubArrayLen {
 
     /**
@@ -34,6 +49,12 @@ public class MinSubArrayLen {
      * @param nums
      * @return
      */
+    @MethodTag(
+            methodLink = "https://leetcode.cn/problems/minimum-size-subarray-sum/",
+            questionNumber = "209",
+            timeComplexity = TimeComplexity.O_N,
+            algorithmCategory = AlgorithmCategory.SLIDE_WINDOW
+    )
     public int minSubArrayLen(int target, int[] nums) {
         int leftPoint = 0;
         int rightPoint = 0;

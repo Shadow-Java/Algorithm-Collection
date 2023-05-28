@@ -22,7 +22,7 @@ public @interface QuestionTag {
 
     String questionLink() default "https://leetcode.cn/problemset/all/";
 
-    String questionDesc() default "";
+    String desc() default "";
 
     /**
      * 难度

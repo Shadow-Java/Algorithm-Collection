@@ -15,6 +15,9 @@ public @interface MethodTag {
      */
     String questionNumber();
 
+    String methodLink() default "";
+
+    String desc() default "";
     /**
      * 时间复杂度
      */
@@ -24,7 +27,7 @@ public @interface MethodTag {
      * 使用的数据结构
      * @return
      */
-    DataStructType dataStructType();
+    DataStructType dataStructType() default DataStructType.ARRAY_LIST;
 
     /**
      * 使用的什么类型的算法

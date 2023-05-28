@@ -17,6 +17,8 @@ public enum DataStructType {
      * 数组
      */
     ARRAY_LIST("ARRAY_LIST"),
+
+    HASH_MAP("HASH_MAP"),
     /**
      * 一般的栈
      */
