@@ -55,6 +55,18 @@ public @interface QuestionTag {
     Class[] relevateClass() default {};
 
     /**
+     * 题目的记忆周期
+     * @return
+     */
+    MemoryCycle memoryCycle() default MemoryCycle.FIRST;
+
+    /**
+     * 根据艾宾浩斯遗忘曲线进行学习的重复记忆<br/>
+     * 周期越低证明你越需要重复重复再重复
+     */
+    SegmentLevel segmentLevel() default SegmentLevel.SENSORY_MEMORY;
+
+    /**
      * 使用的数据结构
      * @return
      */
