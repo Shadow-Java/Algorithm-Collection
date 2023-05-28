@@ -1,10 +1,15 @@
 package algorithm.collection.leetcode.slidingwindow;
 
+import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
+import algorithm.collection.common.datastruct.tag.DataStructType;
+import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.QuestionTag;
+import algorithm.collection.common.datastruct.tag.TimeComplexity;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 30. 串联所有单词的子串
  *
  * 给定一个字符串s和一个字符串数组words。words中所有字符串 长度相同。
  *
@@ -25,6 +30,16 @@ import java.util.List;
  * @date 2023/5/27 10:58
  * @since 1.0
  */
+@QuestionTag(
+        questionNumber = "30",
+        questionTitle = "串联所有单词的子串",
+        difficultyLeve = DifficultyLevel.HARD,
+        desc = "给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。",
+        questionLink = "https://leetcode.cn/problems/substring-with-concatenation-of-all-words/",
+        algorithmCategory = AlgorithmCategory.DOUBLE_POINTER,
+        timeComplexity = TimeComplexity.O_N,
+        dataStructTypes = {DataStructType.HASH_MAP,DataStructType.ARRAY_LIST}
+)
 public class SubstringConcatenationofAllWords {
 
     public List<Integer> findSubstring(String s, String[] words) {

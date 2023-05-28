@@ -16,6 +16,10 @@
             <groupId>algorithm.collection</groupId>
             <artifactId>algorithm-collection-common</artifactId>
         </dependency>
+        <dependency>
+            <groupId>algorithm.collection</groupId>
+            <artifactId>algorithm-collection-primary</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

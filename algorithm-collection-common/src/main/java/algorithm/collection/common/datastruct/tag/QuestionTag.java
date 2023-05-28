@@ -20,8 +20,16 @@ public @interface QuestionTag {
      */
     String questionTitle();
 
+    /**
+     * 题目链接
+     * @return
+     */
     String questionLink() default "https://leetcode.cn/problemset/all/";
 
+    /**
+     * 题目描述
+     * @return
+     */
     String desc() default "";
 
     /**
@@ -33,6 +41,18 @@ public @interface QuestionTag {
      * 时间复杂度
      */
     TimeComplexity timeComplexity() default TimeComplexity.O_N;
+
+    /**
+     * 是否是会员题
+     * @return
+     */
+    boolean membershipQuestion() default false;
+
+    /**
+     * 关联的题解
+     * @return
+     */
+    Class[] relevateClass() default {};
 
     /**
      * 使用的数据结构
