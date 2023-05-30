@@ -44,13 +44,13 @@ import java.util.Set;
         questionTitle = "最小覆盖子串",
         relevateClass = {LongestSubstring.class},
         questionLink = "https://leetcode.cn/problems/minimum-window-substring/",
-        algorithmCategory = AlgorithmCategory.DEPTH_FIRST_SEARCH,
+        algorithmCategory = AlgorithmCategory.DOUBLE_POINTER,
         timeComplexity = TimeComplexity.O_N
 )
 public class MinimumWindowSubstring {
 
     @MethodTag(
-            questionNumber = "3",
+            questionNumber = "76",
             methodLink = "https://leetcode.cn/problems/minimum-window-substring/solution/tong-su-qie-xiang-xi-de-miao-shu-hua-dong-chuang-k/",
             timeComplexity = TimeComplexity.O_N,
             dataStructType = DataStructType.ARRAY_LIST,
@@ -93,9 +93,34 @@ public class MinimumWindowSubstring {
         return size == Integer.MAX_VALUE ? "" : s.substring(start, start + size);
     }
 
+    /**
+     *
+     * @param s1 由英语字符A-a等组成
+     * @param win
+     * @return s1是win的覆盖子串
+     */
+    public boolean isCoverSubString(String s1,String win){
+        //英语字符26个，'A'-'Z'的ascii值为65-90，'a'的ascii值为97-122，算上其他字符ascii为0-127
+        //用于统计每个字符的出现次数，数组下标为字符的ascii值，如need['a']=need['97']=0,这样直接使用ascii值不用偏位移
+        //如果使用int[] need = new int[26]; need[0]=need['a'-'a'],need[1]=need['b'-'a']
+        int[] need = new int[128];
+        //记录需要的字符的个数
+        for (int i = 0; i < s1.length(); i++) {
+            need[s1.charAt(i)]++;
+        }
+        //窗口需要的字符数
+        int count = s1.length();
+        //通过right右移动 让count--
+        if(count == 0){
+            //left向右移动，如果当前包含s1的字符，count++
+            return true;
+        }
+        return false;
+    }
+
 
     @MethodTag(
-            questionNumber = "3",
+            questionNumber = "76",
             desc = "错误的解法：使用hashmap进行计数有个问题，Integer会缓存频繁使用的数值，数值范围为-128到127，在此范围内直接返回缓存值。超过该范围就会new 一个对象。当不存在该字符时返回的是空，改为get(x).intValue,且比较时用equals",
             methodLink = "https://leetcode.cn/problems/minimum-window-substring/comments/",
             timeComplexity = TimeComplexity.O_N,

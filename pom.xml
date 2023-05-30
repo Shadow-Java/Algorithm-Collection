@@ -19,8 +19,8 @@
 
     <modules>
         <module>algorithm-collection-common</module>
-        <module>algorithm-collection-leetcode</module>
         <module>algorithm-collection-primary</module>
+        <module>algorithm-collection-leetcode</module>
         <module>algorithm-collection-markdown</module>
     </modules>
 
