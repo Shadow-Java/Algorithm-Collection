@@ -15,10 +15,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot</artifactId>
         </dependency>
@@ -39,16 +35,69 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
     </dependencies>
 
     <build>
+        <finalName>leetcode-algorithm-collection</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/test/java</directory>
+            </testResource>
+        </testResources>
         <pluginManagement>
             <plugins>
+                <!-- 打包工具-->
                 <plugin>
-                    <artifactId>maven-install-plugin</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <mainClass>algorithm.collection.primary.Application</mainClass>
+                        <layout>ZIP</layout>
+                        <includes>
+                            <dependency>
+                                <groupId>algorithm.collection</groupId>
+                                <artifactId>algorithm-collection-common</artifactId>
+                            </dependency>
+                            <dependency>
+                                <groupId>algorithm.collection</groupId>
+                                <artifactId>algorithm-collection-leetcode</artifactId>
+                            </dependency>
+                            <dependency>
+                                <groupId>algorithm.collection</groupId>
+                                <artifactId>algorithm-collection-markdown</artifactId>
+                            </dependency>
+                        </includes>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
