@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 邮件
+ * 邮件 使用hutool工具实现邮件发送
  *
  * @author shadow
  * @date 2022/7/28 19:30

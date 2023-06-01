@@ -7,6 +7,7 @@ import algorithm.collection.common.datastruct.tag.MethodTag;
 import algorithm.collection.common.datastruct.tag.QuestionTag;
 import algorithm.collection.common.datastruct.tag.TimeComplexity;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -108,6 +109,32 @@ public class LongestSubstring {
             key++;
         }
         return maxSize;
+    }
+
+    /**
+     * 注意题目是统计最大的不重复字符，其中不重复的处理就是更新start 左窗口
+     * @param s
+     * @return
+     */
+    public int solution_second(String s) {
+        // 记录字符上一次出现的位置
+        int[] last = new int[128];
+        Arrays.fill(last,-1);
+        int n = s.length();
+
+        int res = 0;
+        int start = 0; // 窗口开始位置
+        for(int i = 0; i < n; i++) {
+            int index = s.charAt(i);
+            /**
+             * 因为是不重复字符串，如abca，右窗口遇到a时需要将left更新为当前位置
+             */
+            start = Math.max(start, last[index] + 1);
+            res   = Math.max(res, i - start + 1);
+            last[index] = i;
+        }
+
+        return res;
     }
 
 }
