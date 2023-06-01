@@ -1,7 +1,9 @@
 package algorithm.collection.leetcode.slidingwindow;
 
 import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
+import algorithm.collection.common.datastruct.tag.DataStructType;
 import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.MethodTag;
 import algorithm.collection.common.datastruct.tag.QuestionTag;
 import algorithm.collection.common.datastruct.tag.TimeComplexity;
 
@@ -32,6 +34,20 @@ import algorithm.collection.common.datastruct.tag.TimeComplexity;
 )
 public class MinimumWindowSubsequence {
 
+    /**
+     * 1.什么是子序列：即按照T中顺序出现，且包含所有字符的字符串
+     * 2.需要最短且左窗口最靠左
+     * @param s1
+     * @param s2
+     * @return
+     */
+    @MethodTag(
+            questionNumber = "727",
+            methodLink = "https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/solutions/240717/pai-xu-hua-chuang-by-netcan/",
+            timeComplexity = TimeComplexity.O_N,
+            dataStructType = DataStructType.ARRAY_LIST,
+            algorithmCategory = AlgorithmCategory.SLIDE_WINDOW
+    )
     public String minWindow(String s1, String s2) {
         return "";
     }

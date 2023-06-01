@@ -69,7 +69,7 @@ public class MinimumInterval {
      */
     @MethodTag(
             questionNumber = "632",
-            methodLink = "https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/",
+            methodLink = "https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/solutions/240717/pai-xu-hua-chuang-by-netcan/",
             timeComplexity = TimeComplexity.O_N,
             dataStructType = DataStructType.ARRAY_LIST,
             algorithmCategory = AlgorithmCategory.SLIDE_WINDOW
