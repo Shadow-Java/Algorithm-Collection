@@ -21,6 +21,8 @@ import java.util.Map;
  * 输入：s1= "ab" s2 = "eidboaoo"
  * 输出：false
  *
+ * s1 和 s2 仅包含小写字母
+ *
  * @author shadow
  * @create 2023-05-28 16:55
  **/
@@ -55,19 +57,23 @@ public class PermutationString {
             algorithmCategory = AlgorithmCategory.SLIDE_WINDOW
     )
     public static boolean checkInclusion(String s1, String s2) {
+        //匹配串
         char[] pattern = s1.toCharArray();
+        //文本串
         char[] text = s2.toCharArray();
 
         int pLen = s1.length();
         int tLen = s2.length();
-
+        //匹配串的出现频率
         int[] pFreq = new int[26];
+        //窗口串的频率
         int[] winFreq = new int[26];
 
         for (int i = 0; i < pLen; i++) {
+            //因为只有英文字符，所以可以用偏移量，总共且只有26个字符
             pFreq[pattern[i] - 'a']++;
         }
-
+        //匹配串需要的字符数 去重的
         int pCount = 0;
         for (int i = 0; i < 26; i++) {
             if (pFreq[i] > 0){
@@ -77,21 +83,24 @@ public class PermutationString {
 
         int left = 0;
         int right = 0;
-        // 当滑动窗口中的某个字符个数与 s1 中对应相等的时候才计数
+        // 当滑动窗口中的字符的种类数与 s1 中对应相等的时候才计数
         int winCount = 0;
         while (right < tLen){
+            //当前的字符中有匹配串
             if (pFreq[text[right] - 'a'] > 0 ) {
+                //窗口的字符计数加一
                 winFreq[text[right] - 'a']++;
+                //当滑动窗口中某个字符出现的频率与匹配串字符出现的频率相同则加1
                 if (winFreq[text[right] - 'a'] == pFreq[text[right] - 'a']){
                     winCount++;
                 }
             }
-            right++;
 
             while (pCount == winCount){
-                if (right - left == pLen){
+                if (right - left +1 == pLen){
                     return true;
                 }
+                //当窗口的种类数包含的匹配串的字符种类数，left指针需要向右移动，直到长度一致，这样能保证是连续的子串
                 if (pFreq[text[left] - 'a'] > 0 ) {
                     winFreq[text[left] - 'a']--;
                     if (winFreq[text[left] - 'a'] < pFreq[text[left] - 'a']){
@@ -100,12 +109,13 @@ public class PermutationString {
                 }
                 left++;
             }
+            right++;
         }
         return false;
     }
 
     public static void main(String[] args) {
-        String s1 = "b0a",s2 = "eidboaoo";
+        String s1 = "aa",s2 = "eidboaoo";
         boolean res = checkInclusion(s1,s2);
         System.out.println(res);
     }
@@ -125,6 +135,8 @@ public class PermutationString {
      * 窗口s2包含s1的子串：s1的字符种类数等于win的字符种类数，且win的长度等于s1的长度
      *
      * ex：s1 = "abc"   win = "abfcd"   统计s2的wincount=s1.length，win的字符个数与s1一致
+     * 1.win的字符种类数与匹配串的字符种类数相同(wincount)
+     * 2.win的长度和匹配串的长度相同
      * @param s1
      * @param map
      * @return
