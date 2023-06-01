@@ -10,9 +10,14 @@ package algorithm.collection.common.datastruct.tag;
 public enum AlgorithmCategory {
 
     OTHER("OTHER"),
+
+    DYNAMIC_PROGRAMMING("DYNAMIC_PROGRAMMING"),
     DEPTH_FIRST_SEARCH("DEPTH_FIRST_SEARCH"),
+
     WIDTH_FIRST_SEARCH("WIDTH_FIRST_SEARCH"),
+
     DOUBLE_POINTER("DOUBLE_POINTER"),
+
     SLIDE_WINDOW("SLIDE_WINDOW");
     private String value;
 
