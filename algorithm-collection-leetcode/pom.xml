@@ -20,6 +20,10 @@
             <artifactId>algorithm-collection-common</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+        </dependency>
+        <dependency>
             <groupId>algorithm.collection</groupId>
             <artifactId>algorithm-collection-primary</artifactId>
         </dependency>
