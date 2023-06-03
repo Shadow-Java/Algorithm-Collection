@@ -13,7 +13,9 @@ public enum TimeComplexity {
     O_N_LOG_N("O(N(logN))"),
     O_N_2("O(N^2)"),
     O_N_3("O(N^3)"),
-    O_N_4("O(N^4)");
+    O_N_4("O(N^4)"),
+    //其中 N,KN, KN,K 分别为 S, T 字符串的长度
+    O_NK("O(NK)");
     private String value;
 
     TimeComplexity(String level) {
