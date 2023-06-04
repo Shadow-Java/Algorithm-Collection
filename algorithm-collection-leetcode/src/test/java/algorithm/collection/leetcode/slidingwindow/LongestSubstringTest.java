@@ -108,6 +108,9 @@ class LongestSubstringTest {
                 return true;
             }
         }
+        out:for(int x:book){
+
+        }
         return false;
     }
 
