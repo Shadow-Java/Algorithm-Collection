@@ -3,7 +3,6 @@ package algorithm.collection.leetcode.slidingwindow;
 
 import algorithm.collection.common.datastruct.tag.DifficultyLevel;
 import algorithm.collection.common.datastruct.tag.QuestionTag;
-import org.junit.Test;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -47,7 +46,7 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Fork(1)
 @Threads(2)
-class LongestSubstringTest {
+public class LongestSubstringTest {
 
 
     @Benchmark

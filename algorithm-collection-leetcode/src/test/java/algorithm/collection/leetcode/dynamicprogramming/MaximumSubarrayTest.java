@@ -12,7 +12,7 @@ import algorithm.collection.common.datastruct.tag.QuestionTag;
         questionTitle = "最小区间",
         relevateClass = MaximumSubarray.class
 )
-class MaximumSubarrayTest {
+public class MaximumSubarrayTest {
 
     public static int maxSubArray(int[] nums){
         int[] dp = new int[nums.length];
