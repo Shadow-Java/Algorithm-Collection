@@ -23,6 +23,8 @@ public enum DataStructType {
      * 一般的栈
      */
     UNIVERSAL_STACK("UNIVERSAL_STACK"),
+
+    SYSTEM_STACK("SYSTEM_STACK"),
     /**
      * 单调栈
      */

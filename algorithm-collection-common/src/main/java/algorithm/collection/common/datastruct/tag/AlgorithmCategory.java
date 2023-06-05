@@ -20,6 +20,8 @@ public enum AlgorithmCategory {
 
     DOUBLE_POINTER("DOUBLE_POINTER"),
 
+    BACK_TRACKING("BACK_TRACKING"),
+
     SLIDE_WINDOW("SLIDE_WINDOW");
     private String value;
 
