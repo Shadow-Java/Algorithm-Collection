@@ -33,6 +33,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok.version>1.18.22</lombok.version>
+        <hutool.version>5.8.4.M1</hutool.version>
     </properties>
    <!-- pom标签  https://blog.csdn.net/weixin_44226789/article/details/107890467-->
    <!--  maven生命周期 https://cloud.tencent.com/developer/article/1543717-->
@@ -82,7 +83,12 @@
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-core</artifactId>
-                <version>5.8.4.M1</version>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-extra</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
