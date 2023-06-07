@@ -22,6 +22,8 @@ public enum AlgorithmCategory {
 
     BACK_TRACKING("BACK_TRACKING"),
 
+    BIT_MANIPULATION("BIT_MANIPULATION"),
+
     SLIDE_WINDOW("SLIDE_WINDOW");
     private String value;
 
