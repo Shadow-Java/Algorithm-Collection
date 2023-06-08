@@ -38,8 +38,10 @@ public class DeepWidthSearch {
 
 
     /**
-     * 输入一个n，输出1-n的全排列
-     * 加入有n个箱子，相当于将1-n放入n个箱子中，使用深度优先搜索
+     * 输入一个n，输出1-n的全排列<br/>
+     * 比如123的全排列：123,132,213,231，312,321<br/>
+     * 加入有n个箱子，相当于将1-n放入n个箱子中，使用深度优先搜索<br/>
+     * 大致逻辑：step是站在第几个箱子面前，n表示手里的牌，book表示手里的牌是否已经被使用，每次站在箱子前查看手机那些牌没有使用，随机取一张，选择好后放下一个箱子，当所有的箱子安排好后回收当前的牌
      * @param step 代表第几个箱子
      */
     public void dfs(int step){
@@ -93,7 +95,7 @@ public class DeepWidthSearch {
 
 
     /**
-     * 深度优先遍历探寻遍历的顺序
+     * 深度优先遍历二叉树结构，通过栈打印回溯的路径
      * todo 有问题
      * @param root
      */
@@ -140,6 +142,11 @@ public class DeepWidthSearch {
     }
 
 
+    /**
+     * dfs遍历图结构
+     * @param start 任意选择其中一个图结点
+     * @return
+     */
     public List<Integer> dfsGraph(int start) {
         /**
          * 记录已经访问过的点

@@ -30,7 +30,7 @@ import java.util.Set;
         questionNumber = "136",
         questionTitle = "无重复字符的最长子串",
         desc = "给你一个 非空 整数数组 nums ，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。",
-        questionLink = "https://leetcode.cn/problems/longest-substring-without-repeating-characters/",
+        questionLink = "https://leetcode.cn/problems/single-number/",
         algorithmCategory = AlgorithmCategory.BIT_MANIPULATION,
         timeComplexity = TimeComplexity.O_N,
         dataStructTypes = {DataStructType.ARRAY_LIST}
@@ -39,7 +39,7 @@ public class SingleNumber {
 
     @MethodTag(
             questionNumber = "136",
-            methodLink = "https://leetcode.cn/problems/longest-substring-without-repeating-characters/solution/hua-dong-chuang-kou-by-powcai/",
+            methodLink = "https://leetcode.cn/problems/single-number/",
             timeComplexity = TimeComplexity.O_N,
             dataStructType = DataStructType.ARRAY_LIST,
             algorithmCategory = AlgorithmCategory.BIT_MANIPULATION
