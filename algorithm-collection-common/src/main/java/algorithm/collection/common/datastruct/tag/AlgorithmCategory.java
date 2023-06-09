@@ -24,6 +24,8 @@ public enum AlgorithmCategory {
 
     BIT_MANIPULATION("BIT_MANIPULATION"),
 
+    BINARY_FIND("BINARY_FIND"),
+
     SLIDE_WINDOW("SLIDE_WINDOW");
     private String value;
 
