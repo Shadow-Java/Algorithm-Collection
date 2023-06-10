@@ -6,12 +6,12 @@ import java.util.TreeMap;
 
 /**
  * 252. 会议室
- *
+ * <p>
  * 给定一个会议时间安排的数组 intervals ，每个会议时间都会包括开始和结束的时间 intervals[i] = [starti, endi] ，请你判断一个人是否能够参加这里面的全部会议。
- *
+ * <p>
  * 输入：intervals = [[0,30],[5,10],[15,20]]
  * 输出：false
- *
+ * <p>
  * 输入：intervals = [[7,10],[2,4]]
  * 输出：true
  *
@@ -23,6 +23,7 @@ public class CanAttendMeetings {
     /**
      * 暴力排序，然后判断相邻的区间是否有交集，如果有说明不可以完成所有的会议，若都没有，说明可以。O(NlgN)时间
      * 按开始时间排序后，依次检查相邻前一个的结束和后一个的开始时间是否重叠
+     *
      * @param intervals
      * @return
      */
@@ -41,6 +42,7 @@ public class CanAttendMeetings {
      * 不排序，按照区间处理，每当进入一个区间[a, b]，就把区间[a, b)内的conut累计1。
      * 最后扫描看看有没有时间点会议数目超过2，若有说明不能完成所有会议。否则可以。O(Nlg(Span)), N是数组intervals的长度，Span是所有区间内跨度最大的区间的跨度
      * 链接：https://leetcode-cn.com/problems/meeting-rooms/solution/zhong-gui-zhong-ju-si-chong-bu-tong-de-j-ayuh/
+     *
      * @param intervals
      * @return
      */
@@ -59,6 +61,7 @@ public class CanAttendMeetings {
 
     /**
      * 小优化
+     *
      * @param intervals
      * @return
      */
