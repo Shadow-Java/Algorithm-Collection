@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.fnd.binaryfind;
+package algorithm.collection.leetcode.search.binary;
 
 import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
 import algorithm.collection.common.datastruct.tag.DataStructType;

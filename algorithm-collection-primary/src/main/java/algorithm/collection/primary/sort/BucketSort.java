@@ -2,8 +2,6 @@ package algorithm.collection.primary.sort;
 
 import algorithm.collection.common.datastruct.array.ArrayRandomGenerator;
 
-import java.util.Arrays;
-
 /**
  * 桶排序是一种基于数据状态的排序
  *
