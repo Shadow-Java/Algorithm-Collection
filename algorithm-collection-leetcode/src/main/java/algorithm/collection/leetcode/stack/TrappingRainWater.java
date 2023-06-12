@@ -101,7 +101,7 @@ public class TrappingRainWater {
     }
 
     /**
-     * 单调栈结构实现
+     * 单调栈结构实现，可以类比括号比对
      *
      * @param height
      * @return
