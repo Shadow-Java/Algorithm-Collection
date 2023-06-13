@@ -15,16 +15,14 @@
 中间值的选择：
 1.mid=（left+right）/2
 0 1 2 3 4 5 6 7  left=0 right=7 mid =4,奇数则是中间偏右 偶数则是中间值
-2.mid=left+(right-l)/2 
+2.mid=left+(right-l)/2
 0 1 2 3 4 5 6 7  left=0 righ  t=7 mid =3,奇数则是中间偏左 偶数则是中间值偏左
 
 ### while判断的选择
 
 1.while (left <= right)
 
-
 2.while (left <= right)
-
 
 ### 递归二分：
 
