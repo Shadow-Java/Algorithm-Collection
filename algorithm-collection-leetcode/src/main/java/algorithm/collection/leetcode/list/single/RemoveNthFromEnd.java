@@ -39,14 +39,15 @@ public class RemoveNthFromEnd {
         //使用哑节点，若头结点被删除，则不会为空
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
+        //拿到删除节点的前节点
         ListNode pre = dummy;
         //使用快慢指针,能找到倒数的第n个节点
         ListNode slow = head;
         ListNode fast = head;
         //若要找到倒数第n个节点，那么需要慢指针指向null，快指针离慢指针n个节点
         //1  ->  2  ->  3  ->  4  ->  5  ->  null
-        //                    fast           slow   （此情况让fast找到了倒数第2个节点）
-        //             fast                  slow   （此情况让fast找到了倒数第3个节点）
+        //                    slow           fast （此情况让fast找到了倒数第2个节点）
+        //             slow                  fast  （此情况让fast找到了倒数第3个节点）
         for(int i=0;i<n;i++){
             fast = fast.next;
         }
@@ -55,6 +56,7 @@ public class RemoveNthFromEnd {
             slow = slow.next;
             fast = fast.next;
         }
+        //删除节点为slow，相当于pre->slow->slow.next,此时删除slow
         pre.next = slow.next;
         return dummy.next;
     }
