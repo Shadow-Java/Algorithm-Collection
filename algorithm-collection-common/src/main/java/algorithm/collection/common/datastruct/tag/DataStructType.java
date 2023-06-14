@@ -42,6 +42,8 @@ public enum DataStructType {
      */
     //双端队列
     DEDED_DOUBLE_QUEUE("DEDED_DOUBLE_QUEUE"),
+
+    HEAP("HEAP"),
     /**
      * 链表
      */
