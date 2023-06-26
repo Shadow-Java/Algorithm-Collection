@@ -105,19 +105,23 @@ public class MergeKLists {
     )
     public ListNode mergeKListsAnotherWay(ListNode[] lists) {
         Queue<ListNode> pq = new PriorityQueue<>((v1, v2) -> v1.val - v2.val);
+        //组成一个小顶堆
         for (ListNode node: lists) {
             if (node != null) {
                 pq.offer(node);
             }
         }
-
+        //合并的结点的哑节点
         ListNode dummyHead = new ListNode(0);
+        //合并后的队尾
         ListNode tail = dummyHead;
         while (!pq.isEmpty()) {
+            //堆顶出队
             ListNode minNode = pq.poll();
-            tail.next = minNode;
-            tail = minNode;
+            //拿到最小值节点
+            tail = tail.next = minNode;
             if (minNode.next != null) {
+                //最小值节点的下一个节点入队
                 pq.offer(minNode.next);
             }
         }
