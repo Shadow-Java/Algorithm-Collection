@@ -28,6 +28,8 @@ public enum AlgorithmCategory {
 
     BINARY_FIND("BINARY_FIND"),
 
+    MATH("MATH"),
+
     SLIDE_WINDOW("SLIDE_WINDOW");
     private String value;
 
