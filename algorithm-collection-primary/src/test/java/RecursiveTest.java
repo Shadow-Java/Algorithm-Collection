@@ -1,5 +1,6 @@
-import org.junit.Test;
+
 import algorithm.collection.primary.recursive.Recursive;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Shadow at 2022/7/5 22:46

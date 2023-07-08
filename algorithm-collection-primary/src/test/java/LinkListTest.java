@@ -1,6 +1,6 @@
 import algorithm.collection.common.datastruct.linklist.SingleLinkListNode;
 import algorithm.collection.primary.linkedList.LinkedList;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * 链表test

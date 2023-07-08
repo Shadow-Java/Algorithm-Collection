@@ -1,10 +1,8 @@
 package algorithm.collection.common.datastruct.tree;
 
-import junit.framework.TestCase;
-
 import java.util.Random;
 
-public class BinaryTreeGeneratorTest extends TestCase {
+public class BinaryTreeGeneratorTest {
 
     public static void main(String[] args) {
         test();

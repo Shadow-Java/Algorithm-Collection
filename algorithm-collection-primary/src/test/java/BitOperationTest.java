@@ -1,5 +1,5 @@
 import algorithm.collection.primary.bitoperation.BitOperation;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  *

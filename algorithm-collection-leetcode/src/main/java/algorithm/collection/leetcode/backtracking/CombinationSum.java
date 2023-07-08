@@ -1,6 +1,15 @@
 package algorithm.collection.leetcode.backtracking;
 
 
+import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
+import algorithm.collection.common.datastruct.tag.DataStructType;
+import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.QuestionTag;
+import algorithm.collection.common.datastruct.tag.TimeComplexity;
+import algorithm.collection.leetcode.slidingwindow.PermutationString;
+import algorithm.collection.leetcode.tree.dfs.MaxDepth;
+import algorithm.collection.primary.tree.DeepWidthSearch;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +28,17 @@ import java.util.List;
  * @author shadow
  * @create 2023-05-18 00:26
  **/
+@QuestionTag(
+        questionNumber = "39",
+        questionTitle = "组合总和",
+        relevateClass = {PermutationString.class, MaxDepth.class, DeepWidthSearch.class},
+        difficultyLeve = DifficultyLevel.MEDIUM,
+        desc = "给你一个 无重复元素 的整数数组candidates 和一个目标整数target，找出candidates中可以使数字和为目标数target 的 所有不同组合 ，并以列表形式返回。你可以按 任意顺序 返回这些组合",
+        questionLink = "https://leetcode.cn/problems/combination-sum/",
+        algorithmCategory = AlgorithmCategory.DEPTH_FIRST_SEARCH,
+        timeComplexity = TimeComplexity.O_N_LOG_N,
+        dataStructTypes = {DataStructType.UNIVERSAL_STACK}
+)
 public class CombinationSum {
 
     /**
@@ -38,13 +58,14 @@ public class CombinationSum {
     }
 
     /**
-     * 需要弄清楚递归的内存分配，每个变量是怎样存储的
-     * @param i
-     * @param candidates
-     * @param res
-     * @param target
-     * @param list
-     * @param ans
+     * 需要弄清楚递归的内存分配，每个变量是怎样存储的<br/>
+     * 回溯算法一般都会重复列举，需要剪支
+     * @param i             第几个开始排列
+     * @param candidates    数组入参
+     * @param res           list的总和
+     * @param target        目标值
+     * @param list          回溯的每个list
+     * @param ans           结果合集，即所有满足list的总和
      */
     private static void f(int i,int[] candidates,int res,int target,List<Integer> list,List<List<Integer>> ans){
         if(res > target){
@@ -70,6 +91,16 @@ public class CombinationSum {
     }
 
 
+    /**
+     * 从结点begin开始深度遍历分支，即一个分支一个list，如果list满足结果要求则加入ans
+     * 空间复杂度：栈的深度 O(target)
+     * @param arr      无重复且排序后的数组
+     * @param begin    深度遍历开始的节点
+     * @param target   目标值
+     * @param sum      path的实时总和
+     * @param path     遍历的路径
+     * @param res      满足target结果的总和
+     */
     private void dfs(int[] arr,int begin,int target,int sum,List<Integer> path,List<List<Integer>> res){
         // 终止条件
         if(sum > target){
@@ -80,14 +111,18 @@ public class CombinationSum {
             res.add(new ArrayList<Integer>(path));  // 这里要新拷贝一个 list ，放入 res 中，避免 res 中引用同一个元素；
             return ;
         }
-
+        /**
+         * 注：这里使用begin有个奇妙的用法，比如数组[2,3,6,7],当使用2后，下一步只能使用3，即只会出现[2,2,3] 不会出现[2,3,2]的情况
+         */
         for(int i = begin;i<arr.length;i++){  //从begin 开始，使用当前元素及比当前元素大的（前面使用排序的作用在于此）
             path.add(arr[i]);
-            //  对 i 节点进行深度优先搜索，但只能从 i 及比 i 大的位置开始；避免{1，2，3}，{1，3，2} 的情况
+            /**
+             * 对 i 节点进行深度优先搜索，但只能从 i 及比 i 大的位置开始；避免{1，2，3}，{1，3，2} 的情况<br/>
+             * 为什么是深度优先：从begin结点开始，一直在分支上向下遍历
+             */
             dfs(arr,i,target,sum+arr[i],path,res);
             path.remove(path.size()-1);  // 回溯
         }
-        return ;
     }
 
     public static void main(String[] args) {
