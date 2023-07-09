@@ -5,6 +5,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class BinaryTreeGenerator {
@@ -126,6 +127,58 @@ public class BinaryTreeGenerator {
 
     public static void printTreeByOrderLevel(TreeNode root) {
         levelOrder(root);
+    }
+
+    /**
+     * 可视化打印二叉树
+     * @param root
+     */
+    public static void showTree(TreeNode root){
+        int hight = 0;//层数
+        List<List<Integer>> list = new ArrayList<>();//所有节点分层保存
+        if(root == null){
+            System.out.println("--------------------------二叉树为空，请重新输入--------------------------");
+        }
+        Deque<TreeNode> nodeDeque = new ArrayDeque<>();
+        nodeDeque.add(root);
+        while(!nodeDeque.isEmpty()){
+            int n = nodeDeque.size();//每一层的节点数
+            List<Integer> levelNodeVals = new ArrayList<>();
+            hight++;
+            for(int i=0;i<n;i++){
+                TreeNode curNode = nodeDeque.pop();
+                levelNodeVals.add(curNode.getVal());
+                if(curNode.getLeft() != null){
+                    nodeDeque.add(curNode.getLeft());
+                }
+                if(curNode.getRight() != null){
+                    nodeDeque.add(curNode.getRight());
+                }
+            }
+            list.add(levelNodeVals);
+        }
+
+        int lastNum = (int)Math.pow(2,hight-1);//满二叉树最后一层的节点数
+        int lastLen = lastNum + (lastNum - 1); //最后一层所占数组长度(每个节点之间间隔一个位置)
+        Integer[][] tree = new Integer[hight][lastLen];
+        for (int i = 0,size = list.size(); i < size ; i ++) {
+            List<Integer> strs = list.get(i);//当前层所有节点
+            int tempHight = hight - i;
+            int start = (int) (Math.pow(2,tempHight-1) - 1);//当前层起始节点下标
+            for (Integer nodeVal : strs) {
+                tree[i][start] = nodeVal;//节点
+                int gap = (int) Math.pow(2,tempHight);//当前层节点间的间隔
+                start = start + gap;//下一个节点
+            }
+        }
+        //输出树
+        for (int i = 0 ; i < hight ; i ++){
+            for(int j = 0 ; j < lastLen ; j ++){
+                Integer str = tree[i][j];
+                System.out.format("%-2.2s", Objects.isNull(str) || 0==str ?"  ":str);
+            }
+            System.out.println();
+        }
     }
 
 }
