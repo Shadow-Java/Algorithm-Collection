@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.deprecated;
+package algorithm.collection.leetcode.dynamicprogramming.sequence;
 
 import java.util.Arrays;
 

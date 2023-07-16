@@ -31,7 +31,7 @@ import algorithm.collection.common.datastruct.tag.TimeComplexity;
  * @create 2023-07-09 01:34
  **/
 @QuestionTag(
-        difficultyLeve = DifficultyLevel.EASY,
+        difficultyLeve = DifficultyLevel.MEDIUM,
         questionNumber = "740",
         questionTitle = "删除并获得点数",
         relevateClass = HouseRobber.class,

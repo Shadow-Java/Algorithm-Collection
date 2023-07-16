@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.deprecated;
+package algorithm.collection.leetcode.dynamicprogramming.sequence;
 
 public class LongestTurbulentSubarray {
     //最长湍流子数组就是只看该数组元素的后一位，数组下标的顺序为偶奇偶奇。。
