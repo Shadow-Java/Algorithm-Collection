@@ -1,10 +1,11 @@
 package algorithm.collection.leetcode.dynamicprogramming.sequence;
 
+import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
 import algorithm.collection.common.datastruct.tag.DataStructType;
 import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.MethodTag;
 import algorithm.collection.common.datastruct.tag.QuestionTag;
 import algorithm.collection.common.datastruct.tag.TimeComplexity;
-import algorithm.collection.leetcode.dynamicprogramming.linear.HouseRobber;
 
 /**
  * 在两条独立的水平线上按给定的顺序写下 nums1 和 nums2 中的整数。
@@ -24,7 +25,7 @@ import algorithm.collection.leetcode.dynamicprogramming.linear.HouseRobber;
         difficultyLeve = DifficultyLevel.MEDIUM,
         questionNumber = "1035",
         questionTitle = "不相交的线",
-        relevateClass = HouseRobber.class,
+        relevateClass = LongestCommonSubsequence.class,
         desc = "在两条独立的水平线上按给定的顺序写下 nums1 和 nums2 中的整数",
         questionLink = "https://leetcode.cn/problems/uncrossed-lines/",
         timeComplexity = TimeComplexity.O_N,
@@ -32,6 +33,19 @@ import algorithm.collection.leetcode.dynamicprogramming.linear.HouseRobber;
 )
 public class UncrossedLines {
 
+    /**
+     * 其实就是在求最长公共子序列
+     * @param nums1
+     * @param nums2
+     * @return
+     */
+    @MethodTag(
+            methodLink = "https://leetcode.cn/problems/uncrossed-lines/solution/gong-shui-san-xie-noxiang-xin-ke-xue-xi-bkaas/",
+            questionNumber = "1143",
+            timeComplexity = TimeComplexity.O_N_2,
+            dataStructType = DataStructType.ARRAY_LIST,
+            algorithmCategory = AlgorithmCategory.DYNAMIC_PROGRAMMING
+    )
     public int maxUncrossedLines(int[] nums1, int[] nums2) {
         //最多的连线其实就是在求最长公共子序列
         int[][] dp = new int[nums1.length + 1][nums2.length + 1];
