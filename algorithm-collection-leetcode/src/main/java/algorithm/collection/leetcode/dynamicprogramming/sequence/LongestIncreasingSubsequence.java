@@ -100,9 +100,4 @@ class LongestIncreasingSubsequence {
         }
         return res;
     }
-
-    public static void main(String[] args) {
-        int[] nums = {1,5,10,2,3,4};
-        lengthOfLISAnotherway(nums);
-    }
 }
