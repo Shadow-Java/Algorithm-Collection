@@ -1,4 +1,13 @@
-package algorithm.collection.leetcode.deprecated;
+package algorithm.collection.leetcode.doublepointer;
+
+import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
+import algorithm.collection.common.datastruct.tag.DataStructType;
+import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.MethodTag;
+import algorithm.collection.common.datastruct.tag.QuestionTag;
+import algorithm.collection.common.datastruct.tag.TimeComplexity;
+
+import java.util.Arrays;
 
 /**
  * 实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。
@@ -12,12 +21,30 @@ package algorithm.collection.leetcode.deprecated;
  * 3,2,1 → 1,2,3
  * 1,1,5 → 1,5,1
  */
+@QuestionTag(
+        difficultyLeve = DifficultyLevel.MEDIUM,
+        questionNumber = "31",
+        questionTitle = "下一个排列",
+        relevateClass = NextGreaterElementIII.class,
+        desc = "整数数组的一个 排列  就是将其所有成员以序列或线性顺序排列。",
+        questionLink = "https://leetcode.cn/problems/next-permutation/",
+        algorithmCategory = AlgorithmCategory.DOUBLE_POINTER,
+        timeComplexity = TimeComplexity.O_N_2,
+        dataStructTypes = {DataStructType.ARRAY_LIST}
+)
 public class NextPermutation {
 
     /**
      * 这题都是用for时间复杂度比较高，
      * @param nums
      */
+    @MethodTag(
+            questionNumber = "31",
+            methodLink = "https://leetcode.cn/problems/next-permutation/",
+            timeComplexity = TimeComplexity.O_N,
+            dataStructType = DataStructType.ARRAY_LIST,
+            algorithmCategory = AlgorithmCategory.DOUBLE_POINTER
+    )
     public void nextPermutation(int[] nums) {
         boolean isMax = true;//是否是最大的数
         for(int i = 0;i<nums.length;i++){
@@ -84,6 +111,32 @@ public class NextPermutation {
                 swap(nums,i,min);
             }
         }
+    }
+
+    /**
+     * 题解有三个方面：
+     * 1.使用dfs找出所有的全排列一个个比较
+     * 2.找出第一个升序对，但是升序对尽可能相邻
+     * @param nums
+     */
+    private void anotherWay(int[] nums){
+        int len = nums.length;
+        for (int i = len - 1; i > 0; i--) {
+            if (nums[i] > nums[i - 1]) {
+                //例如465，只需要交换4和5即可
+                Arrays.sort(nums, i, len);
+                for (int j = i; j <len; j++) {
+                    if (nums[j] > nums[i - 1]) {
+                        int temp = nums[j];
+                        nums[j] = nums[i - 1];
+                        nums[i - 1] = temp;
+                        return;
+                    }
+                }
+            }
+        }
+        //没有则升序排列
+        Arrays.sort(nums);
     }
 
 
