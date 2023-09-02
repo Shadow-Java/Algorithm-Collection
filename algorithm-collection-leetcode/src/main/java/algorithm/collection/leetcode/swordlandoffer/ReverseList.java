@@ -37,14 +37,53 @@ public class ReverseList {
     public static ListNode reverseList(ListNode head) {
         ListNode pre = new ListNode();
         while (head != null){
+            //记一下当前节点的地址
             ListNode curNode = head;
             ListNode lastNode = pre.next;
             //注意这里的对象引用
             pre.next = new ListNode(curNode.val);
             pre.next.next = lastNode;
+            //head节点的地址变化不会影响curNode.val的变化
             head = head.next;
         }
         return pre.next;
+    }
+
+
+    /**
+     * <pre>
+     *     双指针pre和cur，pre指向上一个节点，cur是当前节点，每次将cur.next = pre;
+     *     例子： 1 -> 2 -> 3 -> 4 -> 5 -> NULL
+     *          cur                       pre
+     *
+     * </pre>
+     * <pre>
+     *     MyClass obj1 = new MyClass();
+     *     obj1.value = 5;
+     *     MyClass obj2 = obj1; // 使用等号将obj1赋值给obj2
+     *     obj2.value = 10;
+     *     System.out.println(obj1.value); // 输出：10，因为obj1和obj2引用同一个对象
+     *     System.out.println(obj2.value); // 输出：10
+     *     cur.next = pre;          // 修改 next 引用指向
+     *     pre = cur;               // pre 暂存 cur
+     *     一种是修改内存地址的内容，一个是修改内存
+     * </pre>
+     *
+     *
+     *
+     * @param head
+     * @return
+     */
+    public ListNode reverseListAnotherWay(ListNode head) {
+        ListNode cur = head;
+        ListNode pre = null;
+        while(cur != null) {
+            ListNode tmp = cur.next; // 暂存后继节点 cur.next
+            cur.next = pre;          // 修改 next 引用指向
+            pre = cur;               // pre 暂存 cur
+            cur = tmp;               // cur 访问下一节点
+        }
+        return pre;
     }
 
     public static void main(String[] args) {

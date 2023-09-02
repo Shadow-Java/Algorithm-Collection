@@ -57,7 +57,7 @@ public class LinkedListCycle {
 
 
     /**
-     * 统计环的长度
+     * 统计环的长度：当fast和slow从第一次相遇后，开始计数，第二次相遇走的步数即为环长
      * @param head
      * @return
      */
