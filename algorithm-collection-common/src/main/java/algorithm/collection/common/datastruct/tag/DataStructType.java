@@ -34,6 +34,13 @@ public enum DataStructType {
      */
     BINARY_TREE("BINARY_TREE"),
     /**
+     * 二叉搜索树
+     * 特点：
+     * 1.左节点总比节点小，右节点总比节点大
+     * 2.中序遍历为从小到大排序（由第一个特点得出）
+     */
+    BINARY_SEARCH_TREE("BINARY_SEARCH_TREE"),
+    /**
      * 队列
      */
     UNIVERSAL_QUEUE("UNIVERSAL_QUEUE"),
