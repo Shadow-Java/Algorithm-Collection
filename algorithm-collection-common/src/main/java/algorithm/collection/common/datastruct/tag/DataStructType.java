@@ -41,6 +41,10 @@ public enum DataStructType {
      */
     BINARY_SEARCH_TREE("BINARY_SEARCH_TREE"),
     /**
+     * 平衡的二叉搜索树
+     */
+    BALANCE_BINARY_SEARCH_TREE("BALANCE_BINARY_SEARCH_TREE"),
+    /**
      * 队列
      */
     UNIVERSAL_QUEUE("UNIVERSAL_QUEUE"),

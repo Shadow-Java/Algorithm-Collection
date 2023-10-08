@@ -62,8 +62,7 @@ public class RestoreBinarySearchTree {
         dfs(node.left);
         if(pre==null) {
             pre = node;
-        }
-        else {
+        } else {
             if(pre.val>node.val) {
                 y = node;
                 if(x==null) {
