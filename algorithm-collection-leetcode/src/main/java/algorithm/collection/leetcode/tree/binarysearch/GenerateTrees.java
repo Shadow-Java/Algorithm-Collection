@@ -1,7 +1,9 @@
 package algorithm.collection.leetcode.tree.binarysearch;
 
+import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
 import algorithm.collection.common.datastruct.tag.DataStructType;
 import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.MethodTag;
 import algorithm.collection.common.datastruct.tag.QuestionTag;
 import algorithm.collection.common.datastruct.tag.TimeComplexity;
 import algorithm.collection.common.datastruct.tree.BinaryTreeGenerator;
@@ -22,7 +24,7 @@ import java.util.List;
  * @create 2023-06-28 21:28
  **/
 @QuestionTag(
-        difficultyLeve = DifficultyLevel.EASY,
+        difficultyLeve = DifficultyLevel.MEDIUM,
         questionNumber = "95",
         questionTitle = "不同的二叉搜索树 II",
         relevateClass = DeepWidthSearch.class,
@@ -40,10 +42,20 @@ public class GenerateTrees {
      * @param n  代表n个节点，且结点值从1~n
      * @return   返回树的集合
      */
+    @MethodTag(
+            questionNumber = "95",
+            methodLink = "https://leetcode.cn/problems/unique-binary-search-trees-ii/solutions/2438263/gong-shui-san-xie-chang-gui-er-cha-shu-b-h4sw/",
+            timeComplexity = TimeComplexity.O_LOG_N,
+            dataStructType = DataStructType.ARRAY_LIST,
+            algorithmCategory = AlgorithmCategory.DOUBLE_POINTER
+    )
     public List<TreeNode> generateTrees(int n) {
         if (n < 1) {
             return new ArrayList<>();
         }
+        /**
+         * 因为二插搜索树是以中序遍历为核心，故[start,end]表示以区间进行构建二叉搜索树，那么首先拿到中间节点，然后递归构建[start,mid-1]和[mid+1,n]
+         */
         return helper(1, n);
     }
 

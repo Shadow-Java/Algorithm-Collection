@@ -49,6 +49,7 @@ public class MaximumSubarray {
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
         for (int i=1;i<nums.length;i++){
+            //为什么是和nums[i]比较而不是和dp[i]比较：因为dp[0..i]表示前i个数的和，而和可能是负数，一个数+一个负数会变小，那么后面就没必要加了。所以是和nums[i]比较
             dp[i] = Math.max(dp[i-1]+nums[i],nums[i]);
         }
         int maxSum = nums[0];
@@ -60,7 +61,7 @@ public class MaximumSubarray {
 
     public static void main(String[] args) {
         int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
-        maxSubArray(nums);
+        System.out.println(maxSubArray(nums));
     }
 
 }
