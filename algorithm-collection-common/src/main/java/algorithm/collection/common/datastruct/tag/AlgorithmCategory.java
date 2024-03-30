@@ -30,7 +30,9 @@ public enum AlgorithmCategory {
 
     MATH("MATH"),
 
-    SLIDE_WINDOW("SLIDE_WINDOW");
+    SLIDE_WINDOW("SLIDE_WINDOW"),
+
+    MONOTONE_STACK("MONOTONE_STACK");
     private String value;
 
     AlgorithmCategory(String level) {

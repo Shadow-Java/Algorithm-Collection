@@ -113,13 +113,15 @@ public class TrappingRainWater {
             dataStructType = DataStructType.MONOTONIC_STACK,
             algorithmCategory = AlgorithmCategory.OTHER
     )
-    public int trapAnotherWaySecond(int[] height) {
+    public static int trapAnotherWaySecond(int[] height) {
         int ans = 0;
         //单调递减栈
         Deque<Integer> stack = new LinkedList<>();
         int n = height.length;
         //遍历整个柱子
         for (int i = 0; i < n; ++i) {
+            //在低洼的池子中，每次拿出栈顶元素为基准计算装水；直到栈中元素为空
+            //为什么能把之前入栈的元素出栈，因为是计算了该基准柱子的容积，后面就用不到了（遇到了第一个比其大的数）
             while (!stack.isEmpty() && height[i] > height[stack.peek()]) {
                 //弹出形成低洼的柱子
                 int top = stack.pop();
@@ -138,6 +140,12 @@ public class TrappingRainWater {
             stack.push(i);
         }
         return ans;
+    }
+
+
+    public static void main(String[] args) {
+        int[] heights = {0,1,0,2,1,0,1,3,2,1,2,1};
+        System.out.println(trapAnotherWaySecond(heights));
     }
 
 }
