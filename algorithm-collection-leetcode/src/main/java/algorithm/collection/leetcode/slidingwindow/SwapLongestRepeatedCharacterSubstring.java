@@ -34,6 +34,7 @@ import algorithm.collection.common.datastruct.tag.TimeComplexity;
         difficultyLeve = DifficultyLevel.MEDIUM,
         questionLink = "https://leetcode.cn/problems/swap-for-longest-repeated-character-substring/",
         algorithmCategory = AlgorithmCategory.SLIDE_WINDOW,
+        relevateClass = LongestSubstring.class,
         timeComplexity = TimeComplexity.O_N
 )
 public class SwapLongestRepeatedCharacterSubstring {
