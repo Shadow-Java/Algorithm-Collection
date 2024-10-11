@@ -74,7 +74,7 @@ public class LinkedListCycleII {
             slow = slow.next;
             fast = fast.next.next;
             //fast和slow第一次相遇
-            if(fast == slow){
+            if(fast == slow) {
                 //相遇后，让head和slow继续走，相遇时必在入口处
                 while (head != slow){
                     head = head.next;

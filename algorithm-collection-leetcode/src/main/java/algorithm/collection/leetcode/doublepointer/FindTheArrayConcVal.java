@@ -92,4 +92,19 @@ public class FindTheArrayConcVal {
         return res;
     }
 
+    public long findTheArrayConcVal_V2(int[] nums) {
+        int res = 0;
+        int right = nums.length-1;
+        int left = 0;
+        //使用双指针遍历数组的模式
+        for (left=0;left<right;left++,right--) {
+            String valStr = nums[left] + String.valueOf(nums[right]);
+            res = res+Integer.parseInt(valStr);
+        }
+        if(res == right) {
+            res += nums[left];
+        }
+        return res;
+    }
+
 }
