@@ -79,4 +79,22 @@ public class MinSubArrayLen {
         return result == Integer.MAX_VALUE ? 0 : result + 1;
     }
 
+    public static int minSubArrayLen_v2(int target, int[] nums) {
+        if(nums == null || nums.length == 0) return 0;
+        int left = 0;
+        int minLen = Integer.MAX_VALUE;
+        int windowRes = 0;
+        for(int right = 0; right < nums.length; right++) {
+            windowRes = windowRes + nums[right];
+            while(windowRes >= target) {
+                //当窗口满足条件时，先更新长度，再移动指针
+                minLen = Math.min(minLen, right - left+1);
+                //当移动左指针导致窗口不满足条件时，此时更新右指针；即先移动右指针，缩小左指针。
+                windowRes = windowRes - nums[left];
+                left++;
+            }
+        }
+        return minLen;
+    }
+
 }
