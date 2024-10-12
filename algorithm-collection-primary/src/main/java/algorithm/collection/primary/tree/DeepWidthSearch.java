@@ -182,6 +182,79 @@ public class DeepWidthSearch {
         dfs(root.right, level + 1);
     }
 
+    // 迭代实现后序遍历
+    public void postorderTraversalIterative(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        List<Integer> result = new ArrayList<>();
+
+        while (!stack.isEmpty()) {
+            TreeNode currentNode = stack.pop();
+            result.add(0, currentNode.val); // 在列表前端添加
+            if (currentNode.left != null) {
+                stack.push(currentNode.left);
+            }
+            if (currentNode.right != null) {
+                stack.push(currentNode.right);
+            }
+        }
+
+        for (int val : result) {
+            System.out.print(val + " ");
+        }
+    }
+
+    // 迭代实现中序遍历
+    public void inorderTraversalIterative(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode currentNode = root;
+
+        while (currentNode != null || !stack.isEmpty()) {
+            while (currentNode != null) {
+                stack.push(currentNode);
+                currentNode = currentNode.left;
+            }
+            currentNode = stack.pop();
+            System.out.print(currentNode.val + " ");
+            currentNode = currentNode.right;
+        }
+    }
+
+
+    /**
+     * 注意前序遍历、中序遍历和后序遍历都属于dfs遍历，且遍历不需要加Set<Integer> visited；
+     * 前序遍历：根节点 -> 左子树 -> 右子树
+     * 中序遍历：左子树 -> 根节点 -> 右子树
+     * 后序遍历：左子树 -> 右子树 -> 根节点
+     * 在这三种遍历方式中，每个节点都会被访问一次且仅一次，不会出现重复访问的情况
+     * @param root   迭代实现前序遍历
+     */
+    public void preorderTraversalIterative(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode currentNode = stack.pop();
+            System.out.print(currentNode.val + " ");
+
+            if (currentNode.right != null) {
+                stack.push(currentNode.right);
+            }
+            if (currentNode.left != null) {
+                stack.push(currentNode.left);
+            }
+        }
+    }
+
 
     /**
      * dfs遍历图结构

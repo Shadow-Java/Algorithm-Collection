@@ -35,7 +35,7 @@ public class LinkedList {
      * 类型:头结点有值,结果返回新的头部
      * 结构:pre->head->next
      */
-    public static SingleLinkListNode reverseList(SingleLinkListNode head){
+    public static SingleLinkListNode reverseList(SingleLinkListNode head) {
         /**
          * 代表cur节点的上一个节点,开始时上一节点为null
          */

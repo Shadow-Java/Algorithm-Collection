@@ -9,7 +9,7 @@ public class RecuriveExample {
     /**
      * 给一块土地，想划分为正方形，但不确定什么是最大的正方形
      */
-    public static void findMaxSquare(int longth,int width){
+    public static void findMaxSquare(int longth,int width) {
         if(longth == width){
             System.out.println("最大的宽度为："+width);
             return;
@@ -26,7 +26,7 @@ public class RecuriveExample {
      * sum表示求的是0-n-1的和
      * @param n
      */
-    public static int sum(int[] num,int n,int sum,int cur){
+    public static int sum(int[] num,int n,int sum,int cur) {
         if(n == cur){
             return sum;
         }
