@@ -235,7 +235,7 @@ public class DeepWidthSearch {
      * 在这三种遍历方式中，每个节点都会被访问一次且仅一次，不会出现重复访问的情况
      * @param root   迭代实现前序遍历
      */
-    public void preorderTraversalIterative(TreeNode root) {
+    public static void preorderTraversalIterative(TreeNode root) {
         if (root == null) {
             return;
         }
@@ -245,7 +245,7 @@ public class DeepWidthSearch {
         while (!stack.isEmpty()) {
             TreeNode currentNode = stack.pop();
             System.out.print(currentNode.val + " ");
-
+            //栈结构是先进的后访问，故要遍历结果为根节点 -> 左子树 -> 右子树，则先加入右子树
             if (currentNode.right != null) {
                 stack.push(currentNode.right);
             }
