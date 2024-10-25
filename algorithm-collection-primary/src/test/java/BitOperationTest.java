@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Test;
  */
 public class BitOperationTest {
 
+    /**
+     * n&1相当于n%2
+     */
     @Test
     public void findOddTimesTwo(){
         int[] arr = {1,1,1,3,3,4,4,4,5,5};
