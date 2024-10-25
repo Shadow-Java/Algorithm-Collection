@@ -15,6 +15,7 @@ public class NumberOf1 {
     public static int numberOfRad(int num,int base) {
         StringBuilder stringBuilder= new StringBuilder();
         while (num > 0) {
+            //在索引0的位置插入余数
             stringBuilder.insert(0,num%base);
             num=num/base;
         }
