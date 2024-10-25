@@ -28,5 +28,9 @@ public interface StudyPlanService {
      */
     List<String> pushSpecifiedStudyPlan(List<String> items, TimeUnit timeDimension);
 
-    List<String>
+    /**
+     * 获取所有的学习计划
+     * @return
+     */
+    List<String> getAllStudyPlan();
 }
