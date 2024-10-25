@@ -14,9 +14,9 @@ public class RecuriveExample {
             System.out.println("最大的宽度为："+width);
             return;
         }
-        if(longth > width){
+        if(longth > width) {
             findMaxSquare(longth-width,width);
-        }else{
+        } else {
             findMaxSquare(longth,width-longth);
         }
     }
