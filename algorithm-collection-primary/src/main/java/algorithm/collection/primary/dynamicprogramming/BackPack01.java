@@ -25,13 +25,16 @@ package algorithm.collection.primary.dynamicprogramming;
  *                   1.不选矿泉水，为dfs(1,5)
  *                   2.选矿泉水，dfs(1,2)+5
  *                   3.max(dfs(1,5),dfs(1,2)+5) = 8
+ *  当重量为w时，偷前i个物品
+ *  dfs(i,w) =  1.dfs(i-1,w)   w[i] > w(太重放不下)
+ *              2.max(dfs(i-1,w),dfs(i-1,w-w[i])+v) ,w[i]<w
  * @author shadow
  * @create 2024-10-26 00:08
  **/
 public class BackPack01 {
 
-    private static int[] weight = {1, 2, 3};
-    private static int[] value = {6, 10, 12};
+    private static int[] weight = {2, 3,4,7};
+    private static int[] values = {1, 3,5,9};
 
     public static void main(String[] args) {
         /**
@@ -39,8 +42,9 @@ public class BackPack01 {
          * 2.dp是递归+记忆化搜索
          */
         int n = weight.length;
-        System.out.println(dfs(n-1,5));
-        System.out.println(knapsack(weight,value,5));
+        //System.out.println(dfs(n-1,5));
+        //System.out.println(knapsack(weight,value,5));
+        knapsack_V2(weight, values, 10);
     }
 
     /**
@@ -75,7 +79,7 @@ public class BackPack01 {
         if(capacity < weight[i]) {
             return dfs(i-1, capacity);
         }
-        return Math.max(dfs(i-1,capacity), dfs(i-1, capacity-weight[i])+value[i]);
+        return Math.max(dfs(i-1,capacity), dfs(i-1, capacity-weight[i])+values[i]);
     }
 
     public static int knapsack(int[] weights, int[] values, int W) {
@@ -88,6 +92,63 @@ public class BackPack01 {
             }
         }
 
+        return dp[W];
+    }
+
+
+    public static int knapsack_V2(int[] weights, int[] values, int W) {
+        int n = weights.length;
+
+        int[][] dp = new int[n+1][W+1];
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= W; j++) {
+                //weights重置从0~n,但dp表对物品和价值多一行0，防止下标出界
+                if(weights[i-1] > j) {
+                    dp[i][j] = dp[i-1][j];
+                } else {
+                    dp[i][j] = Math.max(dp[i-1][j],dp[i-1][j-weights[i-1]]+values[i-1]);
+                }
+            }
+        }
+        //输出dp表看变化
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= W; j++) {
+                System.out.print(dp[i][j] + " ");
+            }
+            System.out.println();
+        }
+        return dp[n][W];
+    }
+
+    /**
+     * 空间优化，滚动数组
+     * dp[i][j] = dp[i-1][j];说明dp[i][j]只与上一个dp[i-1]有关，跟上上一个没有关系，即只与拿n-1个物品的最大价值有关
+     *
+     * if j>w[i]  dp[j]=max(dp[j],dp[j-w[i]]+[i])   完全体结构，压缩为一维数组
+     * @param weights
+     * @param values
+     * @param W
+     * @return
+     */
+    public static int knapsack_V3(int[] weights, int[] values, int W) {
+        int n = weights.length;
+
+        int[] dp = new int[W+1];
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = W; j >= 1; j--) {
+                //从后往前推，防止前面的数据被覆盖掉
+                if(j > weights[i-1]) {
+                    //dp[j]在后，dp[j-weights[i-1]]在前
+                    dp[j] = Math.max(dp[j],dp[j-weights[i-1]]+values[i-1]);
+                }
+            }
+            for (int j = 0; j <= W; j++) {
+                System.out.print(dp[j] + " ");
+            }
+            System.out.println();
+        }
         return dp[W];
     }
 
