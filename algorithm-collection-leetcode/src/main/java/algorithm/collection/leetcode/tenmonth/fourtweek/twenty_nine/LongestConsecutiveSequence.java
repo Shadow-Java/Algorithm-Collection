@@ -1,6 +1,8 @@
 package algorithm.collection.leetcode.tenmonth.fourtweek.twenty_nine;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LongestConsecutiveSequence {
 
@@ -16,16 +18,23 @@ public class LongestConsecutiveSequence {
      * @return
      */
     public static int longestConsecutive(int[] nums) {
+        if(nums == null || nums.length <= 0) {
+            return 0;
+        }
         Arrays.sort(nums);
-        int max = Integer.MIN_VALUE;
-        int left =0;
+        int max = 1;
+        Set<Integer> windowSet = new HashSet<>();
+        windowSet.add(nums[0]);
         for (int right =1;right< nums.length;right++) {
-            if(nums[right-1]+1 != nums[right]) {
-                max = Math.max(right-left,max);
-                left = right;
+            windowSet.add(nums[right]);
+            if(nums[right-1]+1 != nums[right] && nums[right-1] != nums[right]) {
+                max = Math.max(windowSet.size()-1,max);
+                windowSet.clear();
+                windowSet.add(nums[right]);
             }
         }
-        return max > 1? max:1;
+        max = Math.max(windowSet.size(),max);
+        return max;
     }
 
     public static void main(String[] args) {

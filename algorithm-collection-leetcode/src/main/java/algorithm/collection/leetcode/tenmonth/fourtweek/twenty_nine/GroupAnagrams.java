@@ -22,8 +22,9 @@ public class GroupAnagrams {
             Arrays.sort(chars);
             String key = String.valueOf(chars);
             List<String> list = map.getOrDefault(key, new ArrayList<>());
-            if(map.containsKey(key)) {
-                list.add(str);
+            list.add(str);
+            if(!map.containsKey(key)) {
+                map.put(key,list);
             }
         }
         List<List<String>> ans = new ArrayList<>();

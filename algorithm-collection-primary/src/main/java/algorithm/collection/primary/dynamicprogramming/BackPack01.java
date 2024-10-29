@@ -138,7 +138,7 @@ public class BackPack01 {
 
         for (int i = 1; i <= n; i++) {
             for (int j = W; j >= 1; j--) {
-                //从后往前推，防止前面的数据被覆盖掉
+                //从后往前推，防止dp[i-1]轮的数据被覆盖掉
                 if(j > weights[i-1]) {
                     //dp[j]在后，dp[j-weights[i-1]]在前
                     dp[j] = Math.max(dp[j],dp[j-weights[i-1]]+values[i-1]);
