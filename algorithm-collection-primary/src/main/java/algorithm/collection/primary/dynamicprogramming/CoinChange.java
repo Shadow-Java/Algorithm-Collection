@@ -31,8 +31,17 @@ public class CoinChange {
         return -1;
     }
 
+    /**
+     * 类比完全背包，数量就是价值，在完全背包中求的是价值，那么数量就类比价值
+     * 总金额 amount就是背包容量，面额就是物品容量
+     * @param i
+     * @param capacity
+     * @param coins
+     * @return
+     */
     public int dfs(int i,int capacity,int[] coins) {
         if(i < 0) {
+            //因为类比完全背包，初始状态[0,0]的状态需要构造出来，所以加了初始态
             if(capacity == 0) {
                 return 0;
             }
