@@ -12,7 +12,6 @@ public class LongestConsecutiveSequence {
      * 输出: 4
      * 解释: 最长的连续子序列是 [1, 2, 3, 4]。它的长度为 4。
      *
-     * todo 第K大的字符串，即出现次数最多的前K个字符串
      * todo 最长有效字符串
      * @param nums
      * @return
