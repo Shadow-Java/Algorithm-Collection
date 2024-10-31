@@ -37,6 +37,7 @@ public class LengthOfLongestSubstring {
      * 问：为什么只需判断字母 c 的出现次数？
      * 答：字母 c 进入窗口后，如果导致 cnt[c]<0，由于其余字母的出现次数没有变化，所以有且仅有字母 c 的个数比 p 的多。
      *
+     * TODO:要求打印数据的窗口，即left如何移动的
      *
      * @param s
      * @return
