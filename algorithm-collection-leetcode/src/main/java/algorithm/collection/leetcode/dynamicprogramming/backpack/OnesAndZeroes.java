@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.deprecated;
+package algorithm.collection.leetcode.dynamicprogramming.backpack;
 
 public class OnesAndZeroes {
     /** 0-1背包问题
