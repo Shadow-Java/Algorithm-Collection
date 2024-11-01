@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.tenmonth.fourtweek.twenty_thirty_one;
+package algorithm.collection.leetcode.october.fourtweek.twenty_thirty_one;
 
 import java.util.ArrayList;
 import java.util.Deque;

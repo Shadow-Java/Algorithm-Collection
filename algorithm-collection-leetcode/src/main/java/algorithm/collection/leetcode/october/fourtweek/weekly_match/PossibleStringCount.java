@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.tenmonth.fourtweek.weekly_match;
+package algorithm.collection.leetcode.october.fourtweek.weekly_match;
 
 /**
  * @author shadow

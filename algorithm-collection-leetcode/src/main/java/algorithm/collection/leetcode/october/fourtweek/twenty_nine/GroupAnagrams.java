@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.tenmonth.fourtweek.twenty_nine;
+package algorithm.collection.leetcode.october.fourtweek.twenty_nine;
 
 import java.lang.reflect.Array;
 import java.util.*;
