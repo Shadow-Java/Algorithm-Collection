@@ -7,8 +7,7 @@ public class SchedulePlanExcutor {
 
 
     public static void main(String[] args) {
-        List<String> items = new ArrayList<>();
-
+        List<Question> items = new ArrayList<>();
     }
 
 

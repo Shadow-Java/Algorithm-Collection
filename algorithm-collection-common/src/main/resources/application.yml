@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    druid:
+      login-timeout: 30000
+    dynamic:
+      primary: sqlite
+      datasource:
+        mysql:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/xxx?serverTimezone=UTC
+          username:
+          password:
+        sqlite:
+          url: jdbc:sqlite:./data/algorithm-collection.db
+          driver-class-name: org.sqlite.JDBC

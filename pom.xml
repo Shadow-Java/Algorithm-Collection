@@ -22,6 +22,7 @@
         <module>algorithm-collection-primary</module>
         <module>algorithm-collection-leetcode</module>
         <module>algorithm-collection-markdown</module>
+        <module>algorithm-collection-schedule</module>
     </modules>
 
     <properties>
@@ -119,6 +120,11 @@
             <dependency>
                 <groupId>algorithm.collection</groupId>
                 <artifactId>algorithm-collection-leetcode</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>algorithm.collection</groupId>
+                <artifactId>algorithm-collection-schedule</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
