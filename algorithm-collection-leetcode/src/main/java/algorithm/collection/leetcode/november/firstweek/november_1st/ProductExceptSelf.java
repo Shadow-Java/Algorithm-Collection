@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.november.firstweek;
+package algorithm.collection.leetcode.november.firstweek.november_1st;
 
 /**
  * 238. 除自身以外数组的乘积

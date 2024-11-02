@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.november.firstweek;
+package algorithm.collection.leetcode.november.firstweek.november_1st;
 
 import java.util.ArrayList;
 import java.util.Arrays;
