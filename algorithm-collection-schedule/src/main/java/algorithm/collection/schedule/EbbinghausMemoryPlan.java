@@ -1,4 +1,4 @@
-package algorithm.collection.common.util;
+package algorithm.collection.schedule;
 
 import java.util.List;
 

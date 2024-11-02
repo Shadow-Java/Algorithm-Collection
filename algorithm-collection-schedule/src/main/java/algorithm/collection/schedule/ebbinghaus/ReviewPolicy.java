@@ -1,4 +1,4 @@
-package algorithm.collection.common.Ebbinghaus;
+package algorithm.collection.schedule.ebbinghaus;
 
 /**
  * 复习策略

@@ -1,4 +1,4 @@
-package algorithm.collection.common.Ebbinghaus;
+package algorithm.collection.schedule.ebbinghaus;
 
 /**
  * 定义天计划、周计划或者月计划
