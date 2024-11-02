@@ -17,11 +17,27 @@ public class SetZeroes {
 
 
     /**
+     * 方法一：使用标记数组
+     * 思路和算法
+     *
+     * 我们可以用两个标记数组分别记录每一行和每一列是否有零出现。
+     *
+     * 具体地，我们首先遍历该数组一次，如果某个元素为 0，那么就将该元素所在的行和列所对应标记数组的位置置为 true。最后我们再次遍历该数组，用标记数组更新原数组即可。
+     *
+     *
+     * 复杂度分析
+     *
+     * 时间复杂度：O(mn)，其中 m 是矩阵的行数，n 是矩阵的列数。我们至多只需要遍历该矩阵两次。
+     *
+     * 空间复杂度：O(m+n)，其中 m 是矩阵的行数，n 是矩阵的列数。我们需要分别记录每一行或每一列是否有零出现。
+     *
+     *
      *
      * @param matrix
      */
     public void setZeroes_V2(int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
+        //一维数组，不要总是想着二维
         boolean[] row = new boolean[m];
         boolean[] col = new boolean[n];
         for (int i = 0; i < m; i++) {
