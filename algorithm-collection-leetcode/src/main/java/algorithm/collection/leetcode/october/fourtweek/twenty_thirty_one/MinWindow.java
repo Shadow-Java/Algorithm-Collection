@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ *
+ * 76. 最小覆盖子串
  * 给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
  * 注意：
  *
@@ -33,62 +35,61 @@ public class MinWindow {
      * 难点在于如何判断s是包含t的子串：1.字符种类数相同   2.字符的出现频率相同
      *
      * 利用滑动窗口的特点：1.当窗口不满足条件时，right右移动，使其满足条件  2.当窗口满足条件时，left右移动。使其减少窗口条件
+     * 滑动窗口的right初始值最好为0，可以不用处理边界情况
      * @param s
      * @param t
      * @return
      */
     public String minWindow_V3(String s, String t) {
-        if(s.length() == 0 || t.length() == 0) {
+        if (s.length() == 0 || t.length() == 0) {
             return "";
         }
-        //统计字符t中字符出现的频率
-        Map<Character,Integer> countT = new HashMap<>();
-        //统计窗口中字符出现的频率
-        Map<Character,Integer> countWindow = new HashMap<>();
-        for (char ch : t.toCharArray())  {
-            countT.put(ch,countT.getOrDefault(ch,0)+1);
+
+        // 统计字符 t 中字符出现的频率
+        Map<Character, Integer> countT = new HashMap<>();
+        // 统计窗口中字符出现的频率，，即通过have+countWindow联动判断当前窗口是满足条件的
+        Map<Character, Integer> countWindow = new HashMap<>();
+
+        for (char ch : t.toCharArray()) {
+            countT.put(ch, countT.getOrDefault(ch, 0) + 1);
         }
-        //用于计算t中字符种类数
-        int tCount = countT.keySet().size();
-        //用于统计窗口的字符种类数，即通过have+countWindow联动判断当前窗口是满足条件的
+
+        // 用于计算 t 中字符种类数
+        int tCount = countT.size();
+        // 用于统计窗口的字符种类数
         int have = 0;
         int resLen = Integer.MAX_VALUE;
         int resStart = 0;
         int left = 0;
-        /**
-         * 初始值right定义为0好，还是为1好
-         * 如果right定义为1，则需要处理边界，一般都是定义0
-         * 如果right定义为0，则可以处理边界，不用提前加当前字符加入窗口
-         */
-        for (int right=0;right < s.length();right++) {
+
+        for (int right = 0; right < s.length(); right++) {
             char ch = s.charAt(right);
-            if(countT.containsKey(ch)) {
-                //记录字符出现的频次
-                countWindow.put(ch,countWindow.getOrDefault(ch,0)+1);
-                //使用等于，可以处理"aaab"这种重复子串,即当a等于3后就不更新have
-                if(countT.get(ch) == countWindow.get(ch)) {
+            if (countT.containsKey(ch)) {
+                countWindow.put(ch, countWindow.getOrDefault(ch, 0) + 1);
+                if (countT.get(ch).equals(countWindow.get(ch))) {
                     have++;
                 }
             }
-            //left需要一直移动
-            while (have == tCount) {//窗口字符的种类数等于当前t的种类数
-                if(right -left +1 < resLen) {
-                    resLen = right -left +1;
+
+            // 当窗口满足条件时，尝试收缩窗口
+            while (have == tCount) {
+                if (right - left + 1 < resLen) {
+                    resLen = right - left + 1;
                     resStart = left;
                 }
+
                 char leftCh = s.charAt(left);
-                if(countT.containsKey(leftCh) ) {
-                    //让窗口的字符出现频率减一
-                    countWindow.put(leftCh,countWindow.get(leftCh)-1);
-                    //
-                    if(countT.get(leftCh) > countWindow.get(leftCh)) {
-                        --have;
+                if (countT.containsKey(leftCh)) {
+                    countWindow.put(leftCh, countWindow.get(leftCh) - 1);
+                    if (countT.get(leftCh) > countWindow.get(leftCh)) {
+                        have--;
                     }
                 }
-                left++;//持续向右移动
+                left++; // 持续向右移动
             }
         }
-        return resLen == Integer.MAX_VALUE ? "" : s.substring(resStart,resLen);
+
+        return resLen == Integer.MAX_VALUE ? "" : s.substring(resStart, resStart + resLen);
     }
 
     public String minWindow_V2(String S, String t) {
