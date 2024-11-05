@@ -66,6 +66,7 @@ public class Trap {
         int n = height.length;
         for (int i = 0; i < n; ++i) {
             //要形成低洼需三个位置，即最左边的高度和最右边的高度，其次是能形成低洼的中间高度
+            //目的是形成单调递减栈，只要大于当前栈则弹出
             while (!stack.isEmpty() && height[i] > height[stack.peek()]) {
                 //形成低洼的中间高度
                 int top = stack.pop();
