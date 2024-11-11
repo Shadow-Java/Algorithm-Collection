@@ -29,6 +29,7 @@ public class PossibleStringCount {
 
 
     /**
+     * 她可能在一个按键上按太久，导致一个字符被输入多次；表示一个字母可能被输入了多次，而不只是一次；比如a -> aaaa(多输入了三次)
      * @param word
      * @return
      */
