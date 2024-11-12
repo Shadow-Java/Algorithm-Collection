@@ -48,22 +48,22 @@ public class LetterCombinations {
         res = new ArrayList<String>();
         if(digits.equals(""))
             return res;
-        //
+        //选择第一个数字
         findCombination(digits, 0, "");
         return res;
     }
 
     private void findCombination(String digits, int index, String s){
-        //index指的是树的深度？
+        //index指的是树的深度
         if(index == digits.length()){
             res.add(s);
             return;
         }
-
+        //选择第i个数字
         Character c = digits.charAt(index);
         //当前index对应的子节点数，比如当点的数字2 = ‘abc’
         String letters = letterMap[c - '0'];
-        for(int i = 0 ; i < letters.length() ; i ++) {//父节点
+        for(int i = 0 ; i < letters.length() ; i ++) {//每个数字都有letters.length()种情况
             findCombination(digits, index+1, s + letters.charAt(i));
         }
     }

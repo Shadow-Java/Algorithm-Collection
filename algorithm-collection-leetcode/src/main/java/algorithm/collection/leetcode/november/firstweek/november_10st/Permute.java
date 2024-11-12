@@ -32,26 +32,38 @@ public class Permute {
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> path = Arrays.asList(new Integer[nums.length]); // 所有排列的长度都是一样的 n
-        boolean[] onPath = new boolean[nums.length];
-        dfs(0, nums, ans, path, onPath);
+        List<Integer> path = new ArrayList<>(); // 所有排列的长度都是一样的 n
+        boolean[] visited = new boolean[nums.length];
+        dfs(nums, ans, path, visited);
         return ans;
     }
 
-    private void dfs(int i, int[] nums, List<List<Integer>> ans, List<Integer> path, boolean[] onPath) {
-        if (i == nums.length) {
+    /**
+     * 相当于从空的顶点进入，子节点就是for (int j = 0; j < nums.length; j++),然后通过onPath去过滤已经访问的路径
+     * @param nums
+     * @param ans
+     * @param path
+     * @param onPath
+     */
+    private void dfs(int[] nums, List<List<Integer>> ans, List<Integer> path, boolean[] onPath) {
+        if (path.size() == nums.length) {
             //因为需要恢复现场，回退path，所以需要拷贝一份；不拷贝最后path会为空
             ans.add(new ArrayList<>(path));
             return;
         }
         for (int j = 0; j < nums.length; j++) {
             if (!onPath[j]) {
-                path.set(i, nums[j]); // 从没有选的数字中选一个
-                onPath[j] = true; // 已选上
-                dfs(i + 1, nums, ans, path, onPath);
+                /**
+                 * path.set(i, nums[j]); 如果是定长则使用覆盖，就不用恢复现场；
+                 * 如果是path.add(nums[j]);则需要恢复现场
+                 */
+                path.add(nums[j]);
+                onPath[j] = true; // 表示选择了nums[j]
+                dfs(nums, ans, path, onPath);
                 onPath[j] = false; // 恢复现场
                 // 注意 path 无需恢复现场，因为排列长度固定，直接覆盖就行
                 //如果不固定，append的话才需要恢复现场
+                path.remove(path.size()-1);
             }
         }
     }
@@ -74,7 +86,7 @@ public class Permute {
 
     /**
      *
-     * @param i
+     * @param i   应该表示树的深度遍历的路径i
      * @param hs  使用剩余元素作为标记，不再使用on_path作为标记
      */
     private void dfs_V2(int i, HashSet<Integer> hs){
