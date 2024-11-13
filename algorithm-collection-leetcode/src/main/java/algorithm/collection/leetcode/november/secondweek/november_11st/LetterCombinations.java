@@ -69,4 +69,19 @@ public class LetterCombinations {
     }
 
 
+    public void backtrack2(String digits,int start,String path,List<String> ans) {
+        if(start == digits.length()) {
+            ans.add(new String(path));
+            return;
+        }
+        String str = letterMap[digits.charAt(start)-'0'];
+        for (int i=0;i<str.length();i++) {
+            path = path+str.charAt(i);
+            //这里用的是start，而不是i，因为start指的是第i个节点，然后第i个节点有letterMap种路径
+            backtrack2(digits,start+1,path,ans);
+            path = path.substring(0,path.length()-1);//为什么要回退
+        }
+    }
+
+
 }
