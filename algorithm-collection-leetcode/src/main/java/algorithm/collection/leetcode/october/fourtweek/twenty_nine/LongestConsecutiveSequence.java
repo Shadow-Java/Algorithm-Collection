@@ -7,6 +7,7 @@ import java.util.Set;
 public class LongestConsecutiveSequence {
 
     /**
+     * 128. 最长连续序列
      * 给你一个未排序的整数数组 nums，请找出其中最长的连续子序列的长度。连续子序列是指元素值连续递增的子序列
      * 输入: nums = [100, 4, 200, 1, 3, 2]
      * 输出: 4
