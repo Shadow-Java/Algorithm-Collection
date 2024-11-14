@@ -39,7 +39,9 @@ public class Combine {
      * @return
      */
     public List<List<Integer>> combine(int n, int k) {
-        return new ArrayList<>();
+        List<List<Integer>> ans = new ArrayList<>();
+        dfs(0,k,new ArrayList<>(),ans);
+        return ans;
     }
 
     /**
