@@ -63,12 +63,20 @@ public class PossibleStringCount {
 
         for (int i = 1; i <= n; i++) {
             dp[i] = dp[i - 1];  // 每个字符单独作为一个字符串
-            if (i > 1 && word.charAt(i - 1) == word.charAt(i - 2)) {
+            if (i > 1 && word.charAt(i - 1) == word.charAt(i - 2)) {//必须选，将上一次合并的统计
                 dp[i] += dp[i - 2];  // 如果当前字符和前一个字符相同，则可以将它们合并成一个字符串
             }
         }
+        for (int i=0;i<n+1;i++) {
+            System.out.print(dp[i] + " ");
+        }
 
         return (int) dp[n];
+    }
+
+    public static void main(String[] args) {
+        PossibleStringCount possibleStringCount = new PossibleStringCount();
+        System.out.println(possibleStringCount.possibleStringCount("abbcccc"));
     }
 
 }

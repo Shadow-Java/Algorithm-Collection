@@ -38,6 +38,23 @@ public class LongestConsecutiveSequence {
         return max;
     }
 
+    public static int longestConsecutiveV2(int[] nums) {
+        if(nums == null || nums.length <= 0) {
+            return 0;
+        }
+        Arrays.sort(nums);
+        int left=0;
+        int ans = 1;
+        for (int right =0;right<nums.length;right++) {
+            if(nums[right] == (nums[right-1]+1)) {//不定长，但不需要循环移动left
+                ans = Math.max(ans,right-left+1);
+            } else {
+                left = right;
+            }
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
         int[] nums = {100, 4, 200, 1, 3, 2};
         /**
