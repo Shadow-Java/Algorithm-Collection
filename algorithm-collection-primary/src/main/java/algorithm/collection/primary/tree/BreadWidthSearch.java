@@ -10,6 +10,8 @@ import java.util.List;
 /**
  * 添加宽度优先搜索模版方法
  *
+ * 1、翻转层序遍历：Collections.reverse(list);
+ *
  * @author shadow
  * @create 2023-05-07 15:42
  **/

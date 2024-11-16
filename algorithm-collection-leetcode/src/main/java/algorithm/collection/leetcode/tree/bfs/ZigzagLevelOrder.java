@@ -43,6 +43,7 @@ public class ZigzagLevelOrder {
                 }
             }
             if(!leftToRight){
+                //翻转
                 Collections.reverse(list);
             }
             leftToRight = !leftToRight;
