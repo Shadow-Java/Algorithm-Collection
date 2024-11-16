@@ -57,6 +57,7 @@ public class MinDepth {
         if(root == null) {
             return 0;
         }
+        //当节点的右节点为空时，并不是最小深度0，而求最大深度时求最大值已经包含了对0的处理
         if(root.right == null) {
             return minDepth(root.left)+1;
         }

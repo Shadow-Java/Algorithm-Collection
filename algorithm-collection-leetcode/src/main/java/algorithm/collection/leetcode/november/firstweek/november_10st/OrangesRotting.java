@@ -36,11 +36,11 @@ public class OrangesRotting {
         int N = grid[0].length;
         Queue<int[]> queue = new LinkedList<>();
 
-        int count = 0; // count 表示新鲜橘子的数量
+        int fresh = 0; // count 表示新鲜橘子的数量
         for (int r = 0; r < M; r++) {
             for (int c = 0; c < N; c++) {
                 if (grid[r][c] == 1) {
-                    count++;
+                    fresh++;
                 } else if (grid[r][c] == 2) {
                     queue.add(new int[]{r, c});
                 }
@@ -48,7 +48,7 @@ public class OrangesRotting {
         }
 
         int round = 0; // round 表示腐烂的轮数，或者分钟数
-        while (count > 0 && !queue.isEmpty()) {
+        while (fresh > 0 && !queue.isEmpty()) {
             round++;
             int n = queue.size();
             for (int i = 0; i < n; i++) {
@@ -57,28 +57,28 @@ public class OrangesRotting {
                 int c = orange[1];
                 if (r - 1 >= 0 && grid[r - 1][c] == 1) {
                     grid[r - 1][c] = 2;
-                    count--;
+                    fresh--;
                     queue.add(new int[]{r - 1, c});
                 }
                 if (r + 1 < M && grid[r + 1][c] == 1) {
                     grid[r + 1][c] = 2;
-                    count--;
+                    fresh--;
                     queue.add(new int[]{r + 1, c});
                 }
                 if (c - 1 >= 0 && grid[r][c - 1] == 1) {
                     grid[r][c - 1] = 2;
-                    count--;
+                    fresh--;
                     queue.add(new int[]{r, c - 1});
                 }
                 if (c + 1 < N && grid[r][c + 1] == 1) {
                     grid[r][c + 1] = 2;
-                    count--;
+                    fresh--;
                     queue.add(new int[]{r, c + 1});
                 }
             }
         }
 
-        if (count > 0) {
+        if (fresh > 0) {
             return -1;
         } else {
             return round;
@@ -89,11 +89,50 @@ public class OrangesRotting {
     /**
      * 1、橘子最后不能有新鲜的，即得全部腐烂
      * 2、经过的分钟数得最小
+     *
      * @param grid
      * @return
      */
     public int orangesRottingV2(int[][] grid) {
-        return 0;
+        int M = grid.length;
+        int N = grid[0].length;
+        Queue<int[]> queue = new LinkedList<>();
+        int time = 0;
+        int fresh = 0; // count 表示新鲜橘子的数量
+        for (int r = 0; r < M; r++) {
+            for (int c = 0; c < N; c++) {
+                if (grid[r][c] == 1) {
+                    fresh++;
+                } else if (grid[r][c] == 2) {
+                    //保存腐烂橘子坐标
+                    queue.add(new int[]{r, c});
+                }
+            }
+        }
+        //定义四个方向
+        int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        while (!queue.isEmpty() && fresh > 0) {
+            int levelSize = queue.size();
+            for (int i = 0; i < levelSize; i++) {
+                int[] cur = queue.poll();
+                for (int[] direction : directions) {
+                    int row = cur[0] + direction[0];
+                    int col = cur[1] + direction[1];
+                    //查看数组下标是否越界
+                    if (row < 0 || row >= grid.length || col < 0 || col >= grid[0].length || grid[row][col] != 1) {
+                        continue;
+                    }
+                    //将新鲜的橘子设置为腐烂的橘子
+                    grid[row][col] = 2;
+                    //腐烂的橘子入队
+                    queue.offer(new int[]{row, col});
+                    //新鲜橘子减一
+                    fresh--;
+                }
+            }
+            time++;
+        }
+        return fresh > 0 ? -1 : time;
     }
 
 }
