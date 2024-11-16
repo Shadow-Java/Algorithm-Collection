@@ -8,13 +8,15 @@ package algorithm.collection.schedule.ebbinghaus;
 public class ReviewPolicy {
 
     /**
-     * 流控，在产生多少学习计划
+     * 在计划内在能够容忍的学习的数量
      */
     private int ratio;
+    /**
+     * 在计划内能学习的最多数量
+     */
+    private int maxDailySize = 4;
     /**
      * 天计划
      */
     private PlanInterval dailyPlan;
-
-    //private ;
 }
