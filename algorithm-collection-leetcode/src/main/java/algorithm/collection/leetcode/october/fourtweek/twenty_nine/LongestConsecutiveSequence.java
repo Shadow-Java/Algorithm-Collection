@@ -13,6 +13,8 @@ public class LongestConsecutiveSequence {
      * 输出: 4
      * 解释: 最长的连续子序列是 [1, 2, 3, 4]。它的长度为 4。
      *
+     * 注意是任意选择里面的数，能够递增的
+     *
      * todo 最长有效字符串
      * @param nums
      * @return
@@ -36,23 +38,6 @@ public class LongestConsecutiveSequence {
         }
         max = Math.max(windowSet.size(),max);
         return max;
-    }
-
-    public static int longestConsecutiveV2(int[] nums) {
-        if(nums == null || nums.length <= 0) {
-            return 0;
-        }
-        Arrays.sort(nums);
-        int left=0;
-        int ans = 1;
-        for (int right =0;right<nums.length;right++) {
-            if(nums[right] == (nums[right-1]+1)) {//不定长，但不需要循环移动left
-                ans = Math.max(ans,right-left+1);
-            } else {
-                left = right;
-            }
-        }
-        return ans;
     }
 
     public static void main(String[] args) {
