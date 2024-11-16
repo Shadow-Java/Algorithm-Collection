@@ -6,6 +6,19 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 /**
+ * 1、比较两个数得大小，比如字典序o1.compareTo(o2)的大小
+ * 2、比较Integer的大小，比如o1.compareTo(o2)的大小
+ * 3、堆定义的：
+ * <block>
+ * <code>
+ * PriorityQueue<Integer> maxHeap = new PriorityQueue<>(new Comparator<Integer>() {@Override
+ * public int compare(Integer o1, Integer o2) {
+ * return o1-o2;
+ * }
+ * });
+ * </code>
+ * </block>
+ * 如果o1-o2为则为最小堆，o2-o1为最大堆;每次进入堆即为o1和顶o2进行比较
  * 构建大顶堆和小顶堆
  */
 public class HeapExample {
