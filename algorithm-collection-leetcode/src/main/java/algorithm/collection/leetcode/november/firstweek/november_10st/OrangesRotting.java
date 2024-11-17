@@ -1,5 +1,12 @@
 package algorithm.collection.leetcode.november.firstweek.november_10st;
 
+import algorithm.collection.common.datastruct.tag.DataStructType;
+import algorithm.collection.common.datastruct.tag.DifficultyLevel;
+import algorithm.collection.common.datastruct.tag.QuestionCategory;
+import algorithm.collection.common.datastruct.tag.QuestionTag;
+import algorithm.collection.common.datastruct.tag.TimeComplexity;
+import algorithm.collection.leetcode.november.firstweek.november_2st.SpiralOrder;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -29,6 +36,15 @@ import java.util.Queue;
  * @author shadow
  * @create 2024-11-10 22:05
  **/
+@QuestionTag(
+        difficultyLeve = DifficultyLevel.MEDIUM,
+        questionNumber = "994",
+        questionTitle = "994. 腐烂的橘子",
+        relevateClass = {SpiralOrder.class,MinMalwareSpread.class},
+        timeComplexity = TimeComplexity.O_N_2,
+        dataStructTypes = {DataStructType.DEDED_DOUBLE_QUEUE},
+        questionCategory = {QuestionCategory.GRID_BFS}
+)
 public class OrangesRotting {
 
     public int orangesRotting(int[][] grid) {
@@ -89,7 +105,8 @@ public class OrangesRotting {
     /**
      * 1、橘子最后不能有新鲜的，即得全部腐烂
      * 2、经过的分钟数得最小
-     *
+     * 3、思考：如果可以去掉一个初始就腐烂的橘子（grid[i][j] 改成 0），那么 BFS 结束后，新鲜橘子的个数最大是多少？见 928. 尽量减少恶意软件的传播 II
+     * 4、如果代码不在 while 中判断 fresh>0，会发生什么？会在腐烂完所有新鲜橘子后，多循环一次。这会导致 ans 比实际多 1。
      * @param grid
      * @return
      */

@@ -78,4 +78,6 @@ public @interface QuestionTag {
      */
     AlgorithmCategory[] algorithmCategory() default {};
 
+    QuestionCategory[] questionCategory() default {};
+
 }
