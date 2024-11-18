@@ -40,13 +40,21 @@ import algorithm.collection.leetcode.november.firstweek.november_10st.OrangesRot
         difficultyLeve = DifficultyLevel.HARD,
         questionNumber = "1326",
         questionTitle = "1326. 灌溉花园的最少水龙头数目",
-        relevateClass = OrangesRotting.class,
+        relevateClass = {Jump.class, VideoStitching.class},
         timeComplexity = TimeComplexity.O_N_2,
         dataStructTypes = {DataStructType.DEDED_DOUBLE_QUEUE},
         questionCategory = QuestionCategory.INTERVAL_COVER
 )
 public class MinTaps {
 
+    /**
+     * 1、比较两个点的能够到达的最右端点i1 < i2;
+     *    ①如果 i <= r,那么左端点必然小于0，这样端点0的最右取端点0的最右和端点i的最大值，即选择能浇灌最远的水龙头
+     *    ②如果 i > r,那么[i-r,i+r]
+     * @param n
+     * @param ranges
+     * @return
+     */
     public int minTaps(int n, int[] ranges) {
         //求最远右端点
         int[] rightMost = new int[n + 1];
