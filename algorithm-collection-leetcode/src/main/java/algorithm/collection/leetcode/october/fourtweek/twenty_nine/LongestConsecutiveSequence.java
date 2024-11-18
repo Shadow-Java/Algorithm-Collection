@@ -25,6 +25,9 @@ public class LongestConsecutiveSequence {
         }
         Arrays.sort(nums);
         int max = 1;
+        //为什么要用set集合处理重复元素，比如1,2,2,3,4；如果使用right-left+1=5，但其实要去重，所以需要添加数据结构set
+        //什么场景适合用滑动窗口？结果集是段一段的
+        //什么场景下left指针移动用if，什么场景下用while？ 如果在数组上一段一段的，用if；如果每段有交集，用while
         Set<Integer> windowSet = new HashSet<>();
         windowSet.add(nums[0]);
         //不定长窗口，只有窗口没有left，即只需要更新窗口即可
