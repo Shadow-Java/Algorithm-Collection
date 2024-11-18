@@ -19,11 +19,16 @@ package algorithm.collection.leetcode.october.fourtweek.twenty_thirty_one;
  **/
 public class MaxSubArray {
 
+    /**
+     * Kadane's Algorithm 是一种用于寻找具有最大和的连续子数组的经典算法。它的时间复杂度为 O(n)，空间复杂度为 O(1)，因此非常适合处理大规模数据。Kadane's Algorithm 的核心思想是通过一次遍历数组来找到最大子数组和。
+     * @param nums
+     * @return
+     */
     public int maxSubArray(int[] nums) {
         int ans = nums[0];
         int sum = 0;
         for(int num: nums) {
-            if(sum > 0) {
+            if(sum > 0) {//如果sum大于0，说明能够更大
                 sum += num;
             } else {
                 sum = num;
@@ -42,6 +47,9 @@ public class MaxSubArray {
     public int maxSubArray_dp(int[] nums) {
         int pre = 0, maxAns = nums[0];
         for (int x : nums) {
+            /**
+             * pre为当前最大值，和x相比较
+             */
             pre = Math.max(pre + x, x);
             maxAns = Math.max(maxAns, pre);
         }
