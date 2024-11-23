@@ -1,5 +1,8 @@
 package algorithm.collection.primary.dynamicprogramming;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 0-1背包是每件物品的状态就是取或者不取，取是1，不取是0；假设物品总数为n，那么穷举的总数为2^n
  * 假设有      重量      价值      背包重量为6
@@ -33,8 +36,8 @@ package algorithm.collection.primary.dynamicprogramming;
  **/
 public class BackPack01 {
 
-    private static int[] weight = {2, 3,4,7};
-    private static int[] values = {1, 3,5,9};
+    private static int[] weight = {1,2,3};
+    private static int[] values = {6,10,12};
 
     public static void main(String[] args) {
         /**
@@ -44,7 +47,7 @@ public class BackPack01 {
         int n = weight.length;
         //System.out.println(dfs(n-1,5));
         //System.out.println(knapsack(weight,value,5));
-        knapsack_V2(weight, values, 10);
+        knapsack_V3(weight, values, 5);
     }
 
     /**
@@ -135,19 +138,30 @@ public class BackPack01 {
         int n = weights.length;
 
         int[] dp = new int[W+1];
-
+        List<List<String>> ans = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
+            List<String> level = new ArrayList<>();
             for (int j = W; j >= 1; j--) {
+                //因为dp[i]的最大价值只与dp[i-1]有关，如果从前面往后计算，那么上一轮的数据会被覆盖；从后往前的话，计算当前只会用到之前的数据，不会把上一轮的数据覆盖
                 //从后往前推，防止dp[i-1]轮的数据被覆盖掉
-                if(j > weights[i-1]) {
+                if(j >= weights[i-1]) {
                     //dp[j]在后，dp[j-weights[i-1]]在前
                     dp[j] = Math.max(dp[j],dp[j-weights[i-1]]+values[i-1]);
+                    String str = "dp["+j+"]=Math.max(dp["+j+"],dp["+(j-weights[i-1])+"]+"+values[i-1]+")";
+                    level.add(str);
                 }
             }
+            ans.add(level);
             for (int j = 0; j <= W; j++) {
-                System.out.print(dp[j] + " ");
+                System.out.print(dp[j] + "  ");
             }
             System.out.println();
+        }
+        int count =1;
+        for (List<String> level : ans) {
+            System.out.println("第"+count+"个物品");
+            level.forEach(System.out::println);
+            count++;
         }
         return dp[W];
     }

@@ -88,6 +88,8 @@ public class BitOperation {
         int rightOne = eO & (~eO + 1);//提取最右侧的1
         for (int cur : arr) {
             if ((cur & rightOne) != 0) {//cur这位上有1的数字
+                //首先因为异或原因，导致出现偶数次的两个数肯定分在不同的组内（一组的末尾为一，一组末尾不为1）
+                //然后对每个组内的数字求异或，比如[2,2,2,6,6]那么异或为2（求的是出现奇数次的数）
                 eOhasOne ^= cur;//eor'
             }
         }

@@ -1,5 +1,7 @@
 package algorithm.collection.primary.dynamicprogramming;
 
+import java.util.Arrays;
+
 /**
  * 322.零钱兑换
  * 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。
@@ -22,6 +24,11 @@ package algorithm.collection.primary.dynamicprogramming;
  **/
 public class CoinChange {
 
+    /**
+     * @param coins
+     * @param amount
+     * @return
+     */
     public int coinChange(int[] coins, int amount) {
         int n = coins.length;
         int ans = dfs(n-1,amount,coins);
@@ -51,6 +58,67 @@ public class CoinChange {
             return dfs(i-1, capacity,coins);
         }
         return Math.min(dfs(i-1,capacity,coins), dfs(i, capacity-coins[i],coins)+1);
+    }
+
+    /**
+     * 翻译为递推
+     * @param coins
+     * @param amount
+     * @return
+     */
+    public int coinChangeV2(int[] coins, int amount) {
+        int n = coins.length;
+        int[][] f = new int[n + 1][amount + 1];
+        Arrays.fill(f[0], Integer.MAX_VALUE / 2); // 除 2 防止下面 + 1 溢出
+        f[0][0] = 0;
+        for (int i = 0; i < n; i++) {
+            for (int c = 0; c <= amount; c++) {
+                if (c < coins[i]) f[i + 1][c] = f[i][c];
+                else f[i + 1][c] = Math.min(f[i][c], f[i + 1][c - coins[i]] + 1);
+            }
+        }
+        int ans = f[n][amount];
+        return ans < Integer.MAX_VALUE / 2 ? ans : -1;
+    }
+
+    /**
+     * 空间优化：两个数组（滚动数组）
+     * @param coins
+     * @param amount
+     * @return
+     */
+    public int coinChangeV3(int[] coins, int amount) {
+        int n = coins.length;
+        int[][] f = new int[2][amount + 1];
+        Arrays.fill(f[0], Integer.MAX_VALUE / 2);
+        f[0][0] = 0;
+        for (int i = 0; i < n; i++) {
+            for (int c = 0; c <= amount; c++) {
+                if (c < coins[i]) f[(i + 1) % 2][c] = f[i % 2][c];
+                else f[(i + 1) % 2][c] = Math.min(f[i % 2][c], f[(i + 1) % 2][c - coins[i]] + 1);
+            }
+        }
+        int ans = f[n % 2][amount];
+        return ans < Integer.MAX_VALUE / 2 ? ans : -1;
+    }
+
+    /**
+     * 空间优化：一个数组
+     * @param coins
+     * @param amount
+     * @return
+     */
+    public int coinChangeV4(int[] coins, int amount) {
+        int[] f = new int[amount + 1];
+        Arrays.fill(f, Integer.MAX_VALUE / 2);
+        f[0] = 0;
+        for (int x : coins) {
+            for (int c = x; c <= amount; c++) {
+                f[c] = Math.min(f[c], f[c - x] + 1);
+            }
+        }
+        int ans = f[amount];
+        return ans < Integer.MAX_VALUE / 2 ? ans : -1;
     }
 
 }
