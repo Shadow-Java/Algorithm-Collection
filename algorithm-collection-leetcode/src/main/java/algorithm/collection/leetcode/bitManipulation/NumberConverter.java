@@ -102,6 +102,7 @@ public class NumberConverter {
          */
         String digits = "0123456789abcdef";
         //32位整数的补码表示中，负数的最高位（符号位）是1，加上2^32可以使其变为正数
+        //注：如果是七进制，直接取反，变为正数后再转进制
         if(num < 0) num = (long)(Math.pow(2, 32) + num);
         while (num > 0) {
             int remainder = (int)(num % base);

@@ -88,7 +88,7 @@ public class BitOperation {
         int rightOne = eO & (~eO + 1);//提取最右侧的1
         for (int cur : arr) {
             if ((cur & rightOne) != 0) {//cur这位上有1的数字
-                //首先因为异或原因，导致出现偶数次的两个数肯定分在不同的组内（一组的末尾为一，一组末尾不为1）
+                //首先因为异或原因，导致出现偶数次的两个数肯定分在不同的组内（一组的末尾为一，一组末尾为0）
                 //然后对每个组内的数字求异或，比如[2,2,2,6,6]那么异或为2（求的是出现奇数次的数）
                 eOhasOne ^= cur;//eor'
             }
@@ -100,9 +100,10 @@ public class BitOperation {
      * 题目:统计1的个数<br>
      *
      * 每次找出二进制最右侧的1,逐渐加1，再抹掉右侧的1
-     *
+     * 求与 是为了让~N和N都变为0，除了末尾的1
      * <pre>
      *            N : 011011010000
+     *           ~N : 100100101111
      *     N&(~N+1) : 000000010000
      * N^(N&(~N+1)) : 011011000000
      *                       ^
@@ -119,6 +120,34 @@ public class BitOperation {
             N ^= rightOne;
         }
         return count;
+    }
+
+    /**
+     * Integer.toBinaryString(
+     *             Integer.parseInt(a, 2) + Integer.parseInt(b, 2)
+     *         );
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public String addBinary(String a, String b) {
+        StringBuilder ans = new StringBuilder();
+
+        int n = Math.max(a.length(), b.length()), carry = 0;
+        for (int i = 0; i < n; ++i) {
+            carry += i < a.length() ? (a.charAt(a.length() - 1 - i) - '0') : 0;
+            carry += i < b.length() ? (b.charAt(b.length() - 1 - i) - '0') : 0;
+            ans.append((char) (carry % 2 + '0'));
+            carry /= 2;
+        }
+
+        if (carry > 0) {
+            ans.append('1');
+        }
+        ans.reverse();
+
+        return ans.toString();
     }
 
 }
