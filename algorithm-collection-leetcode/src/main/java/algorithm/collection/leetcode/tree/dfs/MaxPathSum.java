@@ -43,6 +43,13 @@ public class MaxPathSum {
         return maxSum;
     }
 
+    /**
+     * 这题和二叉树的直径类似，枚举的每个顶点
+     *
+     * 如果所有节点都是负数，那么只要某一个节点就可以，通过ans=max求出
+     * @param node
+     * @return
+     */
     public int maxGain(TreeNode node) {
         if (node == null) {
             return 0;
