@@ -33,7 +33,9 @@ public class SearchInsert {
                 return mid;
             }
         }
-        return left+1;
+        // 目标值不存在于数组中，返回插入位置
+        //最终left会跑到target的右边，right会跑在target的左边
+        return left;
     }
 
 }
