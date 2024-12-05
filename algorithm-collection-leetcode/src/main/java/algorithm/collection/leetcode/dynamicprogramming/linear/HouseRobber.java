@@ -79,6 +79,31 @@ public class HouseRobber {
         return max;
     }
 
+    //空间查询优化，提前保存搜索树
+    private int[] cache;
+    public int robV3(int[] nums) {
+        //dp[i] = max(dp[i-1],dp[i-2]+nums[i]);
+        int[] f = new int[nums.length+2];
+        f[0] = 0;
+        f[1] =0;
+        for(int i =0;i<nums.length;i++) {
+            f[i+2]= Math.max(f[i+1],f[i]+nums[i]);
+        }
+        return f[nums.length+1];
+    }
+
+    public int dfs(int[] nums,int i) {
+        if(i < 0) {
+            return 0;
+        }
+        if(cache[i] != -1) {
+            return cache[i];
+        }
+        int previous = Math.max(dfs(nums,i-1),dfs(nums,i-2)+nums[i]);
+        cache[i] = previous;
+        return previous;
+    }
+
     /**
      * 空间优化的基本原理是，很多时候我们并不需要始终持有全部的 DP 数组。对于小偷问题，我们发现最后计算f(n)的时候，实际上只用到了f(n-1)和f(n-2)的结果
      * n-3之前的子问题
