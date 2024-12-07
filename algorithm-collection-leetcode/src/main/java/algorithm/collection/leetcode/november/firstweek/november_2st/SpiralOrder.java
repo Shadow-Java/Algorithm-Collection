@@ -82,11 +82,15 @@ public class SpiralOrder {
         for (int i = 0; i < total; i++) {
             order.add(matrix[row][column]);
             visited[row][column] = true;
-            int nextRow = row + directions[directionIndex][0], nextColumn = column + directions[directionIndex][1];
+            // 计算下一个位置
+            int nextRow = row + directions[directionIndex][0];
+            int nextColumn = column + directions[directionIndex][1];
+            // 如果下一个位置越界或已经被访问，则改变方向
             if (nextRow < 0 || nextRow >= rows || nextColumn < 0 || nextColumn >= columns || visited[nextRow][nextColumn]) {
-                //保证方向一直是从0-3的
+                // 改变方向，方向索引在 0 到 3 之间循环
                 directionIndex = (directionIndex + 1) % 4;
             }
+            // 更新当前位置为新的位置
             row += directions[directionIndex][0];
             column += directions[directionIndex][1];
         }

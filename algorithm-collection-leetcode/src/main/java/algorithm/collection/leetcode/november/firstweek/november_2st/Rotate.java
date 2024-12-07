@@ -35,15 +35,20 @@ public class Rotate {
      * @param matrix
      */
     public void rotate_V2(int[][] matrix) {
+        //left 和 right 分别表示当前处理的最外层矩形的左右边界
         int left = 0,right = matrix.length-1;
         while (left < right) {
+            //基于四个角旋转偏移一个位置的、偏移两个位置的、偏移三个位置的；即每一层最多选择right - left次
             for (int i=0;i < right - left;i++) {
                 //上边界和下边界
                 int top = left,bottom = right;
-                //暂存左顶端的值
+                //暂存左顶端的值，倒着旋转的，即将左下角的值覆盖到左上角；将右下角的值覆盖到左下角。最后将左上角的值覆盖到右上角
                 int topLeft = matrix[top][left+i];
+                //将左下角的值覆盖到左上角,基于四个角偏移i个位置的旋转
                 matrix[top][left+i] = matrix[bottom-i][left];
+                //将右下角的值覆盖到左下角
                 matrix[bottom-i][left] = matrix[bottom][right-i];
+                //右上角的值覆盖到右下角
                 matrix[bottom][right-i] = matrix[top+i][right];
                 matrix[top+i][right] = topLeft;
             }
