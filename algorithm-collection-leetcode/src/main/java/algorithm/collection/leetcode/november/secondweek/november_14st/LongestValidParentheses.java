@@ -25,6 +25,12 @@ import java.util.LinkedList;
  **/
 public class LongestValidParentheses {
 
+    public static void main(String[] args) {
+        String s = "()()";
+        LongestValidParentheses longestValidParentheses = new LongestValidParentheses();
+        longestValidParentheses.longestValidParentheses(s);
+    }
+
     /**
      * 最长有效括号
      * @param s
@@ -34,7 +40,7 @@ public class LongestValidParentheses {
         int max = 0;
         Deque<Integer> stack = new LinkedList<Integer>();
         //提前存一个无效值,存的是下标
-        stack.push(-1);
+        stack.push(-1);//每次让有效的最后括号下标减去-1
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {//栈中只存左括号
                 stack.push(i);

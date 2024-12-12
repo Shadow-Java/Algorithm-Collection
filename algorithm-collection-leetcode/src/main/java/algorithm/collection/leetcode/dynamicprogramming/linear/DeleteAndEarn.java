@@ -8,6 +8,7 @@ import algorithm.collection.common.datastruct.tag.QuestionTag;
 import algorithm.collection.common.datastruct.tag.TimeComplexity;
 
 /**
+ * 740.删除并获得点数
  * 给你一个整数数组nums，你可以对它进行一些操作。
  * <p>
  * 每次操作中，选择任意一个nums[i]，删除它并获得nums[i]的点数。之后，你必须删除 所有 等于nums[i] - 1 和 nums[i] + 1的元素。
@@ -48,7 +49,7 @@ public class DeleteAndEarn {
      * all=[0, 0, 2, 3, 1]  表示2出现2两次，3出现3次，4出现4次       <br/>
      * 对数组中的数字进行打家劫舍，对于每个当前值分为打劫和不打劫          <br/>
      * dp[i] = max(dp[i-1],all[i]*i+dp[i-2])                    <br/>
-     * 相当于对数组进行排序，全都排成连续的数字数组，对出现次数进行打家劫舍  <br/>
+     * 相当于对数组进行排序，全都排成连续的数字数组，对“出现次数”进行打家劫舍  <br/>
      *
      * @param nums
      * @return
