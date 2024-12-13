@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.november.thirdweek.november_18st.november_18st;
+package algorithm.collection.leetcode.november.thirdweek.november_18st;
 
 
 import algorithm.collection.common.datastruct.tree.TreeNode;

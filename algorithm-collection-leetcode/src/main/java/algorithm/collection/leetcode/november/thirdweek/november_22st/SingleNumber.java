@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.november.thirdweek.november_18st.november_22st;
+package algorithm.collection.leetcode.november.thirdweek.november_22st;
 
 /**
  * 136. 只出现一次的数字

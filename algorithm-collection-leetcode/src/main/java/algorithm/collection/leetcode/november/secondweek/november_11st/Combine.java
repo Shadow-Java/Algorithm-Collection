@@ -75,4 +75,24 @@ public class Combine {
         }
     }
 
+    public void backtrack(int n,int k,int start, List<Integer> path, List<List<Integer>> result) {
+        if(path.size() == k) {
+            result.add(new ArrayList<>(path));
+        }
+        /**
+         * 组合和子集都是单调有序的，所以从start开始遍历；
+         * 但是排序型需要从0开始遍历，且需要加visited数组
+         */
+        for (int i = start; i <= n; i++) {
+            // 选择当前元素
+            path.add(i);
+
+            // 递归调用，继续生成包含当前元素的子集
+            backtrack(n, k,i + 1, path, result);
+
+            // 撤销选择，回溯
+            path.remove(path.size() - 1);
+        }
+    }
+
 }

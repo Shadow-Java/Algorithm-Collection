@@ -70,8 +70,12 @@ public class DeleteAndEarn {
         for (int num : nums) {
             ++counter[num];
         }
+        /**
+         * 为什么不需要倒序遍历？
+         * 在这个问题中，我们并不需要对 nums 进行倒序或正向遍历，因为我们不是直接操作 nums，而是操作 数字的出现次数。具体来说，我们只需要遍历 count 数组，count[i] 表示数字 i 的出现次数
+         */
         int[] dp = new int[max + 3];
-        for (int i = max; i >= 0; i--) {
+        for (int i = max; i >= 0; i--) {//从后面的往前偷
             dp[i] = Math.max(dp[i + 1], dp[i + 2] + counter[i] * i);
         }
         return dp[0];

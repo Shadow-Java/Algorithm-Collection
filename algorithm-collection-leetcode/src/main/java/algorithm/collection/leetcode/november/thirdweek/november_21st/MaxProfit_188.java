@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.november.thirdweek.november_18st.november_21st;
+package algorithm.collection.leetcode.november.thirdweek.november_21st;
 
 import java.util.Arrays;
 

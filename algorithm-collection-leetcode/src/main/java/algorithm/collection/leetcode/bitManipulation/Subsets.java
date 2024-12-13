@@ -1,6 +1,5 @@
 package algorithm.collection.leetcode.bitManipulation;
 
-import algorithm.collection.common.datastruct.array.ArrayRandomGenerator;
 import algorithm.collection.common.datastruct.tag.AlgorithmCategory;
 import algorithm.collection.common.datastruct.tag.DataStructType;
 import algorithm.collection.common.datastruct.tag.DifficultyLevel;

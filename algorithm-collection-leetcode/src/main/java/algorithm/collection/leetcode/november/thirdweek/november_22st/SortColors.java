@@ -1,4 +1,4 @@
-package algorithm.collection.leetcode.november.thirdweek.november_18st.november_22st;
+package algorithm.collection.leetcode.november.thirdweek.november_22st;
 
 /**
  * 75. 颜色分类
