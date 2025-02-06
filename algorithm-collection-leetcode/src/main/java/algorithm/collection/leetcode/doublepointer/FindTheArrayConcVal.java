@@ -78,15 +78,15 @@ public class FindTheArrayConcVal {
             algorithmCategory = AlgorithmCategory.DOUBLE_POINTER
     )
     public long findTheArrayConcVal(int[] nums) {
-        int left = nums.length-1;
+        int left = nums.length - 1;
         long res = 0;
 
-        for (int i=0;i< nums.length;i++){
-            if(i < left){
-                res = res+Integer.parseInt(nums[i] +String.valueOf(nums[left]));
+        for (int i = 0; i < nums.length; i++) {
+            if (i < left) {
+                res = res + Integer.parseInt(nums[i] + String.valueOf(nums[left]));
                 left--;
-            } else if(i==left){
-                res = res+Long.parseLong(String.valueOf(nums[i]));
+            } else if (i == left) {
+                res = res + Long.parseLong(String.valueOf(nums[i]));
             }
         }
         return res;
@@ -94,14 +94,14 @@ public class FindTheArrayConcVal {
 
     public long findTheArrayConcVal_V2(int[] nums) {
         int res = 0;
-        int right = nums.length-1;
+        int right = nums.length - 1;
         int left = 0;
         //使用双指针遍历数组的模式
-        for (left=0;left<right;left++,right--) {
+        for (left = 0; left < right; left++, right--) {
             String valStr = nums[left] + String.valueOf(nums[right]);
-            res = res+Integer.parseInt(valStr);
+            res = res + Integer.parseInt(valStr);
         }
-        if(res == right) {
+        if (res == right) {
             res += nums[left];
         }
         return res;

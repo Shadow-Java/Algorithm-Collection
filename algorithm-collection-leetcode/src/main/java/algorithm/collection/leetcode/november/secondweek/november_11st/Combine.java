@@ -75,6 +75,21 @@ public class Combine {
         }
     }
 
+    /**
+     *                1
+     *            /   |   \
+     *          2     3    4
+     *        /  \     \
+     *       3   4     4
+     * 从1开始深度遍历，遇到长度为k时即回退；[[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]
+     * <code>
+     *     public List<List<Integer>> combine(int n, int k) {
+     *         ans = new ArrayList<>();
+     *         dfs(n, 1, k, new ArrayList<>());
+     *         return ans;
+     *     }
+     * </code>
+     */
     public void backtrack(int n,int k,int start, List<Integer> path, List<List<Integer>> result) {
         if(path.size() == k) {
             result.add(new ArrayList<>(path));
