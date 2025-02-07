@@ -20,6 +20,7 @@ import java.util.List;
 public class GenerateParenthesis {
 
     /**
+     * 前k个括号中，左括号一定大于等于右括号的数量；右括号的个数不能超过左括号的个数，当左右括号相等时，只能选左括号
      * 左右括号的个数都必须等于n;
      * 可以看成从2n个位置中选n个位置放左括号，其余位置放右括号；第i个位置选他放左括号，不选则右括号；
      * 要画出一课搜索树，当n=3的时候，左括号的个数不能超过3，所以一旦等于3了，其他就是选右括号了；当左右括号相等的时候，就只能选左括号了
@@ -41,7 +42,7 @@ public class GenerateParenthesis {
     public List<String> generateParenthesis(int n) {
         this.n = n;
         path = new char[n * 2]; // 所有括号长度都是一样的 n*2
-        dfs(0, 0);
+        dfs(0, 0);//从0，0出发开始递归
         return ans;
     }
 
@@ -50,17 +51,18 @@ public class GenerateParenthesis {
     private char[] path;
 
     // i = 目前填了多少个括号
+    //第i个位置，即在当前i时，左右括号数和为i
     // open = 左括号个数，i-open = 右括号个数
     private void dfs(int i, int open) {
         if (i == n * 2) { // 括号构造完毕
             ans.add(new String(path)); // 加入答案
             return;
         }
-        if (open < n) { // 可以填左括号
+        if (open < n) { // 左括号的个数小于n，可以填左括号
             path[i] = '('; // 直接覆盖
             dfs(i + 1, open + 1); // 多了一个左括号
         }
-        if (i - open < open) { // 可以填右括号
+        if (i - open < open) { // 右括号的个数小于左括号的个数可以填右括号
             path[i] = ')'; // 直接覆盖
             dfs(i + 1, open);
         }
