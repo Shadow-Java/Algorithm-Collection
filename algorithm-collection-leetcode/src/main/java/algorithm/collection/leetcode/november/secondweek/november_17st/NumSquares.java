@@ -53,6 +53,7 @@ public class NumSquares {
             System.out.println(onPath);
             return;
         }
+        //每种场景下有squares种情况可以选，在path + item <= n才可以选择，即剪枝
         for (Integer item : squares) {
             if(path + item <= n) {
                 path += item;

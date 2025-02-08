@@ -56,9 +56,11 @@ public class ClimbStairs {
             ans++;
             return;
         }
+        //当前有两种情况可以选，可以选1 也可以选2
         for (int i=1;i<=2;i++) {
+            //当剩余的台阶数小于当前可选的台阶，那么就可以选
             if(remain >= i) {
-                path += i;
+                path += i;//选择后将路径加上相应的台阶数
                 dfs(n,path,remain-i);
                 path -= i;
             }
