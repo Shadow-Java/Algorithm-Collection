@@ -1,6 +1,8 @@
 package algorithm.collection.leetcode.november.secondweek.november_17st;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 279. 完全平方数
@@ -32,6 +34,34 @@ public class NumSquares {
             }
         }
         return f[n];
+    }
+
+    int res;
+    public int numSquaresV2(int n) {
+        res = Integer.MAX_VALUE;
+        List<Integer> squares = new ArrayList<>();
+        for (int i = 1; i < 100; i++) {
+            squares.add(i*i);
+        }
+        dp(n,squares,0,new ArrayList<>());
+        return res;
+    }
+
+    private void dp(int n,List<Integer> squares,int path,List<Integer> onPath) {
+        if(path == n) {
+            res = Math.min(onPath.size(),res);
+            System.out.println(onPath);
+            return;
+        }
+        for (Integer item : squares) {
+            if(path + item <= n) {
+                path += item;
+                onPath.add(item);
+                dp(n,squares,path,onPath);
+                path -= item;
+                onPath.remove(onPath.size()-1);
+            }
+        }
     }
 
 }
