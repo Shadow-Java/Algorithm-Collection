@@ -1,6 +1,7 @@
 package algorithm.collection.primary.dynamicprogramming;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 322.零钱兑换
@@ -41,9 +42,9 @@ public class CoinChange {
     /**
      * 类比完全背包，数量就是价值，在完全背包中求的是价值，那么数量就类比价值
      * 总金额 amount就是背包容量，面额就是物品容量
-     * @param i
-     * @param capacity
-     * @param coins
+     * @param i         表示第i种物品，枚举的是可能性
+     * @param capacity  背包容量
+     * @param coins     所有的可能性
      * @return
      */
     public int dfs(int i,int capacity,int[] coins) {
@@ -57,6 +58,7 @@ public class CoinChange {
         if(capacity < coins[i]) {
             return dfs(i-1, capacity,coins);
         }
+        //这是结果是个数，即在枚举capacity到0的时候的次数，有一个合法的自增1
         return Math.min(dfs(i-1,capacity,coins), dfs(i, capacity-coins[i],coins)+1);
     }
 
@@ -110,15 +112,41 @@ public class CoinChange {
      */
     public int coinChangeV4(int[] coins, int amount) {
         int[] f = new int[amount + 1];
-        Arrays.fill(f, Integer.MAX_VALUE / 2);
+        Arrays.fill(f, Integer.MAX_VALUE);
         f[0] = 0;
         for (int x : coins) {
             for (int c = x; c <= amount; c++) {
-                f[c] = Math.min(f[c], f[c - x] + 1);
+                if(f[c - x] != Integer.MAX_VALUE) {//避免溢出小于0，最终会递归到f[0]=0
+                    f[c] = Math.min(f[c], f[c - x] + 1);
+                }
             }
         }
-        int ans = f[amount];
-        return ans < Integer.MAX_VALUE / 2 ? ans : -1;
+        return f[amount] == Integer.MAX_VALUE ? -1 : f[amount];
+    }
+
+
+    int count = Integer.MAX_VALUE;
+    //这种是每种场景都枚举，因为硬币都都能重复，所以总的组合数达到了c^a种组合；c是硬币种类的数量，a是目标金额
+    //相当于遍历背包1-amount时，每次遍历都是coins.size种情况
+    //如何优化：1.使用动态规划dp    2.dfs(i) 将大问题转化为子问题，通过记忆化搜索转化为dfs(i-coin)+1
+    private void dfs(int amount, int path, int[] coins, List<Integer> onPath) {
+        if (path == amount) {
+            count = Math.min(count, onPath.size());
+            return;
+        }
+        if (path > amount) {
+            return; // 超过目标金额，直接返回
+        }
+
+        for (int coin : coins) {
+            // 剪枝：如果当前路径长度已经大于等于已知的最小硬币数，则无需继续搜索
+            if (onPath.size() + 1 >= count) continue;
+
+            onPath.add(coin);
+            // 使用新的局部变量来避免修改外部状态
+            dfs(amount, path + coin, coins, onPath);
+            onPath.remove(onPath.size() - 1); // 回溯时移除最后一个元素
+        }
     }
 
 }

@@ -76,6 +76,9 @@ public class FindTargetSumways {
         if (c < nums[i]) {
             return memo[i][c] = dfs(i - 1, c); // 只能不选
         }
+        //注意这是方案数，dfs(i - 1, c - nums[i])没有自增1
+        //因为这里代表的是一直让capacity枚举到0 才算一个方案
+        //
         return memo[i][c] = dfs(i - 1, c) + dfs(i - 1, c - nums[i]); // 不选 + 选
     }
 
