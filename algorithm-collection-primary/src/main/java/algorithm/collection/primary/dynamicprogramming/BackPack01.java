@@ -77,6 +77,7 @@ public class BackPack01 {
     public static int dfs(int i,int capacity) {
         //一个物品都没有
         if(i < 0) {
+            //这里为什么不判断capacity<0的情况，如果当capacity<0代表是找到了一个存放方案，如果return 1则错误；因为dfs代表的最大价值和，而不是当前方案数
             return 0;
         }
         if(capacity < weight[i]) {

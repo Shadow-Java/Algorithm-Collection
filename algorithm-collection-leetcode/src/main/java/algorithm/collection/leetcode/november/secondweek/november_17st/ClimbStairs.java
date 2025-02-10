@@ -25,6 +25,21 @@ import algorithm.collection.common.datastruct.tag.TimeComplexity;
  * 2. 1 阶 + 2 阶
  * 3. 2 阶 + 1 阶
  *
+ *
+ *
+ * 70. 爬楼梯
+ * 746. 使用最小花费爬楼梯
+ * 377. 组合总和 Ⅳ 本质是爬楼梯，相当于每次往上爬
+ * nums
+ * [
+ * 𝑖
+ * ]
+ * nums[i] 步
+ * 2466. 统计构造好字符串的方案数 1694
+ * 2266. 统计打字方案数 1857
+ * 2533. 好二进制字符串的数量（会员题）同 2466 题
+ *
+ *
  * @author shadow
  * @create 2024-11-18 20:30
  **/
@@ -67,6 +82,25 @@ public class ClimbStairs {
         }
     }
 
+    /**
+     *         int[] memo = new int[n+1];
+     *         Arrays.fill(memo,-1);
+     *     public int dfs(int i) {
+     *         if(i < 0) {
+     *             return 0;
+     *         }
+     *         if(i == 0) {
+     *             memo[i] = 1;
+     *             return 1;
+     *         }
+     *         if(memo[i] != -1) {
+     *             return memo[i];
+     *         }
+     *         return memo[i] = dfs(i-1)+dfs(i-2);
+     *     }
+     * @param i
+     * @return
+     */
     public int dfs(int i) {
         if(i <=1) {//递归边界
             return 1;
@@ -88,7 +122,7 @@ public class ClimbStairs {
      */
     public int climbStairsV2(int n) {
         int[] f = new int[n+1];
-        f[0] = 1;
+        f[0] = 1;//一定要自己举例才知道起始值为多少 比如f[2] = f[0]+f[1]
         f[1] = 1;
         //一定要明确枚举的对象和dp数组的含义，为了防止数组越界从2开始
         for (int i = 2; i <= n; i++) {
