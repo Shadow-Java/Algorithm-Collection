@@ -74,6 +74,12 @@ public class BackPack01 {
         return dfs(n-1,5);
     }
 
+    /**
+     * 为什么是从capacity到0：因为是递归，实际是从0到capacity的；然后使用一维数组就是0到capacity
+     * @param i
+     * @param capacity
+     * @return
+     */
     public static int dfs(int i,int capacity) {
         //一个物品都没有
         if(i < 0) {

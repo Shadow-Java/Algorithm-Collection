@@ -123,6 +123,7 @@ public class Rob {
         int n = nums.length;
         int[] f = new int[n + 2];
         for (int i = 0; i < n; i++) {
+            //将表达式自增2，这样i在nums数组时不会越界，代表的含义也是正确的
             f[i + 2] = Math.max(f[i + 1], f[i] + nums[i]);
         }
         return f[n + 1];
