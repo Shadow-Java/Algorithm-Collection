@@ -129,6 +129,18 @@ public class Rob {
         return f[n + 1];
     }
 
+    public int robV4(int[] nums) {
+        //要清楚的知道f代表的含义，是枚举1-n个房间的偷盗的最大价值和
+        //最终要求的是f[n],其中f[i]对应的是nums[i-1]
+        int[] f = new int[nums.length + 1];
+        f[0] = 0;
+        f[1] = nums[0];
+        for (int i = 2; i <= nums.length; i++) {
+            f[i] = Math.max(f[i - 1], f[i - 2] + nums[i - 1]);
+        }
+        return f[nums.length];
+    }
+
     /**
      * 看f[i] = max(f[i-1],f[i-2]+nums[i])式子得知，需要三个值，f[i]、f[i-1]、f[i-2]
      * 计算一个f[i]只需要知道上一个和上上一个的值；
