@@ -5,6 +5,8 @@ import algorithm.collection.common.datastruct.tag.DifficultyLevel;
 import algorithm.collection.common.datastruct.tag.QuestionTag;
 import algorithm.collection.common.datastruct.tag.TimeComplexity;
 
+import java.util.Arrays;
+
 /**
  * 45. 跳跃游戏 II
  * 给定一个长度为 n 的 0 索引整数数组 nums。初始位置为 nums[0]。
@@ -57,6 +59,26 @@ public class Jump {
             }
         }
         return ans;
+    }
+
+    /**
+     * 校验是否合理
+     * @param nums
+     * @return
+     */
+    public int jumpV2(int[] nums) {
+        //跳或者不跳
+        int[] f = new int[nums.length + 1];
+        Arrays.fill(f, Integer.MAX_VALUE);
+        f[0] = 1;
+        for (int i = 1; i < nums.length + 1; i++) {
+            if (i < nums[i - 1]) {//可以选择当前
+                f[i] = f[i - 1] + 1;
+            } else {
+                f[i] = Math.min(f[i - 1], f[i - nums[i - 1]]);
+            }
+        }
+        return f[nums.length];
     }
 
 }
