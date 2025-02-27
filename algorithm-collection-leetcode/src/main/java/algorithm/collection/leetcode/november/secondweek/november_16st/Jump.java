@@ -62,7 +62,7 @@ public class Jump {
     }
 
     /**
-     * 校验是否合理
+     * TODO 校验是否合理
      * @param nums
      * @return
      */

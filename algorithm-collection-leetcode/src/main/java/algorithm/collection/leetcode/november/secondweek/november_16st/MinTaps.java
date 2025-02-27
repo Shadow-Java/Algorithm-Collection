@@ -5,7 +5,6 @@ import algorithm.collection.common.datastruct.tag.DifficultyLevel;
 import algorithm.collection.common.datastruct.tag.QuestionCategory;
 import algorithm.collection.common.datastruct.tag.QuestionTag;
 import algorithm.collection.common.datastruct.tag.TimeComplexity;
-import algorithm.collection.leetcode.november.firstweek.november_10st.OrangesRotting;
 
 /**
  * 1326. 灌溉花园的最少水龙头数目
