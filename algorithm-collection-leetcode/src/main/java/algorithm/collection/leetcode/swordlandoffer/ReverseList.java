@@ -15,6 +15,13 @@ import algorithm.collection.common.datastruct.tag.TimeComplexity;
  * 输入: 1->2->3->4->5->NULL
  * 输出: 5->4->3->2->1->NULL
  *
+ *
+ * 假设你有一串珠子，每颗珠子代表链表中的一个节点，每颗珠子之间用一根线（指针）相连。现在我们需要做的是：
+ *
+ *  解开当前珠子与下一颗珠子之间的线。
+ *  把当前珠子重新连接到前一颗珠子的头结点上。
+ *  移动到下一颗珠子重复上述步骤，直到所有的珠子都反向连接
+ *
  * @author shadow
  * @create 2023-07-23 14:07
  **/
@@ -35,8 +42,8 @@ public class ReverseList {
             algorithmCategory = AlgorithmCategory.VIOLENCE
     )
     public static ListNode reverseList(ListNode head) {
-        ListNode pre = new ListNode();
-        while (head != null){
+        ListNode pre = new ListNode();//记录上一个链条
+        while (head != null) {
             //记一下当前节点的地址
             ListNode curNode = head;
             ListNode lastNode = pre.next;
@@ -86,11 +93,28 @@ public class ReverseList {
         return pre;
     }
 
+    public ListNode reverseListV3(ListNode head) {
+        ListNode pre = null;//上一个链表是空
+        ListNode next = null;//起到临时存储的作用，head是下一个链表
+        while(head != null) {
+            next = head.next;//先提前存储下一个节点
+            head.next = pre;//断开下一个节点，并将当前节点放到上一个链条的头节点上
+            pre = head;//更新上一个链条的头结点
+            head = next;//更新下一个节点的头结点
+        }
+        return pre;
+    }
+
     public static void main(String[] args) {
         ListNode head = ListNodeRandomGenerator.generatorSingleList(5,10);
         ListNodeRandomGenerator.printSingleListNode(head);
-        ListNode reverseList = reverseList(head);
-        ListNodeRandomGenerator.printSingleListNode(reverseList);
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        head = head.next;
+        //之前总是会判断失误，是因为两个指针指向的是实体，而不是逻辑地址；一旦一个指针修改后。另一个指针也会被修改的
+        System.out.println(dummy.next.val == head.val);
+        //ListNode reverseList = reverseList(head);
+        //ListNodeRandomGenerator.printSingleListNode(reverseList);
     }
 
 }
