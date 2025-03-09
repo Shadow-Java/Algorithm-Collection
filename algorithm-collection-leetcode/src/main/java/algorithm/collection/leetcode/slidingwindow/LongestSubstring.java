@@ -71,8 +71,7 @@ public class LongestSubstring {
              另外，更新left后，不管原来的 s.charAt(i) 是否在最长子段中，我们都要将 s.charAt(i) 的位置更新为当前的i，
              因此此时新的 s.charAt(i) 已经进入到 当前最长的子段中！
              */
-            if(map.containsKey(s.charAt(i)))
-            {
+            if(map.containsKey(s.charAt(i))) {
                 left = Math.max(left , map.get(s.charAt(i))+1);
             }
             //不管是否更新left，都要更新 s.charAt(i) 的位置！
