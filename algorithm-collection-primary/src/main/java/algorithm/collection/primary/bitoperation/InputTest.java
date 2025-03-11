@@ -28,6 +28,11 @@ import java.util.Scanner;
 public class InputTest {
 
     public static void main(String[] args) {
+        InputTest inputTest = new InputTest();
+        inputTest.testInput();
+    }
+
+    public void testInputV2() {
         Scanner in = new Scanner(System.in);
 
         /**
@@ -58,6 +63,18 @@ public class InputTest {
             //这里写业务代码，
         }
         System.out.println("结束");
+    }
+
+    public void testInput() {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        System.out.println(a);
+
+        while (sc.hasNextLine()) {//输入一行数据
+            int b = sc.nextInt();//一行数据里的第一个数字
+            int c = sc.nextInt();//一行数据里的第二个数字
+            System.out.println(b+"  "+c);
+        }
     }
 
 

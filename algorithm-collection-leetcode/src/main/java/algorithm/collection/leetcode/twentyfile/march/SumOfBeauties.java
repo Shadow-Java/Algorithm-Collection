@@ -64,4 +64,15 @@ public class SumOfBeauties {
         return ans;
     }
 
+
+    /**
+     * 当前i比较的话是与最左边最小值和右边最大值进行比较；
+     * 所以该题为求前缀最大值和后缀最小值的方案
+     * @param nums
+     * @return
+     */
+    public int sumOfBeautiesV2(int[] nums) {
+        return 0;
+    }
+
 }
