@@ -1,6 +1,8 @@
 package algorithm.collection.leetcode.dynamicprogramming;
 
 import algorithm.collection.common.datastruct.array.ArrayRandomGenerator;
+import algorithm.collection.common.datastruct.linklist.LinkListRandomGenerator;
+import algorithm.collection.common.datastruct.linklist.ListNode;
 import algorithm.collection.common.datastruct.tag.QuestionTag;
 
 
