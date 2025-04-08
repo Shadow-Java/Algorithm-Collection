@@ -9,14 +9,14 @@ import algorithm.collection.common.datastruct.tag.TimeComplexity;
 
 /**
  * 53.最大子数组
- *
+ * <p>
  * 输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
  * 输出：6
  * 解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。
- *
+ * <p>
  * 输入：nums = [1]
  * 输出：1
- *
+ * <p>
  * 输入：nums = [5,4,-1,7,8]
  * 输出：23
  *
@@ -48,19 +48,19 @@ public class MaximumSubarray {
     public static int maxSubArray(int[] nums) {
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
-        for (int i=1;i<nums.length;i++){
+        for (int i = 1; i < nums.length; i++) {
             //为什么是和nums[i]比较而不是和dp[i]比较：因为dp[0..i]表示前i个数的和，而和可能是负数，一个数+一个负数会变小，那么后面就没必要加了。所以是和nums[i]比较
-            dp[i] = Math.max(dp[i-1]+nums[i],nums[i]);
+            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
         }
         int maxSum = nums[0];
-        for (int val: dp) {
-            maxSum = Math.max(maxSum,val);
+        for (int val : dp) {
+            maxSum = Math.max(maxSum, val);
         }
         return maxSum;
     }
 
     public static void main(String[] args) {
-        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println(maxSubArray(nums));
     }
 
